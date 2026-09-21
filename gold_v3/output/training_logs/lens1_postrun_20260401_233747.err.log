@@ -1,0 +1,57 @@
+[31;1mSet-Location: [31;1mA positional parameter cannot be found that accepts argument 'BOGI\RL_Session'.[0m
+[31;1mC:\RAHUL: [0m
+[31;1m[36;1mLine |[0m
+[31;1m[36;1m[36;1m   2 | [0m $trainErr = [36;1mC:\RAHUL[0m BOGI\RL_Session Trainings\xauusd_v3\output\train .[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m             ~~~~~~~~[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mThe term 'C:\RAHUL' is not recognized as a name of a cmdlet, function, script file, or executable program.[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m[31;1mCheck the spelling of the name, or if a path was included, verify that the path is correct and try again.[0m
+[31;1mTest-Path: [0m
+[31;1m[36;1mLine |[0m
+[31;1m[36;1m[36;1m   3 | [0m while (-not ([36;1mTest-Path $trainErr[0m)) { Start-Sleep -Seconds 10 }[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m              ~~~~~~~~~~~~~~~~~~~[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mValue cannot be null. (Parameter 'The provided Path argument was null or an empty collection.')[0m
+[31;1mTest-Path: [0m
+[31;1m[36;1mLine |[0m
+[31;1m[36;1m[36;1m   3 | [0m while (-not ([36;1mTest-Path $trainErr[0m)) { Start-Sleep -Seconds 10 }[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m              ~~~~~~~~~~~~~~~~~~~[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mValue cannot be null. (Parameter 'The provided Path argument was null or an empty collection.')[0m
+[31;1mTest-Path: [0m
+[31;1m[36;1mLine |[0m
+[31;1m[36;1m[36;1m   3 | [0m while (-not ([36;1mTest-Path $trainErr[0m)) { Start-Sleep -Seconds 10 }[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m              ~~~~~~~~~~~~~~~~~~~[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mValue cannot be null. (Parameter 'The provided Path argument was null or an empty collection.')[0m
+[31;1mTest-Path: [0m
+[31;1m[36;1mLine |[0m
+[31;1m[36;1m[36;1m   3 | [0m while (-not ([36;1mTest-Path $trainErr[0m)) { Start-Sleep -Seconds 10 }[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m              ~~~~~~~~~~~~~~~~~~~[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mValue cannot be null. (Parameter 'The provided Path argument was null or an empty collection.')[0m
+[31;1mTest-Path: [0m
+[31;1m[36;1mLine |[0m
+[31;1m[36;1m[36;1m   3 | [0m while (-not ([36;1mTest-Path $trainErr[0m)) { Start-Sleep -Seconds 10 }[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m              ~~~~~~~~~~~~~~~~~~~[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mValue cannot be null. (Parameter 'The provided Path argument was null or an empty collection.')[0m
+[31;1mTest-Path: [0m
+[31;1m[36;1mLine |[0m
+[31;1m[36;1m[36;1m   3 | [0m while (-not ([36;1mTest-Path $trainErr[0m)) { Start-Sleep -Seconds 10 }[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m              ~~~~~~~~~~~~~~~~~~~[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mValue cannot be null. (Parameter 'The provided Path argument was null or an empty collection.')[0m
+[31;1mTest-Path: [0m
+[31;1m[36;1mLine |[0m
+[31;1m[36;1m[36;1m   3 | [0m while (-not ([36;1mTest-Path $trainErr[0m)) { Start-Sleep -Seconds 10 }[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m              ~~~~~~~~~~~~~~~~~~~[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mValue cannot be null. (Parameter 'The provided Path argument was null or an empty collection.')[0m
+[31;1mTest-Path: [0m
+[31;1m[36;1mLine |[0m
+[31;1m[36;1m[36;1m   3 | [0m while (-not ([36;1mTest-Path $trainErr[0m)) { Start-Sleep -Seconds 10 }[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m              ~~~~~~~~~~~~~~~~~~~[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mValue cannot be null. (Parameter 'The provided Path argument was null or an empty collection.')[0m
+[31;1mTest-Path: [0m
+[31;1m[36;1mLine |[0m
+[31;1m[36;1m[36;1m   3 | [0m while (-not ([36;1mTest-Path $trainErr[0m)) { Start-Sleep -Seconds 10 }[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m              ~~~~~~~~~~~~~~~~~~~[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mValue cannot be null. (Parameter 'The provided Path argument was null or an empty collection.')[0m
+[31;1mTest-Path: [0m
+[31;1m[36;1mLine |[0m
+[31;1m[36;1m[36;1m   3 | [0m while (-not ([36;1mTest-Path $trainErr[0m)) { Start-Sleep -Seconds 10 }[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m              ~~~~~~~~~~~~~~~~~~~[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mValue cannot be null. (Parameter 'The provided Path argument was null or an empty collection.')[0m

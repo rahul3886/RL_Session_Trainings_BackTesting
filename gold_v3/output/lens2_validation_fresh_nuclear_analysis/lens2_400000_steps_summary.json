@@ -1,0 +1,95 @@
+{
+  "episodes": 115,
+  "news_filtered_days": 15,
+  "total_trades": 51,
+  "wins": 12,
+  "losses": 39,
+  "win_rate": 23.52941176470588,
+  "profit_factor": 0.7484663130980198,
+  "trades_per_episode": 0.4434782608695652,
+  "avg_episode_pnl": 1.4240217391304457,
+  "total_episode_pnl": 163.76250000000127,
+  "pnl_sweep_high_days": 4.655321428571447,
+  "pnl_sweep_low_days": 4.533500000000086,
+  "pnl_sweep_days": 4.586796875000057,
+  "pnl_continuation_days": 0.20463855421686078,
+  "win_rate_sweep_days": 40.625,
+  "win_rate_continuation": 12.048192771084338,
+  "ny_open_trade_rate": 0.17391304347826086,
+  "first_trade_avg_pnl": 4.340034482758637,
+  "first_trade_win_rate": 89.65517241379311,
+  "first_trade_is_ny_open_rate": 0.6896551724137931,
+  "first_trade_matches_intent_rate": 0.6896551724137931,
+  "avg_first_trade_entry_step": 4.689655172413793,
+  "avg_first_trade_entry_delay_from_anchor_min": 70.34482758620689,
+  "avg_first_trade_entry_delay_from_ny_open_min": 85.34482758620689,
+  "avg_first_trade_duration_min": 232.75862068965517,
+  "ny_open_first_trade_win_rate": 20.0,
+  "ny_open_first_trade_profit_factor": 2745.6999999999834,
+  "scenario_counts": {
+    "sweep_high_days": 14,
+    "sweep_low_days": 18,
+    "sweep_days": 32,
+    "continuation_days": 83,
+    "both_sweep_days": 0
+  },
+  "opening_scenario_counts": {
+    "S7_HighLiqGrab": 36,
+    "S1_BullContinuation": 27,
+    "S3S4_Continuation": 24,
+    "S8_LowLiqGrab": 17,
+    "S2_BearContinuation": 11
+  },
+  "opening_scenario_summary": {
+    "S1_BullContinuation": {
+      "days": 27,
+      "ny_open_trade_rate": 0.14814814814814814,
+      "first_trade_rate": 0.18518518518518517,
+      "first_trade_is_ny_open_rate": 0.14814814814814814,
+      "first_trade_matches_intent_rate": 0.14814814814814814,
+      "first_trade_win_rate": 0.0
+    },
+    "S2_BearContinuation": {
+      "days": 11,
+      "ny_open_trade_rate": 0.18181818181818182,
+      "first_trade_rate": 0.18181818181818182,
+      "first_trade_is_ny_open_rate": 0.18181818181818182,
+      "first_trade_matches_intent_rate": 0.09090909090909091,
+      "first_trade_win_rate": 100.0
+    },
+    "S3S4_Continuation": {
+      "days": 24,
+      "ny_open_trade_rate": 0.125,
+      "first_trade_rate": 0.3333333333333333,
+      "first_trade_is_ny_open_rate": 0.125,
+      "first_trade_matches_intent_rate": 0.20833333333333334,
+      "first_trade_win_rate": 12.5
+    },
+    "S7_HighLiqGrab": {
+      "days": 36,
+      "ny_open_trade_rate": 0.25,
+      "first_trade_rate": 0.3333333333333333,
+      "first_trade_is_ny_open_rate": 0.25,
+      "first_trade_matches_intent_rate": 0.2777777777777778,
+      "first_trade_win_rate": 16.666666666666664
+    },
+    "S8_LowLiqGrab": {
+      "days": 17,
+      "ny_open_trade_rate": 0.11764705882352941,
+      "first_trade_rate": 0.11764705882352941,
+      "first_trade_is_ny_open_rate": 0.11764705882352941,
+      "first_trade_matches_intent_rate": 0.0,
+      "first_trade_win_rate": 50.0
+    }
+  },
+  "acceptance": {
+    "win_rate": false,
+    "profit_factor": false,
+    "trades_per_episode": false,
+    "pnl_sweep_low_days": true,
+    "ny_open_trade_rate": true,
+    "first_trade_matches_intent_rate": true,
+    "first_trade_delay": true
+  },
+  "acceptance_passed": false
+}

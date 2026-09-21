@@ -1,0 +1,109 @@
+
+============================================================
+XAUUSD v3 Two-Lens SMC Trading Engine
+Mode: train-lens2
+Project root: C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3
+============================================================
+
+Using cpu device
+Logging to C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\output\tensorboard\lens2\MaskablePPO_2
+----------------------------------
+| session/            |          |
+|    london_range_pts | 19.7     |
+| time/               |          |
+|    fps              | 8        |
+|    iterations       | 1        |
+|    time_elapsed     | 245      |
+|    total_timesteps  | 2048     |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 20.8         |
+| time/                   |              |
+|    fps                  | 7            |
+|    iterations           | 2            |
+|    time_elapsed         | 545          |
+|    total_timesteps      | 4096         |
+| train/                  |              |
+|    approx_kl            | 0.0025772634 |
+|    clip_fraction        | 0.0392       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.168       |
+|    explained_variance   | -0.0569      |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.0518       |
+|    n_updates            | 10           |
+|    policy_gradient_loss | -0.0067      |
+|    value_loss           | 0.431        |
+------------------------------------------
+Eval num_timesteps=5000, episode_reward=-4.39 +/- 0.40
+Episode length: 35.00 +/- 0.00
+-------------------------------------------------------
+| eval/                                |              |
+|    mean_ep_length                    | 35           |
+|    mean_reward                       | -4.39        |
+| policy/                              |              |
+|    ent_coef                          | 0.049        |
+|    hold_rate_500                     | 0.929        |
+| session/                             |              |
+|    london_range_pts                  | 27.3         |
+| time/                                |              |
+|    total_timesteps                   | 5000         |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 125          |
+|    avg_first_trade_entry_delay_an... | 320          |
+|    episode_pnl                       | 0.567        |
+|    first_trade_is_ny_open_rate       | 0            |
+|    first_trade_matches_intent_rate   | 0.333        |
+|    first_trade_pnl                   | 3.55         |
+|    first_trade_win_rate              | 0.5          |
+|    ny_open_trade_rate                | 0            |
+|    pnl_continuation_days             | 1.04         |
+|    pnl_sweep_high_days               | -0.161       |
+|    pnl_sweep_low_days                | 0            |
+|    trades_per_episode                | 0.16         |
+|    win_rate                          | 0.5          |
+|    win_rate_continuation             | 0.103        |
+|    win_rate_sweep_days               | 0            |
+| train/                               |              |
+|    approx_kl                         | 0.0013144126 |
+|    clip_fraction                     | 0.0181       |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.101       |
+|    explained_variance                | 0.559        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.161        |
+|    n_updates                         | 20           |
+|    policy_gradient_loss              | -0.00311     |
+|    value_loss                        | 0.32         |
+-------------------------------------------------------
+New best mean reward!
+----------------------------------
+| session/            |          |
+|    london_range_pts | 25.4     |
+| time/               |          |
+|    fps              | 6        |
+|    iterations       | 3        |
+|    time_elapsed     | 966      |
+|    total_timesteps  | 6144     |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 40.2        |
+| time/                   |             |
+|    fps                  | 5           |
+|    iterations           | 4           |
+|    time_elapsed         | 1436        |
+|    total_timesteps      | 8192        |
+| train/                  |             |
+|    approx_kl            | 0.002558008 |
+|    clip_fraction        | 0.037       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.118      |
+|    explained_variance   | 0.684       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0769      |
+|    n_updates            | 30          |
+|    policy_gradient_loss | -0.00822    |
+|    value_loss           | 0.336       |
+-----------------------------------------

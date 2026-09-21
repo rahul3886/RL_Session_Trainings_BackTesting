@@ -1,0 +1,74 @@
+{
+  "episodes": 115,
+  "news_filtered_days": 15,
+  "total_trades": 22,
+  "wins": 10,
+  "losses": 12,
+  "win_rate": 45.45454545454545,
+  "profit_factor": 2.871196890497426,
+  "trades_per_episode": 0.19130434782608696,
+  "avg_episode_pnl": 1.355808695652171,
+  "total_episode_pnl": 155.91799999999967,
+  "pnl_sweep_high_days": 7.291964285714221,
+  "pnl_sweep_low_days": 0.6092500000000504,
+  "pnl_sweep_days": 3.5329375,
+  "pnl_continuation_days": 0.516433734939755,
+  "win_rate_sweep_days": 28.125,
+  "win_rate_continuation": 3.614457831325301,
+  "ny_open_trade_rate": 0.02608695652173913,
+  "first_trade_avg_pnl": 8.01293333333324,
+  "first_trade_win_rate": 73.33333333333333,
+  "first_trade_is_ny_open_rate": 0.2,
+  "first_trade_matches_intent_rate": 0.4,
+  "avg_first_trade_entry_step": 14.8,
+  "avg_first_trade_entry_delay_from_anchor_min": 222.0,
+  "avg_first_trade_entry_delay_from_ny_open_min": 237.0,
+  "avg_first_trade_duration_min": 191.0,
+  "ny_open_first_trade_win_rate": 0.0,
+  "ny_open_first_trade_profit_factor": 0.0,
+  "scenario_counts": {
+    "sweep_high_days": 14,
+    "sweep_low_days": 18,
+    "sweep_days": 32,
+    "continuation_days": 83,
+    "both_sweep_days": 0
+  },
+  "opening_scenario_counts": {
+    "S3S4_Continuation": 103,
+    "S2_BearContinuation": 6,
+    "Mixed/Ranging": 6
+  },
+  "opening_scenario_summary": {
+    "Mixed/Ranging": {
+      "days": 6,
+      "ny_open_trade_rate": 0.0,
+      "first_trade_rate": 0.3333333333333333,
+      "first_trade_is_ny_open_rate": 0.0,
+      "first_trade_matches_intent_rate": 0.0,
+      "first_trade_win_rate": 100.0
+    },
+    "S2_BearContinuation": {
+      "days": 6,
+      "ny_open_trade_rate": 0.0,
+      "first_trade_rate": 0.0,
+      "first_trade_is_ny_open_rate": 0.0,
+      "first_trade_matches_intent_rate": 0.0,
+      "first_trade_win_rate": 0.0
+    },
+    "S3S4_Continuation": {
+      "days": 103,
+      "ny_open_trade_rate": 0.02912621359223301,
+      "first_trade_rate": 0.1262135922330097,
+      "first_trade_is_ny_open_rate": 0.02912621359223301,
+      "first_trade_matches_intent_rate": 0.05825242718446602,
+      "first_trade_win_rate": 23.076923076923077
+    }
+  },
+  "acceptance": {
+    "win_rate": false,
+    "profit_factor": true,
+    "trades_per_episode": false,
+    "pnl_sweep_low_days": true
+  },
+  "acceptance_passed": false
+}

@@ -1,0 +1,41 @@
+# Lens 2 (Execution Agent) - 1.0M Training Analysis
+
+The training of the Lens 2 Executor has concluded. We have successfully achieved the target of 1,000,000 steps. While the final model (1.01M) is functional, our structural analysis has identified a **massive hidden peak at 890k steps** that significantly outperforms all other checkpoints.
+
+## 📊 Structural Decision Matrix
+
+| Metric | 340k (Baseline) | 640k (Recovery) | **890k (Champion)** | 1.01M (Final) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Profit Factor** | 2.87 | 2.37 | **3.79** 🚀 | 1.86 |
+| **Win Rate** | **45.5%** | 37.5% | 40.9% | 37.5% |
+| **NY-Open Trade Rate**| 2.6% | **2.6%** | **2.6%** ✅ | 0.8% ⚠️ |
+| **First-Trade is NY** | 20.0% | 20.0% | **21.4%** ✅ | 6.2% ⚠️ |
+| **First-Trade WR** | 73.3% | 66.7% | **78.6%** 🚀 | 62.5% |
+| **Intent Match** | **40.0%** | 33.3% | 35.7% | 31.2% |
+| **Entry Delay** | 222 min | 223 min | **197 min** 🚀 | 255 min |
+
+---
+
+## 🔍 Key Findings
+
+### 1. The 890k "Institutional Peak"
+At **890,000 steps**, the agent reached a state of extreme efficiency:
+*   **Hyper-Profitability:** A Profit Factor of **3.79** is institutional-grade.
+*   **Precision Entry:** It achieved the highest "First-Trade Win Rate" (78.6%) of the entire training history.
+*   **Timing Mastery:** It managed to attack the NY Open faster than any other model (Average Delay: 197 minutes vs ~220 min baseline).
+
+### 2. The Final Regression (950k - 1.0M)
+The agent experienced a typical "over-specialization" or "collapse" in the final 100k steps. The NY-Open trade rate plummeted to 0.8%, meaning the agent became too afraid of the open and started waiting for late-session confirmation. This is why the 1.0M model is **not recommended** for production.
+
+---
+
+## 🎯 Recommendation: Promote 890k
+
+I am officially recommending that we **Freeze and Promote the 890,000 Step Checkpoint** as our "Production Champion." It has successfully beaten the 340k baseline in Profit Factor and NY-Open timing.
+
+> [!TIP]
+> This model represents the best balance of the "Aggressive 340k timing" and "Modern 800k precision" we were looking for.
+
+**Next Steps:**
+1.  Archive the 890k model as the primary execution engine.
+2.  Run a final backtest to confirm stable P&L over the last 30 days.

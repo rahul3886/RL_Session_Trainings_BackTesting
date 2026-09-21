@@ -1,0 +1,187 @@
+  [XAUUSD_M5] Found 156 gaps > 3× median interval (median=0 days 00:05:00, threshold=0 days 00:15:00)
+    Gap at 2022-01-10 00:00:00+00:00: 2 days 00:05:00
+    Gap at 2022-01-17 00:00:00+00:00: 2 days 00:05:00
+    Gap at 2022-01-24 00:00:00+00:00: 2 days 00:05:00
+    Gap at 2022-01-31 00:00:00+00:00: 2 days 00:05:00
+    Gap at 2022-02-07 00:00:00+00:00: 2 days 00:05:00
+    ... and 151 more gaps
+pandas-ta not installed, computing indicators manually
+  [XAUUSD_M15] Found 156 gaps > 3× median interval (median=0 days 00:15:00, threshold=0 days 00:45:00)
+    Gap at 2022-01-10 00:00:00+00:00: 2 days 00:15:00
+    Gap at 2022-01-17 00:00:00+00:00: 2 days 00:15:00
+    Gap at 2022-01-24 00:00:00+00:00: 2 days 00:15:00
+    Gap at 2022-01-31 00:00:00+00:00: 2 days 00:15:00
+    Gap at 2022-02-07 00:00:00+00:00: 2 days 00:15:00
+    ... and 151 more gaps
+pandas-ta not installed, computing indicators manually
+HOLD RATE 96.6% at step 225000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 94.2% at step 230000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 97.1% at step 235000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 93.7% at step 240000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 94.8% at step 245000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.8% at step 250000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 94.7% at step 255000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 96.0% at step 260000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.2% at step 265000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 91.5% at step 270000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.0% at step 275000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.3% at step 280000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.7% at step 285000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.3% at step 290000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 94.7% at step 295000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 94.1% at step 300000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.4% at step 305000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.8% at step 310000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 94.4% at step 315000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.3% at step 320000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 93.9% at step 325000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.6% at step 330000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.0% at step 335000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 93.3% at step 340000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 96.4% at step 345000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 97.4% at step 350000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 94.8% at step 355000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.0% at step 360000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.2% at step 365000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 94.9% at step 370000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.2% at step 375000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.9% at step 380000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 94.3% at step 385000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 96.0% at step 390000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.2% at step 395000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 94.8% at step 400000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 93.9% at step 405000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 93.4% at step 410000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 94.6% at step 415000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.3% at step 420000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 94.8% at step 425000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 96.7% at step 430000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 94.8% at step 435000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.7% at step 440000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 96.0% at step 445000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 95.8% at step 450000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 93.9% at step 455000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 96.2% at step 460000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 94.9% at step 465000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 96.8% at step 470000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 93.8% at step 475000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 96.7% at step 480000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 94.3% at step 485000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 92.0% at step 490000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 92.6% at step 495000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 94.5% at step 500000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+HOLD RATE 93.8% at step 505000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(

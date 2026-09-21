@@ -1,0 +1,344 @@
+2026-04-08 06:15:00 [INFO] src.pipeline: ============================================================
+2026-04-08 06:15:00 [INFO] src.pipeline: DATA PIPELINE
+2026-04-08 06:15:00 [INFO] src.pipeline: ============================================================
+2026-04-08 06:15:00 [INFO] src.pipeline: 
+--- Loading M5 data ---
+2026-04-08 06:15:00 [INFO] src.data.ingest: Loading processed data from C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\data\processed\xauusd_M5.parquet
+2026-04-08 06:15:01 [INFO] src.data.ingest:   226080 bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:55:00+00:00
+2026-04-08 06:15:01 [INFO] src.data.validator:   [XAUUSD_M5] Dropped 25 zero/neg volume rows
+2026-04-08 06:15:01 [WARNING] src.data.validator:   [XAUUSD_M5] Found 156 gaps > 3× median interval (median=0 days 00:05:00, threshold=0 days 00:15:00)
+2026-04-08 06:15:01 [WARNING] src.data.validator:     Gap at 2022-01-10 00:00:00+00:00: 2 days 00:05:00
+2026-04-08 06:15:01 [WARNING] src.data.validator:     Gap at 2022-01-17 00:00:00+00:00: 2 days 00:05:00
+2026-04-08 06:15:01 [WARNING] src.data.validator:     Gap at 2022-01-24 00:00:00+00:00: 2 days 00:05:00
+2026-04-08 06:15:01 [WARNING] src.data.validator:     Gap at 2022-01-31 00:00:00+00:00: 2 days 00:05:00
+2026-04-08 06:15:01 [WARNING] src.data.validator:     Gap at 2022-02-07 00:00:00+00:00: 2 days 00:05:00
+2026-04-08 06:15:01 [WARNING] src.data.validator:     ... and 151 more gaps
+2026-04-08 06:15:01 [INFO] src.data.validator:   [XAUUSD_M5] Validation complete: 226055 clean bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:55:00+00:00
+2026-04-08 06:15:01 [WARNING] src.data.indicators: pandas-ta not installed, computing indicators manually
+2026-04-08 06:15:02 [INFO] src.pipeline:   M5: 226055 bars, 785 trading days
+2026-04-08 06:15:02 [INFO] src.pipeline: 
+--- Loading M15 data ---
+2026-04-08 06:15:02 [INFO] src.data.ingest: Loading processed data from C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\data\processed\xauusd_M15.parquet
+2026-04-08 06:15:02 [INFO] src.data.ingest:   75360 bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:45:00+00:00
+2026-04-08 06:15:02 [INFO] src.data.validator:   [XAUUSD_M15] Dropped 14 zero/neg volume rows
+2026-04-08 06:15:02 [WARNING] src.data.validator:   [XAUUSD_M15] Found 156 gaps > 3× median interval (median=0 days 00:15:00, threshold=0 days 00:45:00)
+2026-04-08 06:15:02 [WARNING] src.data.validator:     Gap at 2022-01-10 00:00:00+00:00: 2 days 00:15:00
+2026-04-08 06:15:02 [WARNING] src.data.validator:     Gap at 2022-01-17 00:00:00+00:00: 2 days 00:15:00
+2026-04-08 06:15:02 [WARNING] src.data.validator:     Gap at 2022-01-24 00:00:00+00:00: 2 days 00:15:00
+2026-04-08 06:15:02 [WARNING] src.data.validator:     Gap at 2022-01-31 00:00:00+00:00: 2 days 00:15:00
+2026-04-08 06:15:02 [WARNING] src.data.validator:     Gap at 2022-02-07 00:00:00+00:00: 2 days 00:15:00
+2026-04-08 06:15:02 [WARNING] src.data.validator:     ... and 151 more gaps
+2026-04-08 06:15:02 [INFO] src.data.validator:   [XAUUSD_M15] Validation complete: 75346 clean bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:45:00+00:00
+2026-04-08 06:15:02 [WARNING] src.data.indicators: pandas-ta not installed, computing indicators manually
+2026-04-08 06:15:03 [INFO] src.pipeline:   M15: 75346 bars, 785 trading days
+2026-04-08 06:15:03 [INFO] src.data.validator:   Train:    49910 bars (520 days)
+2026-04-08 06:15:03 [INFO] src.data.validator:   Validate: 12478 bars (130 days)
+2026-04-08 06:15:03 [INFO] src.data.validator:   Test:     12670 bars (132 days)
+2026-04-08 06:15:26 [INFO] src.pipeline: 
+Pipeline summary:
+2026-04-08 06:15:26 [INFO] src.pipeline:   Train days:    520
+2026-04-08 06:15:26 [INFO] src.pipeline:   Validate days: 130
+2026-04-08 06:15:26 [INFO] src.pipeline:   Test days:     132
+2026-04-08 06:15:26 [INFO] src.pipeline:   Total:         782
+2026-04-08 06:15:38 [INFO] src.pipeline: ============================================================
+2026-04-08 06:15:38 [INFO] src.pipeline: STEP 2: TRAINING LENS 1 — LONDON OBSERVER
+2026-04-08 06:15:38 [INFO] src.pipeline: ============================================================
+2026-04-08 06:15:44 [INFO] src.lens1.agent: Resumed Lens 1 PPO agent from C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\models\lens1\lens1_ppo_final.zip
+2026-04-08 06:15:44 [INFO] src.lens1.agent: Created Lens 1 PPO agent:
+2026-04-08 06:15:44 [INFO] src.lens1.agent:   Policy: MlpPolicy, arch=[256, 128, 64], activation=Tanh
+2026-04-08 06:15:44 [INFO] src.lens1.agent:   LR=0.0003, n_steps=2048, batch=64
+2026-04-08 06:15:44 [INFO] src.lens1.agent:   ent_coef_start=0.05
+2026-04-08 06:15:44 [INFO] src.lens1.agent: Training Lens 1: 500000 timesteps
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+2026-04-08 14:58:32 [INFO] src.lens1.agent: Lens 1 training complete. Final model saved to C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\models/lens1_retrain_500k_balanced\lens1_ppo_final.zip
+2026-04-08 14:58:46 [INFO] src.pipeline: ============================================================
+2026-04-08 14:58:46 [INFO] src.pipeline: DATA PIPELINE
+2026-04-08 14:58:46 [INFO] src.pipeline: ============================================================
+2026-04-08 14:58:46 [INFO] src.pipeline: 
+--- Loading M5 data ---
+2026-04-08 14:58:46 [INFO] src.data.ingest: Loading processed data from C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\data\processed\xauusd_M5.parquet
+2026-04-08 14:58:46 [INFO] src.data.ingest:   226080 bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:55:00+00:00
+2026-04-08 14:58:46 [INFO] src.data.validator:   [XAUUSD_M5] Dropped 25 zero/neg volume rows
+2026-04-08 14:58:46 [WARNING] src.data.validator:   [XAUUSD_M5] Found 156 gaps > 3× median interval (median=0 days 00:05:00, threshold=0 days 00:15:00)
+2026-04-08 14:58:46 [WARNING] src.data.validator:     Gap at 2022-01-10 00:00:00+00:00: 2 days 00:05:00
+2026-04-08 14:58:46 [WARNING] src.data.validator:     Gap at 2022-01-17 00:00:00+00:00: 2 days 00:05:00
+2026-04-08 14:58:46 [WARNING] src.data.validator:     Gap at 2022-01-24 00:00:00+00:00: 2 days 00:05:00
+2026-04-08 14:58:46 [WARNING] src.data.validator:     Gap at 2022-01-31 00:00:00+00:00: 2 days 00:05:00
+2026-04-08 14:58:46 [WARNING] src.data.validator:     Gap at 2022-02-07 00:00:00+00:00: 2 days 00:05:00
+2026-04-08 14:58:46 [WARNING] src.data.validator:     ... and 151 more gaps
+2026-04-08 14:58:46 [INFO] src.data.validator:   [XAUUSD_M5] Validation complete: 226055 clean bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:55:00+00:00
+2026-04-08 14:58:46 [WARNING] src.data.indicators: pandas-ta not installed, computing indicators manually
+2026-04-08 14:58:47 [INFO] src.pipeline:   M5: 226055 bars, 785 trading days
+2026-04-08 14:58:47 [INFO] src.pipeline: 
+--- Loading M15 data ---
+2026-04-08 14:58:47 [INFO] src.data.ingest: Loading processed data from C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\data\processed\xauusd_M15.parquet
+2026-04-08 14:58:47 [INFO] src.data.ingest:   75360 bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:45:00+00:00
+2026-04-08 14:58:47 [INFO] src.data.validator:   [XAUUSD_M15] Dropped 14 zero/neg volume rows
+2026-04-08 14:58:47 [WARNING] src.data.validator:   [XAUUSD_M15] Found 156 gaps > 3× median interval (median=0 days 00:15:00, threshold=0 days 00:45:00)
+2026-04-08 14:58:47 [WARNING] src.data.validator:     Gap at 2022-01-10 00:00:00+00:00: 2 days 00:15:00
+2026-04-08 14:58:47 [WARNING] src.data.validator:     Gap at 2022-01-17 00:00:00+00:00: 2 days 00:15:00
+2026-04-08 14:58:47 [WARNING] src.data.validator:     Gap at 2022-01-24 00:00:00+00:00: 2 days 00:15:00
+2026-04-08 14:58:47 [WARNING] src.data.validator:     Gap at 2022-01-31 00:00:00+00:00: 2 days 00:15:00
+2026-04-08 14:58:47 [WARNING] src.data.validator:     Gap at 2022-02-07 00:00:00+00:00: 2 days 00:15:00
+2026-04-08 14:58:47 [WARNING] src.data.validator:     ... and 151 more gaps
+2026-04-08 14:58:47 [INFO] src.data.validator:   [XAUUSD_M15] Validation complete: 75346 clean bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:45:00+00:00
+2026-04-08 14:58:47 [WARNING] src.data.indicators: pandas-ta not installed, computing indicators manually
+2026-04-08 14:58:47 [INFO] src.pipeline:   M15: 75346 bars, 785 trading days
+2026-04-08 14:58:47 [INFO] src.data.validator:   Train:    49910 bars (520 days)
+2026-04-08 14:58:47 [INFO] src.data.validator:   Validate: 12478 bars (130 days)
+2026-04-08 14:58:47 [INFO] src.data.validator:   Test:     12670 bars (132 days)
+2026-04-08 14:59:02 [INFO] src.pipeline: 
+Pipeline summary:
+2026-04-08 14:59:02 [INFO] src.pipeline:   Train days:    520
+2026-04-08 14:59:02 [INFO] src.pipeline:   Validate days: 130
+2026-04-08 14:59:02 [INFO] src.pipeline:   Test days:     132
+2026-04-08 14:59:02 [INFO] src.pipeline:   Total:         782
+2026-04-08 14:59:07 [INFO] src.lens1.encoder: ============================================================
+2026-04-08 14:59:07 [INFO] src.lens1.encoder: LENS 1 POST-TRAINING ANALYSIS
+2026-04-08 14:59:07 [INFO] src.lens1.encoder: ============================================================
+2026-04-08 14:59:07 [INFO] src.lens1.encoder: 
+Extracting encodings for all trading days...
+2026-04-08 15:01:31 [INFO] src.lens1.encoder:   Extracted 130 day encodings
+2026-04-08 15:01:31 [INFO] src.lens1.encoder: 
+--- Analysis 1: Encoding Correlations ---
+2026-04-08 15:01:31 [INFO] src.lens1.encoder: Saved encoding correlations to C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\output\lens1_analysis\lens1_encoding_correlations.csv
+2026-04-08 15:01:31 [INFO] src.lens1.encoder:   SIGNIFICANT: encoding_2 \u2194 ny_close_vs_london_open: -0.353
+2026-04-08 15:01:31 [INFO] src.lens1.encoder:   SIGNIFICANT: encoding_2 \u2194 opening_side_bias: -0.543
+2026-04-08 15:01:31 [INFO] src.lens1.encoder:   SIGNIFICANT: encoding_4 \u2194 opening_side_bias: 0.475
+2026-04-08 15:01:31 [INFO] src.lens1.encoder: 
+--- Analysis 2: Scenario Clustering ---
+2026-04-08 15:01:40 [INFO] src.lens1.encoder: Saved scenario clusters to C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\output\lens1_analysis\lens1_scenario_clusters.csv
+2026-04-08 15:01:40 [INFO] src.lens1.encoder: 
+--- Analysis 3: Sweep Prediction Accuracy ---
+2026-04-08 15:01:40 [INFO] src.lens1.encoder: Best sweep_high predictor: encoding_3
+2026-04-08 15:01:40 [INFO] src.lens1.encoder: Best sweep_low predictor:  encoding_5
+2026-04-08 15:01:40 [INFO] src.lens1.encoder: Sweep accuracy: 47.4% (9/19 sweeps predicted)
+2026-04-08 15:01:40 [INFO] src.lens1.encoder: 
+--- Analysis 4: Encoding Visualisation ---
+2026-04-08 15:01:42 [INFO] src.lens1.encoder: Saved encoding visualisation to C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\output\lens1_analysis\lens1_encoding_map.png
+2026-04-08 15:01:42 [INFO] src.lens1.encoder: UMAP not available, skipping UMAP visualisation
+2026-04-08 15:01:42 [INFO] src.lens1.encoder: 
+============================================================
+2026-04-08 15:01:42 [INFO] src.lens1.encoder: LENS 1 ANALYSIS COMPLETE
+2026-04-08 15:01:42 [INFO] src.lens1.encoder: All outputs saved to C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\output\lens1_analysis
+2026-04-08 15:01:42 [INFO] src.lens1.encoder: ============================================================
+2026-04-08 15:01:54 [INFO] src.pipeline: ============================================================
+2026-04-08 15:01:54 [INFO] src.pipeline: DATA PIPELINE
+2026-04-08 15:01:54 [INFO] src.pipeline: ============================================================
+2026-04-08 15:01:54 [INFO] src.pipeline: 
+--- Loading M5 data ---
+2026-04-08 15:01:54 [INFO] src.data.ingest: Loading processed data from C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\data\processed\xauusd_M5.parquet
+2026-04-08 15:01:54 [INFO] src.data.ingest:   226080 bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:55:00+00:00
+2026-04-08 15:01:54 [INFO] src.data.validator:   [XAUUSD_M5] Dropped 25 zero/neg volume rows
+2026-04-08 15:01:54 [WARNING] src.data.validator:   [XAUUSD_M5] Found 156 gaps > 3× median interval (median=0 days 00:05:00, threshold=0 days 00:15:00)
+2026-04-08 15:01:54 [WARNING] src.data.validator:     Gap at 2022-01-10 00:00:00+00:00: 2 days 00:05:00
+2026-04-08 15:01:54 [WARNING] src.data.validator:     Gap at 2022-01-17 00:00:00+00:00: 2 days 00:05:00
+2026-04-08 15:01:54 [WARNING] src.data.validator:     Gap at 2022-01-24 00:00:00+00:00: 2 days 00:05:00
+2026-04-08 15:01:54 [WARNING] src.data.validator:     Gap at 2022-01-31 00:00:00+00:00: 2 days 00:05:00
+2026-04-08 15:01:54 [WARNING] src.data.validator:     Gap at 2022-02-07 00:00:00+00:00: 2 days 00:05:00
+2026-04-08 15:01:54 [WARNING] src.data.validator:     ... and 151 more gaps
+2026-04-08 15:01:54 [INFO] src.data.validator:   [XAUUSD_M5] Validation complete: 226055 clean bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:55:00+00:00
+2026-04-08 15:01:54 [WARNING] src.data.indicators: pandas-ta not installed, computing indicators manually
+2026-04-08 15:01:55 [INFO] src.pipeline:   M5: 226055 bars, 785 trading days
+2026-04-08 15:01:55 [INFO] src.pipeline: 
+--- Loading M15 data ---
+2026-04-08 15:01:55 [INFO] src.data.ingest: Loading processed data from C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\data\processed\xauusd_M15.parquet
+2026-04-08 15:01:55 [INFO] src.data.ingest:   75360 bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:45:00+00:00
+2026-04-08 15:01:55 [INFO] src.data.validator:   [XAUUSD_M15] Dropped 14 zero/neg volume rows
+2026-04-08 15:01:55 [WARNING] src.data.validator:   [XAUUSD_M15] Found 156 gaps > 3× median interval (median=0 days 00:15:00, threshold=0 days 00:45:00)
+2026-04-08 15:01:55 [WARNING] src.data.validator:     Gap at 2022-01-10 00:00:00+00:00: 2 days 00:15:00
+2026-04-08 15:01:55 [WARNING] src.data.validator:     Gap at 2022-01-17 00:00:00+00:00: 2 days 00:15:00
+2026-04-08 15:01:55 [WARNING] src.data.validator:     Gap at 2022-01-24 00:00:00+00:00: 2 days 00:15:00
+2026-04-08 15:01:55 [WARNING] src.data.validator:     Gap at 2022-01-31 00:00:00+00:00: 2 days 00:15:00
+2026-04-08 15:01:55 [WARNING] src.data.validator:     Gap at 2022-02-07 00:00:00+00:00: 2 days 00:15:00
+2026-04-08 15:01:55 [WARNING] src.data.validator:     ... and 151 more gaps
+2026-04-08 15:01:55 [INFO] src.data.validator:   [XAUUSD_M15] Validation complete: 75346 clean bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:45:00+00:00
+2026-04-08 15:01:55 [WARNING] src.data.indicators: pandas-ta not installed, computing indicators manually
+2026-04-08 15:01:55 [INFO] src.pipeline:   M15: 75346 bars, 785 trading days
+2026-04-08 15:01:55 [INFO] src.data.validator:   Train:    49910 bars (520 days)
+2026-04-08 15:01:55 [INFO] src.data.validator:   Validate: 12478 bars (130 days)
+2026-04-08 15:01:55 [INFO] src.data.validator:   Test:     12670 bars (132 days)
+2026-04-08 15:02:11 [INFO] src.pipeline: 
+Pipeline summary:
+2026-04-08 15:02:11 [INFO] src.pipeline:   Train days:    520
+2026-04-08 15:02:11 [INFO] src.pipeline:   Validate days: 130
+2026-04-08 15:02:11 [INFO] src.pipeline:   Test days:     132
+2026-04-08 15:02:11 [INFO] src.pipeline:   Total:         782
+2026-04-08 15:02:11 [INFO] src.pipeline: Loaded 95 news dates from calendar
+2026-04-08 15:02:11 [INFO] src.pipeline: ============================================================
+2026-04-08 15:02:11 [INFO] src.pipeline: STEP 3: TRAINING LENS 2 — NY EXECUTOR
+2026-04-08 15:02:11 [INFO] src.pipeline: ============================================================
+2026-04-08 15:02:11 [INFO] src.lens2.agent: Resumed Lens 2 MaskablePPO agent from C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\models\lens2\best\best_model.zip
+2026-04-08 15:02:11 [INFO] src.lens2.agent: Created Lens 2 MaskablePPO agent:
+2026-04-08 15:02:11 [INFO] src.lens2.agent:   Policy: MlpPolicy, arch=[256, 128, 64]
+2026-04-08 15:02:11 [INFO] src.lens2.agent:   LR=0.0003, n_steps=2048, batch=64
+2026-04-08 15:02:11 [INFO] src.lens2.agent: Training Lens 2: 500000 timesteps
+2026-04-08 15:15:01 [WARNING] src.lens2.agent: HOLD RATE 95.7% at step 905000. Agent may be trapped in Do-Nothing mode.
+2026-04-08 15:34:25 [WARNING] src.lens2.agent: HOLD RATE 94.0% at step 910000. Trading participation is still too low.
+2026-04-08 15:58:44 [WARNING] src.lens2.agent: HOLD RATE 97.1% at step 915000. Agent may be trapped in Do-Nothing mode.
+2026-04-08 16:22:26 [WARNING] src.lens2.agent: HOLD RATE 94.9% at step 920000. Trading participation is still too low.
+2026-04-08 16:41:35 [WARNING] src.lens2.agent: HOLD RATE 95.2% at step 925000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+2026-04-08 17:08:06 [WARNING] src.lens2.agent: HOLD RATE 95.5% at step 930000. Agent may be trapped in Do-Nothing mode.
+2026-04-08 17:30:25 [WARNING] src.lens2.agent: HOLD RATE 93.7% at step 935000. Trading participation is still too low.
+2026-04-08 17:49:22 [WARNING] src.lens2.agent: HOLD RATE 95.3% at step 940000. Agent may be trapped in Do-Nothing mode.
+2026-04-08 18:09:04 [WARNING] src.lens2.agent: HOLD RATE 94.6% at step 945000. Trading participation is still too low.
+2026-04-08 18:31:18 [WARNING] src.lens2.agent: HOLD RATE 92.1% at step 950000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+2026-04-08 18:59:39 [WARNING] src.lens2.agent: HOLD RATE 94.8% at step 955000. Trading participation is still too low.
+2026-04-08 19:18:00 [WARNING] src.lens2.agent: HOLD RATE 93.5% at step 960000. Trading participation is still too low.
+2026-04-08 19:37:50 [WARNING] src.lens2.agent: HOLD RATE 94.9% at step 965000. Trading participation is still too low.
+2026-04-08 20:28:40 [WARNING] src.lens2.agent: HOLD RATE 93.7% at step 970000. Trading participation is still too low.
+2026-04-08 20:57:09 [WARNING] src.lens2.agent: HOLD RATE 93.7% at step 975000. Trading participation is still too low.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+2026-04-08 21:29:58 [WARNING] src.lens2.agent: HOLD RATE 94.1% at step 980000. Trading participation is still too low.
+2026-04-08 21:55:21 [WARNING] src.lens2.agent: HOLD RATE 94.8% at step 985000. Trading participation is still too low.
+2026-04-08 22:25:59 [WARNING] src.lens2.agent: HOLD RATE 95.6% at step 990000. Agent may be trapped in Do-Nothing mode.
+2026-04-08 22:54:51 [ERROR] __main__: Error in mode 'train-lens2': Unable to allocate 1.19 MiB for an array with shape (39065, 4) and data type float64
+Traceback (most recent call last):
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\main.py", line 368, in main
+    mode_map[args.mode](settings, project_root)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\main.py", line 143, in cmd_train_lens2
+    model, env = run_lens2_training(settings, data, lens1_model, project_root, news_dates)
+                 ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\src\pipeline.py", line 234, in run_lens2_training
+    model = train_lens2(
+        model,
+    ...<4 lines>...
+        reset_num_timesteps=resume_path is None,
+    )
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\src\lens2\agent.py", line 402, in train_lens2
+    model.learn(
+    ~~~~~~~~~~~^
+        total_timesteps=total_timesteps,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reset_num_timesteps=reset_num_timesteps,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\ppo_mask\ppo_mask.py", line 454, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, self.n_steps, use_masking)
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\ppo_mask\ppo_mask.py", line 233, in collect_rollouts
+    new_obs, rewards, dones, infos = env.step(actions)
+                                     ~~~~~~~~^^^^^^^^^
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\vec_env\base_vec_env.py", line 222, in step
+    return self.step_wait()
+           ~~~~~~~~~~~~~~^^
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\vec_env\dummy_vec_env.py", line 71, in step_wait
+    obs, self.reset_infos[env_idx] = self.envs[env_idx].reset()
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\gymnasium\core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\src\lens2\environment.py", line 231, in reset
+    obs = self._get_observation()
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\src\lens2\environment.py", line 414, in _get_observation
+    features = extract_session_features(
+        candle_window, atr_window,
+    ...<3 lines>...
+        smc_config=self.settings.smc if self.settings else None,
+    )
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\src\session\features.py", line 114, in extract_session_features
+    pdh_pdl = compute_pdh_pdl(full_df, candles.index[0])
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\src\smc\liquidity.py", line 194, in compute_pdh_pdl
+    prev_day_data = df[df.index.date < current_date.date()]
+                    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pandas\core\frame.py", line 4369, in __getitem__
+    return self._getitem_bool_array(key)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pandas\core\frame.py", line 4431, in _getitem_bool_array
+    return self.take(indexer, axis=0)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pandas\core\generic.py", line 4101, in take
+    new_data = self._mgr.take(
+        indices,
+        axis=self._get_block_manager_axis(axis),
+        verify=True,
+    )
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pandas\core\internals\managers.py", line 1052, in take
+    return self.reindex_indexer(
+           ~~~~~~~~~~~~~~~~~~~~^
+        new_axis=new_labels,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        allow_dups=True,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pandas\core\internals\managers.py", line 849, in reindex_indexer
+    blk.take_nd(
+    ~~~~~~~~~~~^
+        indexer,
+        ^^^^^^^^
+    ...<3 lines>...
+        ),
+        ^^
+    )
+    ^
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pandas\core\internals\blocks.py", line 1015, in take_nd
+    new_values = algos.take_nd(
+        values, indexer, axis=axis, allow_fill=allow_fill, fill_value=fill_value
+    )
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pandas\core\array_algos\take.py", line 115, in take_nd
+    return _take_nd_ndarray(arr, indexer, axis, fill_value, allow_fill)
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pandas\core\array_algos\take.py", line 155, in _take_nd_ndarray
+    out = np.empty(out_shape, dtype=dtype)
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 1.19 MiB for an array with shape (39065, 4) and data type float64
+Traceback (most recent call last):
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\scripts\retrain_opening_stack.py", line 45, in <module>
+    main()
+    ~~~~^^
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\scripts\retrain_opening_stack.py", line 41, in main
+    _run(mode, config_path)
+    ~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\scripts\retrain_opening_stack.py", line 23, in _run
+    subprocess.run(cmd, check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['C:\\Users\\rahul\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe', 'main.py', '--mode', 'train-lens2', '--config', 'C:\\RAHUL BOGI\\RL_Session Trainings\\xauusd_v3\\config\\retrain_balanced_500k.yaml']' returned non-zero exit status 1.

@@ -1,0 +1,148 @@
+2026-04-12 21:18:30 [INFO] src.pipeline: ============================================================
+2026-04-12 21:18:30 [INFO] src.pipeline: DATA PIPELINE
+2026-04-12 21:18:30 [INFO] src.pipeline: ============================================================
+2026-04-12 21:18:30 [INFO] src.pipeline: 
+--- Loading M5 data ---
+2026-04-12 21:18:30 [INFO] src.data.ingest: Loading processed data from C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\data\processed\xauusd_M5.parquet
+2026-04-12 21:18:31 [INFO] src.data.ingest:   226080 bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:55:00+00:00
+2026-04-12 21:18:31 [INFO] src.data.validator:   [XAUUSD_M5] Dropped 25 zero/neg volume rows
+2026-04-12 21:18:31 [WARNING] src.data.validator:   [XAUUSD_M5] Found 156 gaps > 3× median interval (median=0 days 00:05:00, threshold=0 days 00:15:00)
+2026-04-12 21:18:31 [WARNING] src.data.validator:     Gap at 2022-01-10 00:00:00+00:00: 2 days 00:05:00
+2026-04-12 21:18:31 [WARNING] src.data.validator:     Gap at 2022-01-17 00:00:00+00:00: 2 days 00:05:00
+2026-04-12 21:18:31 [WARNING] src.data.validator:     Gap at 2022-01-24 00:00:00+00:00: 2 days 00:05:00
+2026-04-12 21:18:31 [WARNING] src.data.validator:     Gap at 2022-01-31 00:00:00+00:00: 2 days 00:05:00
+2026-04-12 21:18:31 [WARNING] src.data.validator:     Gap at 2022-02-07 00:00:00+00:00: 2 days 00:05:00
+2026-04-12 21:18:31 [WARNING] src.data.validator:     ... and 151 more gaps
+2026-04-12 21:18:31 [INFO] src.data.validator:   [XAUUSD_M5] Validation complete: 226055 clean bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:55:00+00:00
+2026-04-12 21:18:31 [WARNING] src.data.indicators: pandas-ta not installed, computing indicators manually
+2026-04-12 21:18:32 [INFO] src.pipeline:   M5: 226055 bars, 785 trading days
+2026-04-12 21:18:32 [INFO] src.pipeline: 
+--- Loading M15 data ---
+2026-04-12 21:18:32 [INFO] src.data.ingest: Loading processed data from C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\data\processed\xauusd_M15.parquet
+2026-04-12 21:18:32 [INFO] src.data.ingest:   75360 bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:45:00+00:00
+2026-04-12 21:18:32 [INFO] src.data.validator:   [XAUUSD_M15] Dropped 14 zero/neg volume rows
+2026-04-12 21:18:32 [WARNING] src.data.validator:   [XAUUSD_M15] Found 156 gaps > 3× median interval (median=0 days 00:15:00, threshold=0 days 00:45:00)
+2026-04-12 21:18:32 [WARNING] src.data.validator:     Gap at 2022-01-10 00:00:00+00:00: 2 days 00:15:00
+2026-04-12 21:18:32 [WARNING] src.data.validator:     Gap at 2022-01-17 00:00:00+00:00: 2 days 00:15:00
+2026-04-12 21:18:32 [WARNING] src.data.validator:     Gap at 2022-01-24 00:00:00+00:00: 2 days 00:15:00
+2026-04-12 21:18:32 [WARNING] src.data.validator:     Gap at 2022-01-31 00:00:00+00:00: 2 days 00:15:00
+2026-04-12 21:18:32 [WARNING] src.data.validator:     Gap at 2022-02-07 00:00:00+00:00: 2 days 00:15:00
+2026-04-12 21:18:32 [WARNING] src.data.validator:     ... and 151 more gaps
+2026-04-12 21:18:32 [INFO] src.data.validator:   [XAUUSD_M15] Validation complete: 75346 clean bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:45:00+00:00
+2026-04-12 21:18:32 [WARNING] src.data.indicators: pandas-ta not installed, computing indicators manually
+2026-04-12 21:18:33 [INFO] src.pipeline:   M15: 75346 bars, 785 trading days
+2026-04-12 21:18:33 [INFO] src.data.validator:   Train:    49910 bars (520 days)
+2026-04-12 21:18:33 [INFO] src.data.validator:   Validate: 12478 bars (130 days)
+2026-04-12 21:18:33 [INFO] src.data.validator:   Test:     12670 bars (132 days)
+2026-04-12 21:19:01 [INFO] src.pipeline: 
+Pipeline summary:
+2026-04-12 21:19:01 [INFO] src.pipeline:   Train days:    520
+2026-04-12 21:19:01 [INFO] src.pipeline:   Validate days: 130
+2026-04-12 21:19:01 [INFO] src.pipeline:   Test days:     132
+2026-04-12 21:19:01 [INFO] src.pipeline:   Total:         782
+2026-04-12 21:19:01 [INFO] src.pipeline: Loaded 95 news dates from calendar
+2026-04-12 21:19:02 [INFO] src.pipeline: ============================================================
+2026-04-12 21:19:02 [INFO] src.pipeline: STEP 3: TRAINING LENS 2 — NY EXECUTOR
+2026-04-12 21:19:02 [INFO] src.pipeline: ============================================================
+2026-04-12 21:20:51 [INFO] src.lens2.agent: Created Lens 2 MaskablePPO agent (n_envs=4):
+2026-04-12 21:20:51 [INFO] src.lens2.agent:   Policy: MlpPolicy, arch=[256, 128, 64]
+2026-04-12 21:20:51 [INFO] src.lens2.agent:   LR=0.0003, n_steps=2048, batch=64
+2026-04-12 21:20:51 [INFO] src.lens2.agent: Training Lens 2: 500000 timesteps
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\callbacks.py:418: UserWarning: Training and eval env are not of the same type<stable_baselines3.common.vec_env.subproc_vec_env.SubprocVecEnv object at 0x000001E4DBE4B620> != <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x000001E51F9A0C20>
+  warnings.warn("Training and eval env are not of the same type" f"{self.training_env} != {self.eval_env}")
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+2026-04-12 22:26:51 [WARNING] src.lens2.agent: HOLD RATE 99.1% at step 150000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:28:19 [WARNING] src.lens2.agent: HOLD RATE 99.0% at step 155000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:29:15 [WARNING] src.lens2.agent: HOLD RATE 98.0% at step 160000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:30:54 [WARNING] src.lens2.agent: HOLD RATE 98.2% at step 165000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:31:21 [WARNING] src.lens2.agent: HOLD RATE 97.8% at step 170000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:33:01 [WARNING] src.lens2.agent: HOLD RATE 99.0% at step 175000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:33:29 [WARNING] src.lens2.agent: HOLD RATE 97.5% at step 180000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:35:50 [WARNING] src.lens2.agent: HOLD RATE 97.9% at step 185000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:37:21 [WARNING] src.lens2.agent: HOLD RATE 98.0% at step 190000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:38:59 [WARNING] src.lens2.agent: HOLD RATE 97.4% at step 195000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:40:06 [WARNING] src.lens2.agent: HOLD RATE 97.4% at step 200000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+2026-04-12 22:42:20 [WARNING] src.lens2.agent: HOLD RATE 98.2% at step 205000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:43:04 [WARNING] src.lens2.agent: HOLD RATE 99.1% at step 210000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:45:08 [WARNING] src.lens2.agent: HOLD RATE 98.9% at step 215000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:45:49 [WARNING] src.lens2.agent: HOLD RATE 98.5% at step 220000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:48:13 [WARNING] src.lens2.agent: HOLD RATE 98.2% at step 225000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:49:24 [WARNING] src.lens2.agent: HOLD RATE 98.5% at step 230000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:50:56 [WARNING] src.lens2.agent: HOLD RATE 98.2% at step 235000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:52:05 [WARNING] src.lens2.agent: HOLD RATE 98.2% at step 240000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:53:46 [WARNING] src.lens2.agent: HOLD RATE 98.8% at step 245000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:55:01 [WARNING] src.lens2.agent: HOLD RATE 98.8% at step 250000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:57:16 [WARNING] src.lens2.agent: HOLD RATE 98.1% at step 255000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:57:45 [WARNING] src.lens2.agent: HOLD RATE 98.3% at step 260000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 22:59:40 [WARNING] src.lens2.agent: HOLD RATE 98.2% at step 265000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:00:13 [WARNING] src.lens2.agent: HOLD RATE 99.0% at step 270000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:01:39 [WARNING] src.lens2.agent: HOLD RATE 96.6% at step 275000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:02:15 [WARNING] src.lens2.agent: HOLD RATE 98.6% at step 280000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:03:05 [WARNING] src.lens2.agent: HOLD RATE 98.3% at step 285000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:03:39 [WARNING] src.lens2.agent: HOLD RATE 97.4% at step 290000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:04:50 [WARNING] src.lens2.agent: HOLD RATE 97.9% at step 295000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:05:07 [WARNING] src.lens2.agent: HOLD RATE 98.8% at step 300000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+2026-04-12 23:06:17 [WARNING] src.lens2.agent: HOLD RATE 97.4% at step 305000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:06:34 [WARNING] src.lens2.agent: HOLD RATE 98.2% at step 310000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:07:42 [WARNING] src.lens2.agent: HOLD RATE 98.2% at step 315000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:08:18 [WARNING] src.lens2.agent: HOLD RATE 98.1% at step 320000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:09:09 [WARNING] src.lens2.agent: HOLD RATE 98.3% at step 325000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:09:43 [WARNING] src.lens2.agent: HOLD RATE 98.9% at step 330000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:10:33 [WARNING] src.lens2.agent: HOLD RATE 97.9% at step 335000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:11:07 [WARNING] src.lens2.agent: HOLD RATE 98.2% at step 340000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:12:14 [WARNING] src.lens2.agent: HOLD RATE 99.4% at step 345000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:12:32 [WARNING] src.lens2.agent: HOLD RATE 98.3% at step 350000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:13:40 [WARNING] src.lens2.agent: HOLD RATE 97.2% at step 355000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:13:58 [WARNING] src.lens2.agent: HOLD RATE 98.7% at step 360000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:15:04 [WARNING] src.lens2.agent: HOLD RATE 98.5% at step 365000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:15:40 [WARNING] src.lens2.agent: HOLD RATE 97.9% at step 370000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:16:31 [WARNING] src.lens2.agent: HOLD RATE 97.7% at step 375000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:17:05 [WARNING] src.lens2.agent: HOLD RATE 98.1% at step 380000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:17:54 [WARNING] src.lens2.agent: HOLD RATE 98.7% at step 385000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:18:28 [WARNING] src.lens2.agent: HOLD RATE 98.6% at step 390000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:19:41 [WARNING] src.lens2.agent: HOLD RATE 98.1% at step 395000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:20:00 [WARNING] src.lens2.agent: HOLD RATE 97.7% at step 400000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+2026-04-12 23:21:08 [WARNING] src.lens2.agent: HOLD RATE 98.1% at step 405000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:21:43 [WARNING] src.lens2.agent: HOLD RATE 98.3% at step 410000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:22:32 [WARNING] src.lens2.agent: HOLD RATE 97.9% at step 415000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:23:07 [WARNING] src.lens2.agent: HOLD RATE 98.3% at step 420000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:23:57 [WARNING] src.lens2.agent: HOLD RATE 98.3% at step 425000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:24:30 [WARNING] src.lens2.agent: HOLD RATE 99.2% at step 430000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:25:37 [WARNING] src.lens2.agent: HOLD RATE 98.2% at step 435000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:25:54 [WARNING] src.lens2.agent: HOLD RATE 97.0% at step 440000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:27:02 [WARNING] src.lens2.agent: HOLD RATE 97.7% at step 445000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:27:20 [WARNING] src.lens2.agent: HOLD RATE 98.6% at step 450000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:28:27 [WARNING] src.lens2.agent: HOLD RATE 98.6% at step 455000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:29:01 [WARNING] src.lens2.agent: HOLD RATE 99.4% at step 460000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:29:50 [WARNING] src.lens2.agent: HOLD RATE 97.8% at step 465000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:30:25 [WARNING] src.lens2.agent: HOLD RATE 97.4% at step 470000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:31:16 [WARNING] src.lens2.agent: HOLD RATE 98.7% at step 475000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:31:50 [WARNING] src.lens2.agent: HOLD RATE 98.0% at step 480000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:32:57 [WARNING] src.lens2.agent: HOLD RATE 97.8% at step 485000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:33:14 [WARNING] src.lens2.agent: HOLD RATE 98.6% at step 490000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:34:22 [WARNING] src.lens2.agent: HOLD RATE 98.1% at step 495000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:34:57 [WARNING] src.lens2.agent: HOLD RATE 98.2% at step 500000. Agent may be trapped in Do-Nothing mode.
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sb3_contrib\common\maskable\evaluation.py:72: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+2026-04-12 23:35:48 [WARNING] src.lens2.agent: HOLD RATE 99.0% at step 505000. Agent may be trapped in Do-Nothing mode.
+2026-04-12 23:36:49 [INFO] src.lens2.validation: Lens 2 structural validation final: win_rate=25.0% pf=0.60 trades/ep=0.45 accepted=False
+2026-04-12 23:36:49 [INFO] src.lens2.agent: Lens 2 training complete. Final model saved to C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\models/lens2_nuclear_v4_fresh\lens2_ppo_final.zip
+2026-04-12 23:36:49 [ERROR] __main__: Error in mode 'train-lens2': name 'train_env' is not defined
+Traceback (most recent call last):
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\main.py", line 368, in main
+    mode_map[args.mode](settings, project_root)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\main.py", line 143, in cmd_train_lens2
+    model, env = run_lens2_training(settings, data, lens1_model, project_root, news_dates)
+                 ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\src\pipeline.py", line 246, in run_lens2_training
+    return model, train_env
+                  ^^^^^^^^^
+NameError: name 'train_env' is not defined. Did you mean: 'train_lens2'?

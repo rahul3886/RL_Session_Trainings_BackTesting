@@ -1,0 +1,57 @@
+2026-04-01 23:22:36 [INFO] src.pipeline: ============================================================
+2026-04-01 23:22:36 [INFO] src.pipeline: DATA PIPELINE
+2026-04-01 23:22:36 [INFO] src.pipeline: ============================================================
+2026-04-01 23:22:36 [INFO] src.pipeline: 
+--- Loading M5 data ---
+2026-04-01 23:22:36 [INFO] src.data.ingest: Loading processed data from C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\data\processed\xauusd_M5.parquet
+2026-04-01 23:22:37 [INFO] src.data.ingest:   226080 bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:55:00+00:00
+2026-04-01 23:22:37 [INFO] src.data.validator:   [XAUUSD_M5] Dropped 25 zero/neg volume rows
+2026-04-01 23:22:37 [WARNING] src.data.validator:   [XAUUSD_M5] Found 156 gaps > 3× median interval (median=0 days 00:05:00, threshold=0 days 00:15:00)
+2026-04-01 23:22:37 [WARNING] src.data.validator:     Gap at 2022-01-10 00:00:00+00:00: 2 days 00:05:00
+2026-04-01 23:22:37 [WARNING] src.data.validator:     Gap at 2022-01-17 00:00:00+00:00: 2 days 00:05:00
+2026-04-01 23:22:37 [WARNING] src.data.validator:     Gap at 2022-01-24 00:00:00+00:00: 2 days 00:05:00
+2026-04-01 23:22:37 [WARNING] src.data.validator:     Gap at 2022-01-31 00:00:00+00:00: 2 days 00:05:00
+2026-04-01 23:22:37 [WARNING] src.data.validator:     Gap at 2022-02-07 00:00:00+00:00: 2 days 00:05:00
+2026-04-01 23:22:37 [WARNING] src.data.validator:     ... and 151 more gaps
+2026-04-01 23:22:37 [INFO] src.data.validator:   [XAUUSD_M5] Validation complete: 226055 clean bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:55:00+00:00
+2026-04-01 23:22:37 [WARNING] src.data.indicators: pandas-ta not installed, computing indicators manually
+2026-04-01 23:22:37 [INFO] src.pipeline:   M5: 226055 bars, 785 trading days
+2026-04-01 23:22:37 [INFO] src.pipeline: 
+--- Loading M15 data ---
+2026-04-01 23:22:37 [INFO] src.data.ingest: Loading processed data from C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\data\processed\xauusd_M15.parquet
+2026-04-01 23:22:37 [INFO] src.data.ingest:   75360 bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:45:00+00:00
+2026-04-01 23:22:37 [INFO] src.data.validator:   [XAUUSD_M15] Dropped 14 zero/neg volume rows
+2026-04-01 23:22:37 [WARNING] src.data.validator:   [XAUUSD_M15] Found 156 gaps > 3× median interval (median=0 days 00:15:00, threshold=0 days 00:45:00)
+2026-04-01 23:22:37 [WARNING] src.data.validator:     Gap at 2022-01-10 00:00:00+00:00: 2 days 00:15:00
+2026-04-01 23:22:37 [WARNING] src.data.validator:     Gap at 2022-01-17 00:00:00+00:00: 2 days 00:15:00
+2026-04-01 23:22:37 [WARNING] src.data.validator:     Gap at 2022-01-24 00:00:00+00:00: 2 days 00:15:00
+2026-04-01 23:22:37 [WARNING] src.data.validator:     Gap at 2022-01-31 00:00:00+00:00: 2 days 00:15:00
+2026-04-01 23:22:37 [WARNING] src.data.validator:     Gap at 2022-02-07 00:00:00+00:00: 2 days 00:15:00
+2026-04-01 23:22:37 [WARNING] src.data.validator:     ... and 151 more gaps
+2026-04-01 23:22:37 [INFO] src.data.validator:   [XAUUSD_M15] Validation complete: 75346 clean bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:45:00+00:00
+2026-04-01 23:22:37 [WARNING] src.data.indicators: pandas-ta not installed, computing indicators manually
+2026-04-01 23:22:38 [INFO] src.pipeline:   M15: 75346 bars, 785 trading days
+2026-04-01 23:22:38 [INFO] src.data.validator:   Train:    49910 bars (520 days)
+2026-04-01 23:22:38 [INFO] src.data.validator:   Validate: 12478 bars (130 days)
+2026-04-01 23:22:38 [INFO] src.data.validator:   Test:     12670 bars (132 days)
+2026-04-01 23:22:53 [INFO] src.pipeline: 
+Pipeline summary:
+2026-04-01 23:22:53 [INFO] src.pipeline:   Train days:    520
+2026-04-01 23:22:53 [INFO] src.pipeline:   Validate days: 130
+2026-04-01 23:22:53 [INFO] src.pipeline:   Test days:     132
+2026-04-01 23:22:53 [INFO] src.pipeline:   Total:         782
+2026-04-01 23:23:00 [INFO] src.pipeline: ============================================================
+2026-04-01 23:23:00 [INFO] src.pipeline: STEP 2: TRAINING LENS 1 — LONDON OBSERVER
+2026-04-01 23:23:00 [INFO] src.pipeline: ============================================================
+2026-04-01 23:23:06 [INFO] src.lens1.agent: Created Lens 1 PPO agent:
+2026-04-01 23:23:06 [INFO] src.lens1.agent:   Policy: MlpPolicy, arch=[256, 128, 64], activation=Tanh
+2026-04-01 23:23:06 [INFO] src.lens1.agent:   LR=0.0003, n_steps=2048, batch=64
+2026-04-01 23:23:06 [INFO] src.lens1.agent:   ent_coef_start=0.05
+2026-04-01 23:23:06 [INFO] src.lens1.agent: Training Lens 1: 500000 timesteps
+C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\evaluation.py:70: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  warnings.warn(
+forrtl: error (200): program aborting due to window-CLOSE event
+Image              PC                Routine            Line        Source             
+KERNELBASE.dll     00007FFA8C749DED  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FFA8E82E8D7  Unknown               Unknown  Unknown
+ntdll.dll          00007FFA8FE2C48C  Unknown               Unknown  Unknown

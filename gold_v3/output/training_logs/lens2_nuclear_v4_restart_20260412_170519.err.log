@@ -1,0 +1,117 @@
+2026-04-12 17:05:44 [INFO] src.pipeline: ============================================================
+2026-04-12 17:05:44 [INFO] src.pipeline: DATA PIPELINE
+2026-04-12 17:05:44 [INFO] src.pipeline: ============================================================
+2026-04-12 17:05:44 [INFO] src.pipeline: 
+--- Loading M5 data ---
+2026-04-12 17:05:44 [INFO] src.data.ingest: Loading processed data from C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\data\processed\xauusd_M5.parquet
+2026-04-12 17:05:44 [INFO] src.data.ingest:   226080 bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:55:00+00:00
+2026-04-12 17:05:44 [INFO] src.data.validator:   [XAUUSD_M5] Dropped 25 zero/neg volume rows
+2026-04-12 17:05:44 [WARNING] src.data.validator:   [XAUUSD_M5] Found 156 gaps > 3× median interval (median=0 days 00:05:00, threshold=0 days 00:15:00)
+2026-04-12 17:05:44 [WARNING] src.data.validator:     Gap at 2022-01-10 00:00:00+00:00: 2 days 00:05:00
+2026-04-12 17:05:44 [WARNING] src.data.validator:     Gap at 2022-01-17 00:00:00+00:00: 2 days 00:05:00
+2026-04-12 17:05:44 [WARNING] src.data.validator:     Gap at 2022-01-24 00:00:00+00:00: 2 days 00:05:00
+2026-04-12 17:05:44 [WARNING] src.data.validator:     Gap at 2022-01-31 00:00:00+00:00: 2 days 00:05:00
+2026-04-12 17:05:44 [WARNING] src.data.validator:     Gap at 2022-02-07 00:00:00+00:00: 2 days 00:05:00
+2026-04-12 17:05:44 [WARNING] src.data.validator:     ... and 151 more gaps
+2026-04-12 17:05:44 [INFO] src.data.validator:   [XAUUSD_M5] Validation complete: 226055 clean bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:55:00+00:00
+2026-04-12 17:05:44 [WARNING] src.data.indicators: pandas-ta not installed, computing indicators manually
+2026-04-12 17:05:45 [INFO] src.pipeline:   M5: 226055 bars, 785 trading days
+2026-04-12 17:05:45 [INFO] src.pipeline: 
+--- Loading M15 data ---
+2026-04-12 17:05:45 [INFO] src.data.ingest: Loading processed data from C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\data\processed\xauusd_M15.parquet
+2026-04-12 17:05:45 [INFO] src.data.ingest:   75360 bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:45:00+00:00
+2026-04-12 17:05:46 [INFO] src.data.validator:   [XAUUSD_M15] Dropped 14 zero/neg volume rows
+2026-04-12 17:05:46 [WARNING] src.data.validator:   [XAUUSD_M15] Found 156 gaps > 3× median interval (median=0 days 00:15:00, threshold=0 days 00:45:00)
+2026-04-12 17:05:46 [WARNING] src.data.validator:     Gap at 2022-01-10 00:00:00+00:00: 2 days 00:15:00
+2026-04-12 17:05:46 [WARNING] src.data.validator:     Gap at 2022-01-17 00:00:00+00:00: 2 days 00:15:00
+2026-04-12 17:05:46 [WARNING] src.data.validator:     Gap at 2022-01-24 00:00:00+00:00: 2 days 00:15:00
+2026-04-12 17:05:46 [WARNING] src.data.validator:     Gap at 2022-01-31 00:00:00+00:00: 2 days 00:15:00
+2026-04-12 17:05:46 [WARNING] src.data.validator:     Gap at 2022-02-07 00:00:00+00:00: 2 days 00:15:00
+2026-04-12 17:05:46 [WARNING] src.data.validator:     ... and 151 more gaps
+2026-04-12 17:05:46 [INFO] src.data.validator:   [XAUUSD_M15] Validation complete: 75346 clean bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:45:00+00:00
+2026-04-12 17:05:46 [WARNING] src.data.indicators: pandas-ta not installed, computing indicators manually
+2026-04-12 17:05:46 [INFO] src.pipeline:   M15: 75346 bars, 785 trading days
+2026-04-12 17:05:46 [INFO] src.data.validator:   Train:    49910 bars (520 days)
+2026-04-12 17:05:46 [INFO] src.data.validator:   Validate: 12478 bars (130 days)
+2026-04-12 17:05:46 [INFO] src.data.validator:   Test:     12670 bars (132 days)
+2026-04-12 17:06:05 [INFO] src.pipeline: 
+Pipeline summary:
+2026-04-12 17:06:05 [INFO] src.pipeline:   Train days:    520
+2026-04-12 17:06:05 [INFO] src.pipeline:   Validate days: 130
+2026-04-12 17:06:05 [INFO] src.pipeline:   Test days:     132
+2026-04-12 17:06:05 [INFO] src.pipeline:   Total:         782
+2026-04-12 17:06:05 [INFO] src.pipeline: Loaded 95 news dates from calendar
+2026-04-12 17:06:05 [INFO] src.pipeline: ============================================================
+2026-04-12 17:06:05 [INFO] src.pipeline: STEP 3: TRAINING LENS 2 — NY EXECUTOR
+2026-04-12 17:06:05 [INFO] src.pipeline: ============================================================
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\multiprocessing\process.py", line 320, in _bootstrap
+    self.run()
+    ~~~~~~~~^^
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\vec_env\subproc_vec_env.py", line 29, in _worker
+    env = _patch_env(env_fn_wrapper.var())
+                     ~~~~~~~~~~~~~~~~~~^^
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\src\lens2\agent.py", line 323, in _init
+    env.seed(seed + rank)
+    ^^^^^^^^
+AttributeError: 'Lens2NYEnv' object has no attribute 'seed'
+Process SpawnProcess-2:
+Traceback (most recent call last):
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\multiprocessing\process.py", line 320, in _bootstrap
+    self.run()
+    ~~~~~~~~^^
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\vec_env\subproc_vec_env.py", line 29, in _worker
+    env = _patch_env(env_fn_wrapper.var())
+                     ~~~~~~~~~~~~~~~~~~^^
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\src\lens2\agent.py", line 323, in _init
+    env.seed(seed + rank)
+    ^^^^^^^^
+AttributeError: 'Lens2NYEnv' object has no attribute 'seed'
+Process SpawnProcess-3:
+Traceback (most recent call last):
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\multiprocessing\process.py", line 320, in _bootstrap
+    self.run()
+    ~~~~~~~~^^
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\vec_env\subproc_vec_env.py", line 29, in _worker
+    env = _patch_env(env_fn_wrapper.var())
+                     ~~~~~~~~~~~~~~~~~~^^
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\src\lens2\agent.py", line 323, in _init
+    env.seed(seed + rank)
+    ^^^^^^^^
+AttributeError: 'Lens2NYEnv' object has no attribute 'seed'
+2026-04-12 17:06:39 [ERROR] __main__: Error in mode 'train-lens2': [WinError 232] The pipe is being closed
+Traceback (most recent call last):
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\main.py", line 368, in main
+    mode_map[args.mode](settings, project_root)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\main.py", line 143, in cmd_train_lens2
+    model, env = run_lens2_training(settings, data, lens1_model, project_root, news_dates)
+                 ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\src\pipeline.py", line 228, in run_lens2_training
+    model = create_lens2_agent(
+        train_env_factory,
+    ...<3 lines>...
+        resume_from=str(resume_path) if resume_path else None,
+    )
+  File "C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\src\lens2\agent.py", line 328, in create_lens2_agent
+    vec_env = SubprocVecEnv([make_env(i) for i in range(n_envs)])
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\stable_baselines3\common\vec_env\subproc_vec_env.py", line 126, in __init__
+    self.remotes[0].send(("get_spaces", None))
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\multiprocessing\connection.py", line 212, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rahul\AppData\Local\Python\pythoncore-3.14-64\Lib\multiprocessing\connection.py", line 295, in _send_bytes
+    ov, err = _winapi.WriteFile(self._handle, buf, overlapped=True)
+              ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [WinError 232] The pipe is being closed

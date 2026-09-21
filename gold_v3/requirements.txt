@@ -1,0 +1,30 @@
+# XAUUSD v3 Two-Lens SMC Trading Engine
+# Core
+pandas
+numpy
+scipy
+pyyaml
+
+# Indicators
+pandas-ta
+
+# Data source
+MetaTrader5
+
+# Reinforcement Learning
+stable-baselines3>=2.0
+sb3-contrib
+gymnasium
+torch
+
+# Analysis & Visualization
+scikit-learn
+shap
+quantstats
+tensorboard
+matplotlib
+umap-learn
+
+# Testing
+pytest
+pyarrow

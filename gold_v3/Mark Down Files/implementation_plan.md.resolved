@@ -1,0 +1,35 @@
+# Implementation Plan: Lens 2 Training Completion & Model Finalization
+
+The Lens 2 training has officially completed reaching **1,001,504 steps**. This plan covers the detailed analysis of the training results and the procedure for extracting and validating our "Production Champion" model.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **The 890k Breakthrough:** Our structural analysis shows a massive performance peak at **890,000 steps** (PF 3.79), followed by a regression in the final 100k steps. I recommend finalizing the agent from the **890k checkpoint** rather than the final 1.0M step state.
+
+## Proposed Changes
+
+### Phase 1: Deep Performance Extraction
+*   Extract the full scalar and structural metrics for the three major milestones:
+    *   **340k (The Original Baseline)**
+    *   **890k (The Training Peak)**
+    *   **1001k (The Final State)**
+*   Generate an comparison report to justify the model selection.
+
+### Phase 2: Model Promotion
+*   Navigate to `models/lens2/`.
+*   Archive the 890k model as `lens2_execution_champion_890k.zip`.
+*   Establish this as the primary execution model for the next integration phase (XAUUSD v3 Live Integration).
+
+### Phase 3: Final Structural Validation
+*   Run the full `analyse-lens2` diagnostics on the 890k model.
+*   Confirm the "NY-Open Entry Precision" and "First-Trade Profitability" meet institutional standards.
+
+## Verification Plan
+
+### Automated Tests
+*   `python main.py --mode smoke-test`: Ensure basic pipeline functionality with the new model.
+*   `python main.py --mode backtest`: Run a final 30-day "blind" backtest on the 890k champion.
+
+### Manual Verification
+*   Review the generated diagnostic plots in `output/lens2_validation/checkpoint_reviews/`.

@@ -1,0 +1,48 @@
+[31;1mSet-Location: [31;1mA positional parameter cannot be found that accepts argument 'BOGI\RL_Session'.[0m
+2026-04-01 23:32:03 [INFO] src.pipeline: ============================================================
+2026-04-01 23:32:03 [INFO] src.pipeline: DATA PIPELINE
+2026-04-01 23:32:03 [INFO] src.pipeline: ============================================================
+2026-04-01 23:32:03 [INFO] src.pipeline: 
+--- Loading M5 data ---
+2026-04-01 23:32:03 [INFO] src.data.ingest: Loading processed data from C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\data\processed\xauusd_M5.parquet
+2026-04-01 23:32:04 [INFO] src.data.ingest:   226080 bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:55:00+00:00
+2026-04-01 23:32:04 [INFO] src.data.validator:   [XAUUSD_M5] Dropped 25 zero/neg volume rows
+2026-04-01 23:32:04 [WARNING] src.data.validator:   [XAUUSD_M5] Found 156 gaps > 3× median interval (median=0 days 00:05:00, threshold=0 days 00:15:00)
+2026-04-01 23:32:04 [WARNING] src.data.validator:     Gap at 2022-01-10 00:00:00+00:00: 2 days 00:05:00
+2026-04-01 23:32:04 [WARNING] src.data.validator:     Gap at 2022-01-17 00:00:00+00:00: 2 days 00:05:00
+2026-04-01 23:32:04 [WARNING] src.data.validator:     Gap at 2022-01-24 00:00:00+00:00: 2 days 00:05:00
+2026-04-01 23:32:04 [WARNING] src.data.validator:     Gap at 2022-01-31 00:00:00+00:00: 2 days 00:05:00
+2026-04-01 23:32:04 [WARNING] src.data.validator:     Gap at 2022-02-07 00:00:00+00:00: 2 days 00:05:00
+2026-04-01 23:32:04 [WARNING] src.data.validator:     ... and 151 more gaps
+2026-04-01 23:32:04 [INFO] src.data.validator:   [XAUUSD_M5] Validation complete: 226055 clean bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:55:00+00:00
+2026-04-01 23:32:04 [WARNING] src.data.indicators: pandas-ta not installed, computing indicators manually
+2026-04-01 23:32:05 [INFO] src.pipeline:   M5: 226055 bars, 785 trading days
+2026-04-01 23:32:05 [INFO] src.pipeline: 
+--- Loading M15 data ---
+2026-04-01 23:32:05 [INFO] src.data.ingest: Loading processed data from C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\data\processed\xauusd_M15.parquet
+2026-04-01 23:32:05 [INFO] src.data.ingest:   75360 bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:45:00+00:00
+2026-04-01 23:32:05 [INFO] src.data.validator:   [XAUUSD_M15] Dropped 14 zero/neg volume rows
+2026-04-01 23:32:05 [WARNING] src.data.validator:   [XAUUSD_M15] Found 156 gaps > 3× median interval (median=0 days 00:15:00, threshold=0 days 00:45:00)
+2026-04-01 23:32:05 [WARNING] src.data.validator:     Gap at 2022-01-10 00:00:00+00:00: 2 days 00:15:00
+2026-04-01 23:32:05 [WARNING] src.data.validator:     Gap at 2022-01-17 00:00:00+00:00: 2 days 00:15:00
+2026-04-01 23:32:05 [WARNING] src.data.validator:     Gap at 2022-01-24 00:00:00+00:00: 2 days 00:15:00
+2026-04-01 23:32:05 [WARNING] src.data.validator:     Gap at 2022-01-31 00:00:00+00:00: 2 days 00:15:00
+2026-04-01 23:32:05 [WARNING] src.data.validator:     Gap at 2022-02-07 00:00:00+00:00: 2 days 00:15:00
+2026-04-01 23:32:05 [WARNING] src.data.validator:     ... and 151 more gaps
+2026-04-01 23:32:05 [INFO] src.data.validator:   [XAUUSD_M15] Validation complete: 75346 clean bars, 2022-01-03 00:00:00+00:00 to 2025-01-03 23:45:00+00:00
+2026-04-01 23:32:05 [WARNING] src.data.indicators: pandas-ta not installed, computing indicators manually
+2026-04-01 23:32:05 [INFO] src.pipeline:   M15: 75346 bars, 785 trading days
+2026-04-01 23:32:05 [INFO] src.data.validator:   Train:    49910 bars (520 days)
+2026-04-01 23:32:05 [INFO] src.data.validator:   Validate: 12478 bars (130 days)
+2026-04-01 23:32:05 [INFO] src.data.validator:   Test:     12670 bars (132 days)
+2026-04-01 23:32:24 [INFO] src.pipeline: 
+Pipeline summary:
+2026-04-01 23:32:24 [INFO] src.pipeline:   Train days:    520
+2026-04-01 23:32:24 [INFO] src.pipeline:   Validate days: 130
+2026-04-01 23:32:24 [INFO] src.pipeline:   Test days:     132
+2026-04-01 23:32:24 [INFO] src.pipeline:   Total:         782
+2026-04-01 23:32:30 [INFO] src.lens1.encoder: ============================================================
+2026-04-01 23:32:30 [INFO] src.lens1.encoder: LENS 1 POST-TRAINING ANALYSIS
+2026-04-01 23:32:30 [INFO] src.lens1.encoder: ============================================================
+2026-04-01 23:32:30 [INFO] src.lens1.encoder: 
+Extracting encodings for all trading days...

@@ -1,0 +1,1821 @@
+
+============================================================
+XAUUSD v3 Two-Lens SMC Trading Engine
+Mode: train-lens2
+Project root: C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3
+============================================================
+
+Logging to C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\output\tensorboard\lens2\MaskablePPO_2
+---------------------------------------------------
+| policy/                              |          |
+|    ent_coef                          | 0.04     |
+|    hold_rate_500                     | 0.984    |
+| session/                             |          |
+|    london_range_pts                  | 19.7     |
+| time/                                |          |
+|    fps                               | 91       |
+|    iterations                        | 1        |
+|    time_elapsed                      | 89       |
+|    total_timesteps                   | 1908192  |
+| trade/                               |          |
+|    avg_first_trade_duration_min      | 120      |
+|    avg_first_trade_entry_delay_an... | 222      |
+|    episode_pnl                       | 0.0537   |
+|    first_trade_is_ny_open_rate       | 0        |
+|    first_trade_matches_intent_rate   | 0.5      |
+|    first_trade_pnl                   | -1.64    |
+|    first_trade_win_rate              | 0.667    |
+|    ny_open_trade_rate                | 0        |
+|    pnl_continuation_days             | -0.427   |
+|    pnl_sweep_high_days               | 1.58     |
+|    pnl_sweep_low_days                | 0        |
+|    trades_per_episode                | 0.28     |
+|    win_rate                          | 0.667    |
+|    win_rate_continuation             | 0        |
+|    win_rate_sweep_days               | 0.333    |
+---------------------------------------------------
+------------------------------------------------------
+| policy/                              |             |
+|    ent_coef                          | 0.04        |
+|    hold_rate_500                     | 0.987       |
+| session/                             |             |
+|    london_range_pts                  | 20.8        |
+| time/                                |             |
+|    fps                               | 48          |
+|    iterations                        | 2           |
+|    time_elapsed                      | 339         |
+|    total_timesteps                   | 1916384     |
+| trade/                               |             |
+|    avg_first_trade_duration_min      | 165         |
+|    avg_first_trade_entry_delay_an... | 200         |
+|    episode_pnl                       | 1.29        |
+|    first_trade_is_ny_open_rate       | 0           |
+|    first_trade_matches_intent_rate   | 0.25        |
+|    first_trade_pnl                   | 3.71        |
+|    first_trade_win_rate              | 0.875       |
+|    ny_open_trade_rate                | 0           |
+|    pnl_continuation_days             | 0.259       |
+|    pnl_sweep_high_days               | 3.96        |
+|    pnl_sweep_low_days                | 0.235       |
+|    trades_per_episode                | 0.58        |
+|    win_rate                          | 0.875       |
+|    win_rate_continuation             | 0.156       |
+|    win_rate_sweep_days               | 0.5         |
+| train/                               |             |
+|    approx_kl                         | 0.002927587 |
+|    clip_fraction                     | 0.0151      |
+|    clip_range                        | 0.2         |
+|    entropy_loss                      | -0.0152     |
+|    explained_variance                | 0.354       |
+|    learning_rate                     | 0.0003      |
+|    loss                              | 0.034       |
+|    n_updates                         | 9240        |
+|    policy_gradient_loss              | -0.00106    |
+|    value_loss                        | 0.382       |
+| validation/                          |             |
+|    acceptance_passed                 | 0           |
+|    avg_first_trade_duration_min      | 190         |
+|    avg_first_trade_entry_delay_an... | 117         |
+|    first_trade_is_ny_open_rate       | 0.455       |
+|    first_trade_matches_intent_rate   | 0.591       |
+|    first_trade_win_rate              | 86.4        |
+|    ny_open_first_trade_win_rate      | 10          |
+|    ny_open_trade_rate                | 0.087       |
+|    pnl_continuation_days             | 0.832       |
+|    pnl_sweep_low_days                | 2.44        |
+|    profit_factor                     | 0.939       |
+|    trades_per_episode                | 0.33        |
+|    win_rate                          | 28.9        |
+|    win_rate_continuation             | 8.43        |
+|    win_rate_sweep_days               | 34.4        |
+------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.991        |
+| session/                             |              |
+|    london_range_pts                  | 25.4         |
+| time/                                |              |
+|    fps                               | 50           |
+|    iterations                        | 3            |
+|    time_elapsed                      | 487          |
+|    total_timesteps                   | 1924576      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 212          |
+|    avg_first_trade_entry_delay_an... | 121          |
+|    episode_pnl                       | 2.2          |
+|    first_trade_is_ny_open_rate       | 0.2          |
+|    first_trade_matches_intent_rate   | 0.533        |
+|    first_trade_pnl                   | 5.69         |
+|    first_trade_win_rate              | 0.933        |
+|    ny_open_trade_rate                | 0.06         |
+|    pnl_continuation_days             | 1.83         |
+|    pnl_sweep_high_days               | 0            |
+|    pnl_sweep_low_days                | 3.43         |
+|    trades_per_episode                | 0.54         |
+|    win_rate                          | 0.933        |
+|    win_rate_continuation             | 0.233        |
+|    win_rate_sweep_days               | 0.35         |
+| train/                               |              |
+|    approx_kl                         | 0.0028860392 |
+|    clip_fraction                     | 0.00903      |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.0119      |
+|    explained_variance                | 0.695        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0391       |
+|    n_updates                         | 9250         |
+|    policy_gradient_loss              | -0.0016      |
+|    value_loss                        | 0.114        |
+| validation/                          |              |
+|    acceptance_passed                 | 0            |
+|    avg_first_trade_duration_min      | 167          |
+|    avg_first_trade_entry_delay_an... | 135          |
+|    first_trade_is_ny_open_rate       | 0.44         |
+|    first_trade_matches_intent_rate   | 0.56         |
+|    first_trade_win_rate              | 76           |
+|    ny_open_first_trade_win_rate      | 27.3         |
+|    ny_open_trade_rate                | 0.0957       |
+|    pnl_continuation_days             | 0.875        |
+|    pnl_sweep_low_days                | -0.421       |
+|    profit_factor                     | 0.739        |
+|    trades_per_episode                | 0.374        |
+|    win_rate                          | 32.6         |
+|    win_rate_continuation             | 9.64         |
+|    win_rate_sweep_days               | 28.1         |
+-------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.988        |
+| session/                             |              |
+|    london_range_pts                  | 40.2         |
+| time/                                |              |
+|    fps                               | 53           |
+|    iterations                        | 4            |
+|    time_elapsed                      | 612          |
+|    total_timesteps                   | 1932768      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 155          |
+|    avg_first_trade_entry_delay_an... | 128          |
+|    episode_pnl                       | -0.442       |
+|    first_trade_is_ny_open_rate       | 0.5          |
+|    first_trade_matches_intent_rate   | 0.222        |
+|    first_trade_pnl                   | -1.33        |
+|    first_trade_win_rate              | 0.556        |
+|    ny_open_trade_rate                | 0.18         |
+|    pnl_continuation_days             | -0.867       |
+|    pnl_sweep_high_days               | 8.31         |
+|    pnl_sweep_low_days                | -2.15        |
+|    trades_per_episode                | 0.6          |
+|    win_rate                          | 0.556        |
+|    win_rate_continuation             | 0            |
+|    win_rate_sweep_days               | 0.625        |
+| train/                               |              |
+|    approx_kl                         | 0.0030246086 |
+|    clip_fraction                     | 0.0089       |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.0125      |
+|    explained_variance                | 0.614        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0354       |
+|    n_updates                         | 9260         |
+|    policy_gradient_loss              | -0.00066     |
+|    value_loss                        | 0.112        |
+| validation/                          |              |
+|    acceptance_passed                 | 0            |
+|    avg_first_trade_duration_min      | 166          |
+|    avg_first_trade_entry_delay_an... | 136          |
+|    first_trade_is_ny_open_rate       | 0.375        |
+|    first_trade_matches_intent_rate   | 0.5          |
+|    first_trade_win_rate              | 70.8         |
+|    ny_open_first_trade_win_rate      | 33.3         |
+|    ny_open_trade_rate                | 0.0783       |
+|    pnl_continuation_days             | 0.18         |
+|    pnl_sweep_low_days                | -1.08        |
+|    profit_factor                     | 0.488        |
+|    trades_per_episode                | 0.365        |
+|    win_rate                          | 26.2         |
+|    win_rate_continuation             | 6.02         |
+|    win_rate_sweep_days               | 25           |
+-------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.986        |
+| session/                             |              |
+|    london_range_pts                  | 23           |
+| time/                                |              |
+|    fps                               | 54           |
+|    iterations                        | 5            |
+|    time_elapsed                      | 753          |
+|    total_timesteps                   | 1940960      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 251          |
+|    avg_first_trade_entry_delay_an... | 120          |
+|    episode_pnl                       | 0.855        |
+|    first_trade_is_ny_open_rate       | 0.714        |
+|    first_trade_matches_intent_rate   | 0.429        |
+|    first_trade_pnl                   | 3.42         |
+|    first_trade_win_rate              | 0.714        |
+|    ny_open_trade_rate                | 0.2          |
+|    pnl_continuation_days             | 1.59         |
+|    pnl_sweep_high_days               | -0.936       |
+|    pnl_sweep_low_days                | 0            |
+|    trades_per_episode                | 0.34         |
+|    win_rate                          | 0.714        |
+|    win_rate_continuation             | 0.294        |
+|    win_rate_sweep_days               | 0            |
+| train/                               |              |
+|    approx_kl                         | 0.0064220773 |
+|    clip_fraction                     | 0.0149       |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.0173      |
+|    explained_variance                | 0.747        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0158       |
+|    n_updates                         | 9270         |
+|    policy_gradient_loss              | -0.00297     |
+|    value_loss                        | 0.0985       |
+| validation/                          |              |
+|    acceptance_passed                 | 0            |
+|    avg_first_trade_duration_min      | 173          |
+|    avg_first_trade_entry_delay_an... | 112          |
+|    first_trade_is_ny_open_rate       | 0.48         |
+|    first_trade_matches_intent_rate   | 0.52         |
+|    first_trade_win_rate              | 84           |
+|    ny_open_first_trade_win_rate      | 16.7         |
+|    ny_open_trade_rate                | 0.104        |
+|    pnl_continuation_days             | 0.627        |
+|    pnl_sweep_low_days                | 2.15         |
+|    profit_factor                     | 0.608        |
+|    trades_per_episode                | 0.4          |
+|    win_rate                          | 26.1         |
+|    win_rate_continuation             | 8.43         |
+|    win_rate_sweep_days               | 34.4         |
+-------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.993        |
+| session/                             |              |
+|    london_range_pts                  | 34.4         |
+| time/                                |              |
+|    fps                               | 56           |
+|    iterations                        | 6            |
+|    time_elapsed                      | 877          |
+|    total_timesteps                   | 1949152      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 0            |
+|    avg_first_trade_entry_delay_an... | 0            |
+|    episode_pnl                       | 0            |
+|    first_trade_is_ny_open_rate       | 0            |
+|    first_trade_matches_intent_rate   | 0            |
+|    first_trade_pnl                   | 0            |
+|    first_trade_win_rate              | 0            |
+|    ny_open_trade_rate                | 0            |
+|    pnl_continuation_days             | 0            |
+|    pnl_sweep_high_days               | 0            |
+|    pnl_sweep_low_days                | 0            |
+|    trades_per_episode                | 0            |
+|    win_rate_continuation             | 0            |
+|    win_rate_sweep_days               | 0            |
+| train/                               |              |
+|    approx_kl                         | 0.0039023545 |
+|    clip_fraction                     | 0.0103       |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.0135      |
+|    explained_variance                | 0.675        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0321       |
+|    n_updates                         | 9280         |
+|    policy_gradient_loss              | -0.000131    |
+|    value_loss                        | 0.0984       |
+-------------------------------------------------------
+------------------------------------------------------
+| policy/                              |             |
+|    ent_coef                          | 0.04        |
+|    hold_rate_500                     | 0.986       |
+| session/                             |             |
+|    london_range_pts                  | 52.7        |
+| time/                                |             |
+|    fps                               | 55          |
+|    iterations                        | 7           |
+|    time_elapsed                      | 1029        |
+|    total_timesteps                   | 1957344     |
+| trade/                               |             |
+|    avg_first_trade_duration_min      | 168         |
+|    avg_first_trade_entry_delay_an... | 215         |
+|    episode_pnl                       | -0.102      |
+|    first_trade_is_ny_open_rate       | 0.167       |
+|    first_trade_matches_intent_rate   | 0.667       |
+|    first_trade_pnl                   | 0.863       |
+|    first_trade_win_rate              | 0.5         |
+|    ny_open_trade_rate                | 0.08        |
+|    pnl_continuation_days             | -0.674      |
+|    pnl_sweep_high_days               | -3.55       |
+|    pnl_sweep_low_days                | 3.02        |
+|    trades_per_episode                | 0.84        |
+|    win_rate                          | 0.5         |
+|    win_rate_continuation             | 0.118       |
+|    win_rate_sweep_days               | 0.5         |
+| train/                               |             |
+|    approx_kl                         | 0.002094435 |
+|    clip_fraction                     | 0.00981     |
+|    clip_range                        | 0.2         |
+|    entropy_loss                      | -0.0105     |
+|    explained_variance                | 0.731       |
+|    learning_rate                     | 0.0003      |
+|    loss                              | 0.0183      |
+|    n_updates                         | 9290        |
+|    policy_gradient_loss              | -0.00139    |
+|    value_loss                        | 0.0851      |
+| validation/                          |             |
+|    acceptance_passed                 | 0           |
+|    avg_first_trade_duration_min      | 182         |
+|    avg_first_trade_entry_delay_an... | 112         |
+|    first_trade_is_ny_open_rate       | 0.407       |
+|    first_trade_matches_intent_rate   | 0.481       |
+|    first_trade_win_rate              | 77.8        |
+|    ny_open_first_trade_win_rate      | 9.09        |
+|    ny_open_trade_rate                | 0.0957      |
+|    pnl_continuation_days             | 0.094       |
+|    pnl_sweep_low_days                | 0.486       |
+|    profit_factor                     | 0.365       |
+|    trades_per_episode                | 0.417       |
+|    win_rate                          | 18.8        |
+|    win_rate_continuation             | 7.23        |
+|    win_rate_sweep_days               | 28.1        |
+------------------------------------------------------
+------------------------------------------------------
+| policy/                              |             |
+|    ent_coef                          | 0.04        |
+|    hold_rate_500                     | 0.974       |
+| session/                             |             |
+|    london_range_pts                  | 43          |
+| time/                                |             |
+|    fps                               | 56          |
+|    iterations                        | 8           |
+|    time_elapsed                      | 1165        |
+|    total_timesteps                   | 1965536     |
+| trade/                               |             |
+|    avg_first_trade_duration_min      | 146         |
+|    avg_first_trade_entry_delay_an... | 177         |
+|    episode_pnl                       | 3.35        |
+|    first_trade_is_ny_open_rate       | 0.318       |
+|    first_trade_matches_intent_rate   | 0.318       |
+|    first_trade_pnl                   | 5.94        |
+|    first_trade_win_rate              | 1           |
+|    ny_open_trade_rate                | 0.14        |
+|    pnl_continuation_days             | 2.78        |
+|    pnl_sweep_high_days               | 1.67        |
+|    pnl_sweep_low_days                | 4.87        |
+|    trades_per_episode                | 0.88        |
+|    win_rate                          | 1           |
+|    win_rate_continuation             | 0.333       |
+|    win_rate_sweep_days               | 0.5         |
+| train/                               |             |
+|    approx_kl                         | 0.000816865 |
+|    clip_fraction                     | 0.00369     |
+|    clip_range                        | 0.2         |
+|    entropy_loss                      | -0.00452    |
+|    explained_variance                | 0.741       |
+|    learning_rate                     | 0.0003      |
+|    loss                              | 0.00855     |
+|    n_updates                         | 9300        |
+|    policy_gradient_loss              | -0.00106    |
+|    value_loss                        | 0.0484      |
+| validation/                          |             |
+|    acceptance_passed                 | 0           |
+|    avg_first_trade_duration_min      | 186         |
+|    avg_first_trade_entry_delay_an... | 109         |
+|    first_trade_is_ny_open_rate       | 0.444       |
+|    first_trade_matches_intent_rate   | 0.407       |
+|    first_trade_win_rate              | 81.5        |
+|    ny_open_first_trade_win_rate      | 16.7        |
+|    ny_open_trade_rate                | 0.104       |
+|    pnl_continuation_days             | -0.183      |
+|    pnl_sweep_low_days                | 0.547       |
+|    profit_factor                     | 0.366       |
+|    trades_per_episode                | 0.426       |
+|    win_rate                          | 22.4        |
+|    win_rate_continuation             | 7.23        |
+|    win_rate_sweep_days               | 31.2        |
+------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.983        |
+| session/                             |              |
+|    london_range_pts                  | 20.8         |
+| time/                                |              |
+|    fps                               | 55           |
+|    iterations                        | 9            |
+|    time_elapsed                      | 1327         |
+|    total_timesteps                   | 1973728      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 95           |
+|    avg_first_trade_entry_delay_an... | 225          |
+|    episode_pnl                       | 4.14         |
+|    first_trade_is_ny_open_rate       | 0            |
+|    first_trade_matches_intent_rate   | 0.333        |
+|    first_trade_pnl                   | 0.273        |
+|    first_trade_win_rate              | 0.583        |
+|    ny_open_trade_rate                | 0            |
+|    pnl_continuation_days             | 5.74         |
+|    pnl_sweep_high_days               | 0            |
+|    pnl_sweep_low_days                | 0            |
+|    trades_per_episode                | 0.64         |
+|    win_rate                          | 0.917        |
+|    win_rate_continuation             | 0.306        |
+|    win_rate_sweep_days               | 0            |
+| train/                               |              |
+|    approx_kl                         | 0.0033726483 |
+|    clip_fraction                     | 0.0148       |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.0176      |
+|    explained_variance                | 0.707        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0284       |
+|    n_updates                         | 9310         |
+|    policy_gradient_loss              | -0.000802    |
+|    value_loss                        | 0.105        |
+| validation/                          |              |
+|    acceptance_passed                 | 0            |
+|    avg_first_trade_duration_min      | 173          |
+|    avg_first_trade_entry_delay_an... | 115          |
+|    first_trade_is_ny_open_rate       | 0.444        |
+|    first_trade_matches_intent_rate   | 0.444        |
+|    first_trade_win_rate              | 81.5         |
+|    ny_open_first_trade_win_rate      | 8.33         |
+|    ny_open_trade_rate                | 0.104        |
+|    pnl_continuation_days             | 0.159        |
+|    pnl_sweep_low_days                | 0.299        |
+|    profit_factor                     | 0.505        |
+|    trades_per_episode                | 0.426        |
+|    win_rate                          | 22.4         |
+|    win_rate_continuation             | 8.43         |
+|    win_rate_sweep_days               | 34.4         |
+-------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.983        |
+| session/                             |              |
+|    london_range_pts                  | 40.9         |
+| time/                                |              |
+|    fps                               | 58           |
+|    iterations                        | 10           |
+|    time_elapsed                      | 1411         |
+|    total_timesteps                   | 1981920      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 174          |
+|    avg_first_trade_entry_delay_an... | 165          |
+|    episode_pnl                       | 1.75         |
+|    first_trade_is_ny_open_rate       | 0.0588       |
+|    first_trade_matches_intent_rate   | 0.353        |
+|    first_trade_pnl                   | 3.86         |
+|    first_trade_win_rate              | 0.882        |
+|    ny_open_trade_rate                | 0.02         |
+|    pnl_continuation_days             | 1.41         |
+|    pnl_sweep_high_days               | 5.5          |
+|    pnl_sweep_low_days                | 1.88         |
+|    trades_per_episode                | 0.64         |
+|    win_rate                          | 0.765        |
+|    win_rate_continuation             | 0.216        |
+|    win_rate_sweep_days               | 0.385        |
+| train/                               |              |
+|    approx_kl                         | 0.0020330227 |
+|    clip_fraction                     | 0.00771      |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.0106      |
+|    explained_variance                | 0.66         |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0175       |
+|    n_updates                         | 9320         |
+|    policy_gradient_loss              | -0.000952    |
+|    value_loss                        | 0.118        |
+| validation/                          |              |
+|    acceptance_passed                 | 0            |
+|    avg_first_trade_duration_min      | 191          |
+|    avg_first_trade_entry_delay_an... | 104          |
+|    first_trade_is_ny_open_rate       | 0.444        |
+|    first_trade_matches_intent_rate   | 0.519        |
+|    first_trade_win_rate              | 85.2         |
+|    ny_open_first_trade_win_rate      | 8.33         |
+|    ny_open_trade_rate                | 0.104        |
+|    pnl_continuation_days             | 0.217        |
+|    pnl_sweep_low_days                | 1.39         |
+|    profit_factor                     | 0.398        |
+|    trades_per_episode                | 0.417        |
+|    win_rate                          | 18.8         |
+|    win_rate_continuation             | 9.64         |
+|    win_rate_sweep_days               | 31.2         |
+-------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.987        |
+| session/                             |              |
+|    london_range_pts                  | 26.3         |
+| time/                                |              |
+|    fps                               | 57           |
+|    iterations                        | 11           |
+|    time_elapsed                      | 1563         |
+|    total_timesteps                   | 1990112      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 164          |
+|    avg_first_trade_entry_delay_an... | 177          |
+|    episode_pnl                       | -1.18        |
+|    first_trade_is_ny_open_rate       | 0.188        |
+|    first_trade_matches_intent_rate   | 0.688        |
+|    first_trade_pnl                   | -0.143       |
+|    first_trade_win_rate              | 0.562        |
+|    ny_open_trade_rate                | 0.06         |
+|    pnl_continuation_days             | -0.405       |
+|    pnl_sweep_high_days               | -2.63        |
+|    pnl_sweep_low_days                | -6.71        |
+|    trades_per_episode                | 0.64         |
+|    win_rate                          | 0.375        |
+|    win_rate_continuation             | 0.0909       |
+|    win_rate_sweep_days               | 0.176        |
+| train/                               |              |
+|    approx_kl                         | 0.0040017446 |
+|    clip_fraction                     | 0.00908      |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.00977     |
+|    explained_variance                | 0.799        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0721       |
+|    n_updates                         | 9330         |
+|    policy_gradient_loss              | -0.00275     |
+|    value_loss                        | 0.169        |
+| validation/                          |              |
+|    acceptance_passed                 | 0            |
+|    avg_first_trade_duration_min      | 211          |
+|    avg_first_trade_entry_delay_an... | 112          |
+|    first_trade_is_ny_open_rate       | 0.385        |
+|    first_trade_matches_intent_rate   | 0.462        |
+|    first_trade_win_rate              | 80.8         |
+|    ny_open_first_trade_win_rate      | 10           |
+|    ny_open_trade_rate                | 0.087        |
+|    pnl_continuation_days             | 0.366        |
+|    pnl_sweep_low_days                | 1.04         |
+|    profit_factor                     | 0.488        |
+|    trades_per_episode                | 0.409        |
+|    win_rate                          | 23.4         |
+|    win_rate_continuation             | 9.64         |
+|    win_rate_sweep_days               | 31.2         |
+-------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.985        |
+| session/                             |              |
+|    london_range_pts                  | 16.8         |
+| time/                                |              |
+|    fps                               | 60           |
+|    iterations                        | 12           |
+|    time_elapsed                      | 1614         |
+|    total_timesteps                   | 1998304      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 160          |
+|    avg_first_trade_entry_delay_an... | 152          |
+|    episode_pnl                       | 2.13         |
+|    first_trade_is_ny_open_rate       | 0.25         |
+|    first_trade_matches_intent_rate   | 0.5          |
+|    first_trade_pnl                   | 3.78         |
+|    first_trade_win_rate              | 0.917        |
+|    ny_open_trade_rate                | 0.06         |
+|    pnl_continuation_days             | 1.78         |
+|    pnl_sweep_high_days               | 1.79         |
+|    pnl_sweep_low_days                | 3.75         |
+|    trades_per_episode                | 0.46         |
+|    win_rate                          | 0.833        |
+|    win_rate_continuation             | 0.125        |
+|    win_rate_sweep_days               | 0.333        |
+| train/                               |              |
+|    approx_kl                         | 0.0038432062 |
+|    clip_fraction                     | 0.00796      |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.00878     |
+|    explained_variance                | 0.853        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0175       |
+|    n_updates                         | 9340         |
+|    policy_gradient_loss              | -0.00212     |
+|    value_loss                        | 0.14         |
+-------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.984        |
+| session/                             |              |
+|    london_range_pts                  | 23.9         |
+| time/                                |              |
+|    fps                               | 61           |
+|    iterations                        | 13           |
+|    time_elapsed                      | 1730         |
+|    total_timesteps                   | 2006496      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 220          |
+|    avg_first_trade_entry_delay_an... | 124          |
+|    episode_pnl                       | 1.24         |
+|    first_trade_is_ny_open_rate       | 0.25         |
+|    first_trade_matches_intent_rate   | 0.833        |
+|    first_trade_pnl                   | 2.4          |
+|    first_trade_win_rate              | 0.75         |
+|    ny_open_trade_rate                | 0.06         |
+|    pnl_continuation_days             | 1.24         |
+|    pnl_sweep_high_days               | 0            |
+|    pnl_sweep_low_days                | 2.02         |
+|    trades_per_episode                | 0.46         |
+|    win_rate                          | 0.75         |
+|    win_rate_continuation             | 0.189        |
+|    win_rate_sweep_days               | 0.154        |
+| train/                               |              |
+|    approx_kl                         | 0.0039664954 |
+|    clip_fraction                     | 0.00814      |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.00931     |
+|    explained_variance                | 0.883        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0363       |
+|    n_updates                         | 9350         |
+|    policy_gradient_loss              | -0.0014      |
+|    value_loss                        | 0.127        |
+| validation/                          |              |
+|    acceptance_passed                 | 0            |
+|    avg_first_trade_duration_min      | 195          |
+|    avg_first_trade_entry_delay_an... | 100          |
+|    first_trade_is_ny_open_rate       | 0.481        |
+|    first_trade_matches_intent_rate   | 0.519        |
+|    first_trade_win_rate              | 85.2         |
+|    ny_open_first_trade_win_rate      | 7.69         |
+|    ny_open_trade_rate                | 0.113        |
+|    pnl_continuation_days             | -0.0241      |
+|    pnl_sweep_low_days                | 5.15         |
+|    profit_factor                     | 0.696        |
+|    trades_per_episode                | 0.409        |
+|    win_rate                          | 25.5         |
+|    win_rate_continuation             | 8.43         |
+|    win_rate_sweep_days               | 43.8         |
+-------------------------------------------------------
+-----------------------------------------------------
+| policy/                              |            |
+|    ent_coef                          | 0.04       |
+|    hold_rate_500                     | 0.978      |
+| session/                             |            |
+|    london_range_pts                  | 27.2       |
+| time/                                |            |
+|    fps                               | 63         |
+|    iterations                        | 14         |
+|    time_elapsed                      | 1811       |
+|    total_timesteps                   | 2014688    |
+| trade/                               |            |
+|    avg_first_trade_duration_min      | 189        |
+|    avg_first_trade_entry_delay_an... | 95.4       |
+|    episode_pnl                       | -0.378     |
+|    first_trade_is_ny_open_rate       | 0.357      |
+|    first_trade_matches_intent_rate   | 0.286      |
+|    first_trade_pnl                   | -1.49      |
+|    first_trade_win_rate              | 0.643      |
+|    ny_open_trade_rate                | 0.1        |
+|    pnl_continuation_days             | 0.192      |
+|    pnl_sweep_high_days               | 0.511      |
+|    pnl_sweep_low_days                | -6.14      |
+|    trades_per_episode                | 0.5        |
+|    win_rate                          | 0.5        |
+|    win_rate_continuation             | 0.171      |
+|    win_rate_sweep_days               | 0.0667     |
+| train/                               |            |
+|    approx_kl                         | 0.00441724 |
+|    clip_fraction                     | 0.0078     |
+|    clip_range                        | 0.2        |
+|    entropy_loss                      | -0.00725   |
+|    explained_variance                | 0.851      |
+|    learning_rate                     | 0.0003     |
+|    loss                              | 0.0384     |
+|    n_updates                         | 9360       |
+|    policy_gradient_loss              | -0.00221   |
+|    value_loss                        | 0.144      |
+| validation/                          |            |
+|    acceptance_passed                 | 0          |
+|    avg_first_trade_duration_min      | 189        |
+|    avg_first_trade_entry_delay_an... | 106        |
+|    first_trade_is_ny_open_rate       | 0.407      |
+|    first_trade_matches_intent_rate   | 0.519      |
+|    first_trade_win_rate              | 77.8       |
+|    ny_open_first_trade_win_rate      | 9.09       |
+|    ny_open_trade_rate                | 0.0957     |
+|    pnl_continuation_days             | 0.11       |
+|    pnl_sweep_low_days                | 1.68       |
+|    profit_factor                     | 0.327      |
+|    trades_per_episode                | 0.426      |
+|    win_rate                          | 18.4       |
+|    win_rate_continuation             | 8.43       |
+|    win_rate_sweep_days               | 34.4       |
+-----------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.995        |
+| session/                             |              |
+|    london_range_pts                  | 33.4         |
+| time/                                |              |
+|    fps                               | 62           |
+|    iterations                        | 15           |
+|    time_elapsed                      | 1980         |
+|    total_timesteps                   | 2022880      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 159          |
+|    avg_first_trade_entry_delay_an... | 122          |
+|    episode_pnl                       | 0.182        |
+|    first_trade_is_ny_open_rate       | 0.357        |
+|    first_trade_matches_intent_rate   | 0.643        |
+|    first_trade_pnl                   | 1.06         |
+|    first_trade_win_rate              | 0.714        |
+|    ny_open_trade_rate                | 0.1          |
+|    pnl_continuation_days             | 0.234        |
+|    pnl_sweep_high_days               | -0.0399      |
+|    pnl_sweep_low_days                | 0.271        |
+|    trades_per_episode                | 0.58         |
+|    win_rate                          | 0.429        |
+|    win_rate_continuation             | 0.107        |
+|    win_rate_sweep_days               | 0.136        |
+| train/                               |              |
+|    approx_kl                         | 0.0063663847 |
+|    clip_fraction                     | 0.00726      |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.00631     |
+|    explained_variance                | 0.872        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0343       |
+|    n_updates                         | 9370         |
+|    policy_gradient_loss              | -0.00157     |
+|    value_loss                        | 0.163        |
+| validation/                          |              |
+|    acceptance_passed                 | 0            |
+|    avg_first_trade_duration_min      | 215          |
+|    avg_first_trade_entry_delay_an... | 103          |
+|    first_trade_is_ny_open_rate       | 0.444        |
+|    first_trade_matches_intent_rate   | 0.593        |
+|    first_trade_win_rate              | 81.5         |
+|    ny_open_first_trade_win_rate      | 16.7         |
+|    ny_open_trade_rate                | 0.104        |
+|    pnl_continuation_days             | 0.576        |
+|    pnl_sweep_low_days                | 3.52         |
+|    profit_factor                     | 0.469        |
+|    trades_per_episode                | 0.4          |
+|    win_rate                          | 23.9         |
+|    win_rate_continuation             | 9.64         |
+|    win_rate_sweep_days               | 37.5         |
+-------------------------------------------------------
+------------------------------------------------------
+| policy/                              |             |
+|    ent_coef                          | 0.04        |
+|    hold_rate_500                     | 0.985       |
+| session/                             |             |
+|    london_range_pts                  | 34.3        |
+| time/                                |             |
+|    fps                               | 63          |
+|    iterations                        | 16          |
+|    time_elapsed                      | 2071        |
+|    total_timesteps                   | 2031072     |
+| trade/                               |             |
+|    avg_first_trade_duration_min      | 208         |
+|    avg_first_trade_entry_delay_an... | 78.2        |
+|    episode_pnl                       | -0.162      |
+|    first_trade_is_ny_open_rate       | 0.571       |
+|    first_trade_matches_intent_rate   | 0.571       |
+|    first_trade_pnl                   | 1.28        |
+|    first_trade_win_rate              | 0.857       |
+|    ny_open_trade_rate                | 0.16        |
+|    pnl_continuation_days             | 0.818       |
+|    pnl_sweep_high_days               | -3.48       |
+|    pnl_sweep_low_days                | -0.33       |
+|    trades_per_episode                | 0.54        |
+|    win_rate                          | 0.571       |
+|    win_rate_continuation             | 0.156       |
+|    win_rate_sweep_days               | 0.167       |
+| train/                               |             |
+|    approx_kl                         | 0.002962274 |
+|    clip_fraction                     | 0.00615     |
+|    clip_range                        | 0.2         |
+|    entropy_loss                      | -0.00576    |
+|    explained_variance                | 0.88        |
+|    learning_rate                     | 0.0003      |
+|    loss                              | 0.065       |
+|    n_updates                         | 9380        |
+|    policy_gradient_loss              | -0.00123    |
+|    value_loss                        | 0.129       |
+| validation/                          |             |
+|    acceptance_passed                 | 0           |
+|    avg_first_trade_duration_min      | 179         |
+|    avg_first_trade_entry_delay_an... | 93.3        |
+|    first_trade_is_ny_open_rate       | 0.556       |
+|    first_trade_matches_intent_rate   | 0.593       |
+|    first_trade_win_rate              | 88.9        |
+|    ny_open_first_trade_win_rate      | 13.3        |
+|    ny_open_trade_rate                | 0.13        |
+|    pnl_continuation_days             | 0.639       |
+|    pnl_sweep_low_days                | 4.33        |
+|    profit_factor                     | 0.656       |
+|    trades_per_episode                | 0.426       |
+|    win_rate                          | 20.4        |
+|    win_rate_continuation             | 9.64        |
+|    win_rate_sweep_days               | 37.5        |
+------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.985        |
+| session/                             |              |
+|    london_range_pts                  | 27.9         |
+| time/                                |              |
+|    fps                               | 65           |
+|    iterations                        | 17           |
+|    time_elapsed                      | 2119         |
+|    total_timesteps                   | 2039264      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 143          |
+|    avg_first_trade_entry_delay_an... | 158          |
+|    episode_pnl                       | 1.57         |
+|    first_trade_is_ny_open_rate       | 0.2          |
+|    first_trade_matches_intent_rate   | 0.4          |
+|    first_trade_pnl                   | 3.12         |
+|    first_trade_win_rate              | 0.933        |
+|    ny_open_trade_rate                | 0.06         |
+|    pnl_continuation_days             | 1.53         |
+|    pnl_sweep_high_days               | 2.53         |
+|    pnl_sweep_low_days                | 0.269        |
+|    trades_per_episode                | 0.66         |
+|    win_rate                          | 0.8          |
+|    win_rate_continuation             | 0.188        |
+|    win_rate_sweep_days               | 0.333        |
+| train/                               |              |
+|    approx_kl                         | 0.0133428415 |
+|    clip_fraction                     | 0.00774      |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.0073      |
+|    explained_variance                | 0.886        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0246       |
+|    n_updates                         | 9390         |
+|    policy_gradient_loss              | -0.000838    |
+|    value_loss                        | 0.141        |
+-------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.981        |
+| session/                             |              |
+|    london_range_pts                  | 37.7         |
+| time/                                |              |
+|    fps                               | 67           |
+|    iterations                        | 18           |
+|    time_elapsed                      | 2200         |
+|    total_timesteps                   | 2047456      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 112          |
+|    avg_first_trade_entry_delay_an... | 123          |
+|    episode_pnl                       | 2.27         |
+|    first_trade_is_ny_open_rate       | 0.455        |
+|    first_trade_matches_intent_rate   | 0.545        |
+|    first_trade_pnl                   | 3.94         |
+|    first_trade_win_rate              | 1            |
+|    ny_open_trade_rate                | 0.1          |
+|    pnl_continuation_days             | 1.66         |
+|    pnl_sweep_high_days               | 4.18         |
+|    pnl_sweep_low_days                | 2            |
+|    trades_per_episode                | 0.46         |
+|    win_rate                          | 0.909        |
+|    win_rate_continuation             | 0.161        |
+|    win_rate_sweep_days               | 0.263        |
+| train/                               |              |
+|    approx_kl                         | 0.0023547444 |
+|    clip_fraction                     | 0.00497      |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.00482     |
+|    explained_variance                | 0.902        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0347       |
+|    n_updates                         | 9400         |
+|    policy_gradient_loss              | -0.000692    |
+|    value_loss                        | 0.119        |
+| validation/                          |              |
+|    acceptance_passed                 | 0            |
+|    avg_first_trade_duration_min      | 193          |
+|    avg_first_trade_entry_delay_an... | 102          |
+|    first_trade_is_ny_open_rate       | 0.462        |
+|    first_trade_matches_intent_rate   | 0.615        |
+|    first_trade_win_rate              | 88.5         |
+|    ny_open_first_trade_win_rate      | 8.33         |
+|    ny_open_trade_rate                | 0.104        |
+|    pnl_continuation_days             | 0.313        |
+|    pnl_sweep_low_days                | 4.68         |
+|    profit_factor                     | 0.536        |
+|    trades_per_episode                | 0.4          |
+|    win_rate                          | 23.9         |
+|    win_rate_continuation             | 8.43         |
+|    win_rate_sweep_days               | 34.4         |
+-------------------------------------------------------
+------------------------------------------------------
+| policy/                              |             |
+|    ent_coef                          | 0.04        |
+|    hold_rate_500                     | 0.992       |
+| session/                             |             |
+|    london_range_pts                  | 17.2        |
+| time/                                |             |
+|    fps                               | 68          |
+|    iterations                        | 19          |
+|    time_elapsed                      | 2288        |
+|    total_timesteps                   | 2055648     |
+| trade/                               |             |
+|    avg_first_trade_duration_min      | 156         |
+|    avg_first_trade_entry_delay_an... | 86.2        |
+|    episode_pnl                       | 0.976       |
+|    first_trade_is_ny_open_rate       | 0.417       |
+|    first_trade_matches_intent_rate   | 0.75        |
+|    first_trade_pnl                   | 2.87        |
+|    first_trade_win_rate              | 1           |
+|    ny_open_trade_rate                | 0.1         |
+|    pnl_continuation_days             | 1.11        |
+|    pnl_sweep_high_days               | 2.08        |
+|    pnl_sweep_low_days                | -0.461      |
+|    trades_per_episode                | 0.54        |
+|    win_rate                          | 0.75        |
+|    win_rate_continuation             | 0.214       |
+|    win_rate_sweep_days               | 0.136       |
+| train/                               |             |
+|    approx_kl                         | 0.005132055 |
+|    clip_fraction                     | 0.0071      |
+|    clip_range                        | 0.2         |
+|    entropy_loss                      | -0.00646    |
+|    explained_variance                | 0.906       |
+|    learning_rate                     | 0.0003      |
+|    loss                              | 0.0753      |
+|    n_updates                         | 9410        |
+|    policy_gradient_loss              | -0.00103    |
+|    value_loss                        | 0.122       |
+| validation/                          |             |
+|    acceptance_passed                 | 0           |
+|    avg_first_trade_duration_min      | 174         |
+|    avg_first_trade_entry_delay_an... | 102         |
+|    first_trade_is_ny_open_rate       | 0.5         |
+|    first_trade_matches_intent_rate   | 0.615       |
+|    first_trade_win_rate              | 88.5        |
+|    ny_open_first_trade_win_rate      | 7.69        |
+|    ny_open_trade_rate                | 0.113       |
+|    pnl_continuation_days             | 0.296       |
+|    pnl_sweep_low_days                | 3.4         |
+|    profit_factor                     | 0.472       |
+|    trades_per_episode                | 0.417       |
+|    win_rate                          | 20.8        |
+|    win_rate_continuation             | 8.43        |
+|    win_rate_sweep_days               | 28.1        |
+------------------------------------------------------
+------------------------------------------------------
+| policy/                              |             |
+|    ent_coef                          | 0.04        |
+|    hold_rate_500                     | 0.984       |
+| session/                             |             |
+|    london_range_pts                  | 24.1        |
+| time/                                |             |
+|    fps                               | 69          |
+|    iterations                        | 20          |
+|    time_elapsed                      | 2365        |
+|    total_timesteps                   | 2063840     |
+| trade/                               |             |
+|    avg_first_trade_duration_min      | 240         |
+|    avg_first_trade_entry_delay_an... | 69.6        |
+|    episode_pnl                       | 1.05        |
+|    first_trade_is_ny_open_rate       | 0.786       |
+|    first_trade_matches_intent_rate   | 0.429       |
+|    first_trade_pnl                   | 0.14        |
+|    first_trade_win_rate              | 0.643       |
+|    ny_open_trade_rate                | 0.22        |
+|    pnl_continuation_days             | 1.23        |
+|    pnl_sweep_high_days               | -0.913      |
+|    pnl_sweep_low_days                | 2.38        |
+|    trades_per_episode                | 0.58        |
+|    win_rate                          | 0.714       |
+|    win_rate_continuation             | 0.143       |
+|    win_rate_sweep_days               | 0.333       |
+| train/                               |             |
+|    approx_kl                         | 0.009963017 |
+|    clip_fraction                     | 0.00454     |
+|    clip_range                        | 0.2         |
+|    entropy_loss                      | -0.00487    |
+|    explained_variance                | 0.917       |
+|    learning_rate                     | 0.0003      |
+|    loss                              | 0.0276      |
+|    n_updates                         | 9420        |
+|    policy_gradient_loss              | -0.00142    |
+|    value_loss                        | 0.102       |
+| validation/                          |             |
+|    acceptance_passed                 | 0           |
+|    avg_first_trade_duration_min      | 197         |
+|    avg_first_trade_entry_delay_an... | 101         |
+|    first_trade_is_ny_open_rate       | 0.5         |
+|    first_trade_matches_intent_rate   | 0.423       |
+|    first_trade_win_rate              | 76.9        |
+|    ny_open_first_trade_win_rate      | 7.69        |
+|    ny_open_trade_rate                | 0.113       |
+|    pnl_continuation_days             | 0.173       |
+|    pnl_sweep_low_days                | 3.47        |
+|    profit_factor                     | 0.4         |
+|    trades_per_episode                | 0.417       |
+|    win_rate                          | 18.8        |
+|    win_rate_continuation             | 9.64        |
+|    win_rate_sweep_days               | 31.2        |
+------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.978        |
+| session/                             |              |
+|    london_range_pts                  | 16.8         |
+| time/                                |              |
+|    fps                               | 69           |
+|    iterations                        | 21           |
+|    time_elapsed                      | 2459         |
+|    total_timesteps                   | 2072032      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 135          |
+|    avg_first_trade_entry_delay_an... | 114          |
+|    episode_pnl                       | -0.563       |
+|    first_trade_is_ny_open_rate       | 0.5          |
+|    first_trade_matches_intent_rate   | 0.875        |
+|    first_trade_pnl                   | 1.63         |
+|    first_trade_win_rate              | 0.75         |
+|    ny_open_trade_rate                | 0.08         |
+|    pnl_continuation_days             | 0.158        |
+|    pnl_sweep_high_days               | -2.41        |
+|    pnl_sweep_low_days                | 0            |
+|    trades_per_episode                | 0.4          |
+|    win_rate                          | 0.375        |
+|    win_rate_continuation             | 0.0571       |
+|    win_rate_sweep_days               | 0.0667       |
+| train/                               |              |
+|    approx_kl                         | 0.0024114428 |
+|    clip_fraction                     | 0.0063       |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.00499     |
+|    explained_variance                | 0.91         |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0295       |
+|    n_updates                         | 9430         |
+|    policy_gradient_loss              | -0.000737    |
+|    value_loss                        | 0.105        |
+| validation/                          |              |
+|    acceptance_passed                 | 0            |
+|    avg_first_trade_duration_min      | 173          |
+|    avg_first_trade_entry_delay_an... | 105          |
+|    first_trade_is_ny_open_rate       | 0.48         |
+|    first_trade_matches_intent_rate   | 0.48         |
+|    first_trade_win_rate              | 80           |
+|    ny_open_first_trade_win_rate      | 8.33         |
+|    ny_open_trade_rate                | 0.104        |
+|    pnl_continuation_days             | 0.173        |
+|    pnl_sweep_low_days                | 3.65         |
+|    profit_factor                     | 0.514        |
+|    trades_per_episode                | 0.417        |
+|    win_rate                          | 22.9         |
+|    win_rate_continuation             | 8.43         |
+|    win_rate_sweep_days               | 31.2         |
+-------------------------------------------------------
+------------------------------------------------------
+| policy/                              |             |
+|    ent_coef                          | 0.04        |
+|    hold_rate_500                     | 0.975       |
+| session/                             |             |
+|    london_range_pts                  | 27.3        |
+| time/                                |             |
+|    fps                               | 70          |
+|    iterations                        | 22          |
+|    time_elapsed                      | 2560        |
+|    total_timesteps                   | 2080224     |
+| trade/                               |             |
+|    avg_first_trade_duration_min      | 184         |
+|    avg_first_trade_entry_delay_an... | 109         |
+|    episode_pnl                       | 0.878       |
+|    first_trade_is_ny_open_rate       | 0.533       |
+|    first_trade_matches_intent_rate   | 0.6         |
+|    first_trade_pnl                   | 3.55        |
+|    first_trade_win_rate              | 0.933       |
+|    ny_open_trade_rate                | 0.16        |
+|    pnl_continuation_days             | 0.758       |
+|    pnl_sweep_high_days               | -0.369      |
+|    pnl_sweep_low_days                | 3.07        |
+|    trades_per_episode                | 0.58        |
+|    win_rate                          | 0.667       |
+|    win_rate_continuation             | 0.176       |
+|    win_rate_sweep_days               | 0.25        |
+| train/                               |             |
+|    approx_kl                         | 0.004311948 |
+|    clip_fraction                     | 0.00421     |
+|    clip_range                        | 0.2         |
+|    entropy_loss                      | -0.00393    |
+|    explained_variance                | 0.927       |
+|    learning_rate                     | 0.0003      |
+|    loss                              | 0.043       |
+|    n_updates                         | 9440        |
+|    policy_gradient_loss              | -0.000639   |
+|    value_loss                        | 0.0961      |
+| validation/                          |             |
+|    acceptance_passed                 | 0           |
+|    avg_first_trade_duration_min      | 186         |
+|    avg_first_trade_entry_delay_an... | 92.8        |
+|    first_trade_is_ny_open_rate       | 0.556       |
+|    first_trade_matches_intent_rate   | 0.481       |
+|    first_trade_win_rate              | 85.2        |
+|    ny_open_first_trade_win_rate      | 6.67        |
+|    ny_open_trade_rate                | 0.13        |
+|    pnl_continuation_days             | 0.173       |
+|    pnl_sweep_low_days                | 5.34        |
+|    profit_factor                     | 0.511       |
+|    trades_per_episode                | 0.417       |
+|    win_rate                          | 22.9        |
+|    win_rate_continuation             | 8.43        |
+|    win_rate_sweep_days               | 37.5        |
+------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.981        |
+| session/                             |              |
+|    london_range_pts                  | 63.7         |
+| time/                                |              |
+|    fps                               | 71           |
+|    iterations                        | 23           |
+|    time_elapsed                      | 2626         |
+|    total_timesteps                   | 2088416      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 257          |
+|    avg_first_trade_entry_delay_an... | 72.9         |
+|    episode_pnl                       | 0.645        |
+|    first_trade_is_ny_open_rate       | 0.643        |
+|    first_trade_matches_intent_rate   | 0.5          |
+|    first_trade_pnl                   | 0.499        |
+|    first_trade_win_rate              | 0.714        |
+|    ny_open_trade_rate                | 0.18         |
+|    pnl_continuation_days             | 0.606        |
+|    pnl_sweep_high_days               | -1.31        |
+|    pnl_sweep_low_days                | 2.52         |
+|    trades_per_episode                | 0.5          |
+|    win_rate                          | 0.643        |
+|    win_rate_continuation             | 0.152        |
+|    win_rate_sweep_days               | 0.235        |
+| train/                               |              |
+|    approx_kl                         | 0.0026277467 |
+|    clip_fraction                     | 0.00621      |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.0047      |
+|    explained_variance                | 0.903        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0344       |
+|    n_updates                         | 9450         |
+|    policy_gradient_loss              | -0.00186     |
+|    value_loss                        | 0.123        |
+-------------------------------------------------------
+-----------------------------------------------------
+| policy/                              |            |
+|    ent_coef                          | 0.04       |
+|    hold_rate_500                     | 0.976      |
+| session/                             |            |
+|    london_range_pts                  | 28.8       |
+| time/                                |            |
+|    fps                               | 72         |
+|    iterations                        | 24         |
+|    time_elapsed                      | 2711       |
+|    total_timesteps                   | 2096608    |
+| trade/                               |            |
+|    avg_first_trade_duration_min      | 194        |
+|    avg_first_trade_entry_delay_an... | 68.8       |
+|    episode_pnl                       | 1.26       |
+|    first_trade_is_ny_open_rate       | 0.412      |
+|    first_trade_matches_intent_rate   | 0.706      |
+|    first_trade_pnl                   | 4.15       |
+|    first_trade_win_rate              | 0.941      |
+|    ny_open_trade_rate                | 0.14       |
+|    pnl_continuation_days             | 1.47       |
+|    pnl_sweep_high_days               | -3.27      |
+|    pnl_sweep_low_days                | 5.27       |
+|    trades_per_episode                | 0.66       |
+|    win_rate                          | 0.706      |
+|    win_rate_continuation             | 0.189      |
+|    win_rate_sweep_days               | 0.385      |
+| train/                               |            |
+|    approx_kl                         | 0.00744393 |
+|    clip_fraction                     | 0.00693    |
+|    clip_range                        | 0.2        |
+|    entropy_loss                      | -0.00523   |
+|    explained_variance                | 0.911      |
+|    learning_rate                     | 0.0003     |
+|    loss                              | 0.0293     |
+|    n_updates                         | 9460       |
+|    policy_gradient_loss              | -0.00148   |
+|    value_loss                        | 0.121      |
+| validation/                          |            |
+|    acceptance_passed                 | 0          |
+|    avg_first_trade_duration_min      | 209        |
+|    avg_first_trade_entry_delay_an... | 94.6       |
+|    first_trade_is_ny_open_rate       | 0.577      |
+|    first_trade_matches_intent_rate   | 0.538      |
+|    first_trade_win_rate              | 84.6       |
+|    ny_open_first_trade_win_rate      | 6.67       |
+|    ny_open_trade_rate                | 0.13       |
+|    pnl_continuation_days             | 0.496      |
+|    pnl_sweep_low_days                | 5.23       |
+|    profit_factor                     | 0.596      |
+|    trades_per_episode                | 0.417      |
+|    win_rate                          | 22.9       |
+|    win_rate_continuation             | 9.64       |
+|    win_rate_sweep_days               | 34.4       |
+-----------------------------------------------------
+Eval num_timesteps=2100000, episode_reward=-6.50 +/- 0.40
+Episode length: 35.00 +/- 0.00
+------------------------------------------------------
+| eval/                                |             |
+|    mean_ep_length                    | 35          |
+|    mean_reward                       | -6.5        |
+| policy/                              |             |
+|    ent_coef                          | 0.04        |
+|    hold_rate_500                     | 0.978       |
+| session/                             |             |
+|    london_range_pts                  | 35.4        |
+| time/                                |             |
+|    total_timesteps                   | 2100000     |
+| trade/                               |             |
+|    avg_first_trade_duration_min      | 157         |
+|    avg_first_trade_entry_delay_an... | 41.5        |
+|    episode_pnl                       | 0.298       |
+|    first_trade_is_ny_open_rate       | 0.846       |
+|    first_trade_matches_intent_rate   | 0.615       |
+|    first_trade_pnl                   | 2.03        |
+|    first_trade_win_rate              | 0.923       |
+|    ny_open_trade_rate                | 0.22        |
+|    pnl_continuation_days             | 0.701       |
+|    pnl_sweep_high_days               | 0.695       |
+|    pnl_sweep_low_days                | -0.733      |
+|    trades_per_episode                | 0.66        |
+|    win_rate                          | 0.692       |
+|    win_rate_continuation             | 0.148       |
+|    win_rate_sweep_days               | 0.217       |
+| train/                               |             |
+|    approx_kl                         | 0.003741374 |
+|    clip_fraction                     | 0.00439     |
+|    clip_range                        | 0.2         |
+|    entropy_loss                      | -0.0038     |
+|    explained_variance                | 0.93        |
+|    learning_rate                     | 0.0003      |
+|    loss                              | 0.0679      |
+|    n_updates                         | 9470        |
+|    policy_gradient_loss              | 0.000181    |
+|    value_loss                        | 0.0928      |
+| validation/                          |             |
+|    acceptance_passed                 | 0           |
+|    avg_first_trade_duration_min      | 188         |
+|    avg_first_trade_entry_delay_an... | 86.1        |
+|    first_trade_is_ny_open_rate       | 0.556       |
+|    first_trade_matches_intent_rate   | 0.481       |
+|    first_trade_win_rate              | 85.2        |
+|    ny_open_first_trade_win_rate      | 6.67        |
+|    ny_open_trade_rate                | 0.13        |
+|    pnl_continuation_days             | 0.0548      |
+|    pnl_sweep_low_days                | 5.23        |
+|    profit_factor                     | 0.49        |
+|    trades_per_episode                | 0.435       |
+|    win_rate                          | 22          |
+|    win_rate_continuation             | 9.64        |
+|    win_rate_sweep_days               | 37.5        |
+------------------------------------------------------
+New best mean reward!
+----------------------------------
+| session/            |          |
+|    london_range_pts | 44.2     |
+| time/               |          |
+|    fps              | 72       |
+|    iterations       | 25       |
+|    time_elapsed     | 2830     |
+|    total_timesteps  | 2104800  |
+----------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.993        |
+| session/                             |              |
+|    london_range_pts                  | 40.7         |
+| time/                                |              |
+|    fps                               | 71           |
+|    iterations                        | 26           |
+|    time_elapsed                      | 2981         |
+|    total_timesteps                   | 2112992      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 256          |
+|    avg_first_trade_entry_delay_an... | 118          |
+|    episode_pnl                       | 0.211        |
+|    first_trade_is_ny_open_rate       | 0.5          |
+|    first_trade_matches_intent_rate   | 0.7          |
+|    first_trade_pnl                   | 2.49         |
+|    first_trade_win_rate              | 0.8          |
+|    ny_open_trade_rate                | 0.1          |
+|    pnl_continuation_days             | 0.512        |
+|    pnl_sweep_high_days               | -1.73        |
+|    pnl_sweep_low_days                | -0.737       |
+|    trades_per_episode                | 0.36         |
+|    win_rate                          | 0.7          |
+|    win_rate_continuation             | 0.143        |
+|    win_rate_sweep_days               | 0.133        |
+| train/                               |              |
+|    approx_kl                         | 0.0027016392 |
+|    clip_fraction                     | 0.00482      |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.00492     |
+|    explained_variance                | 0.929        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0514       |
+|    n_updates                         | 9480         |
+|    policy_gradient_loss              | -0.000929    |
+|    value_loss                        | 0.104        |
+| validation/                          |              |
+|    acceptance_passed                 | 0            |
+|    avg_first_trade_duration_min      | 202          |
+|    avg_first_trade_entry_delay_an... | 95.8         |
+|    first_trade_is_ny_open_rate       | 0.5          |
+|    first_trade_matches_intent_rate   | 0.538        |
+|    first_trade_win_rate              | 88.5         |
+|    ny_open_first_trade_win_rate      | 7.69         |
+|    ny_open_trade_rate                | 0.113        |
+|    pnl_continuation_days             | 0.565        |
+|    pnl_sweep_low_days                | 5.23         |
+|    profit_factor                     | 0.772        |
+|    trades_per_episode                | 0.417        |
+|    win_rate                          | 22.9         |
+|    win_rate_continuation             | 9.64         |
+|    win_rate_sweep_days               | 40.6         |
+-------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.986        |
+| session/                             |              |
+|    london_range_pts                  | 33.4         |
+| time/                                |              |
+|    fps                               | 70           |
+|    iterations                        | 27           |
+|    time_elapsed                      | 3116         |
+|    total_timesteps                   | 2121184      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 218          |
+|    avg_first_trade_entry_delay_an... | 97.5         |
+|    episode_pnl                       | 1.04         |
+|    first_trade_is_ny_open_rate       | 0.5          |
+|    first_trade_matches_intent_rate   | 0.562        |
+|    first_trade_pnl                   | 3.66         |
+|    first_trade_win_rate              | 0.875        |
+|    ny_open_trade_rate                | 0.16         |
+|    pnl_continuation_days             | 1.09         |
+|    pnl_sweep_high_days               | -0.438       |
+|    pnl_sweep_low_days                | 4.29         |
+|    trades_per_episode                | 0.54         |
+|    win_rate                          | 0.688        |
+|    win_rate_continuation             | 0.194        |
+|    win_rate_sweep_days               | 0.286        |
+| train/                               |              |
+|    approx_kl                         | 0.0022943115 |
+|    clip_fraction                     | 0.00448      |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.00396     |
+|    explained_variance                | 0.938        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.023        |
+|    n_updates                         | 9490         |
+|    policy_gradient_loss              | -0.000543    |
+|    value_loss                        | 0.0784       |
+| validation/                          |              |
+|    acceptance_passed                 | 0            |
+|    avg_first_trade_duration_min      | 207          |
+|    avg_first_trade_entry_delay_an... | 89.4         |
+|    first_trade_is_ny_open_rate       | 0.577        |
+|    first_trade_matches_intent_rate   | 0.577        |
+|    first_trade_win_rate              | 84.6         |
+|    ny_open_first_trade_win_rate      | 6.67         |
+|    ny_open_trade_rate                | 0.13         |
+|    pnl_continuation_days             | 0.562        |
+|    pnl_sweep_low_days                | 3.72         |
+|    profit_factor                     | 0.599        |
+|    trades_per_episode                | 0.426        |
+|    win_rate                          | 22.4         |
+|    win_rate_continuation             | 9.64         |
+|    win_rate_sweep_days               | 34.4         |
+-------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.982        |
+| session/                             |              |
+|    london_range_pts                  | 19.4         |
+| time/                                |              |
+|    fps                               | 71           |
+|    iterations                        | 28           |
+|    time_elapsed                      | 3213         |
+|    total_timesteps                   | 2129376      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 239          |
+|    avg_first_trade_entry_delay_an... | 43.1         |
+|    episode_pnl                       | 1.83         |
+|    first_trade_is_ny_open_rate       | 0.688        |
+|    first_trade_matches_intent_rate   | 0.688        |
+|    first_trade_pnl                   | 3.82         |
+|    first_trade_win_rate              | 0.938        |
+|    ny_open_trade_rate                | 0.22         |
+|    pnl_continuation_days             | 2.24         |
+|    pnl_sweep_high_days               | -2.61        |
+|    pnl_sweep_low_days                | 2.62         |
+|    trades_per_episode                | 0.58         |
+|    win_rate                          | 0.812        |
+|    win_rate_continuation             | 0.2          |
+|    win_rate_sweep_days               | 0.4          |
+| train/                               |              |
+|    approx_kl                         | 0.0015378324 |
+|    clip_fraction                     | 0.00505      |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.0038      |
+|    explained_variance                | 0.953        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0221       |
+|    n_updates                         | 9500         |
+|    policy_gradient_loss              | -0.000675    |
+|    value_loss                        | 0.0797       |
+-------------------------------------------------------
+------------------------------------------------------
+| policy/                              |             |
+|    ent_coef                          | 0.04        |
+|    hold_rate_500                     | 0.982       |
+| session/                             |             |
+|    london_range_pts                  | 19.3        |
+| time/                                |             |
+|    fps                               | 70          |
+|    iterations                        | 29          |
+|    time_elapsed                      | 3353        |
+|    total_timesteps                   | 2137568     |
+| trade/                               |             |
+|    avg_first_trade_duration_min      | 125         |
+|    avg_first_trade_entry_delay_an... | 79.3        |
+|    episode_pnl                       | 0.0539      |
+|    first_trade_is_ny_open_rate       | 0.571       |
+|    first_trade_matches_intent_rate   | 0.571       |
+|    first_trade_pnl                   | 1.96        |
+|    first_trade_win_rate              | 0.857       |
+|    ny_open_trade_rate                | 0.16        |
+|    pnl_continuation_days             | 0.947       |
+|    pnl_sweep_high_days               | -1.93       |
+|    pnl_sweep_low_days                | -5.37       |
+|    trades_per_episode                | 0.64        |
+|    win_rate                          | 0.714       |
+|    win_rate_continuation             | 0.152       |
+|    win_rate_sweep_days               | 0.294       |
+| train/                               |             |
+|    approx_kl                         | 0.015587167 |
+|    clip_fraction                     | 0.00446     |
+|    clip_range                        | 0.2         |
+|    entropy_loss                      | -0.00394    |
+|    explained_variance                | 0.941       |
+|    learning_rate                     | 0.0003      |
+|    loss                              | 0.0246      |
+|    n_updates                         | 9510        |
+|    policy_gradient_loss              | -0.000586   |
+|    value_loss                        | 0.0784      |
+| validation/                          |             |
+|    acceptance_passed                 | 0           |
+|    avg_first_trade_duration_min      | 213         |
+|    avg_first_trade_entry_delay_an... | 79.8        |
+|    first_trade_is_ny_open_rate       | 0.607       |
+|    first_trade_matches_intent_rate   | 0.571       |
+|    first_trade_win_rate              | 89.3        |
+|    ny_open_first_trade_win_rate      | 17.6        |
+|    ny_open_trade_rate                | 0.148       |
+|    pnl_continuation_days             | 0.646       |
+|    pnl_sweep_low_days                | 5.33        |
+|    profit_factor                     | 0.872       |
+|    trades_per_episode                | 0.426       |
+|    win_rate                          | 24.5        |
+|    win_rate_continuation             | 10.8        |
+|    win_rate_sweep_days               | 43.8        |
+------------------------------------------------------
+------------------------------------------------------
+| policy/                              |             |
+|    ent_coef                          | 0.04        |
+|    hold_rate_500                     | 0.989       |
+| session/                             |             |
+|    london_range_pts                  | 36.5        |
+| time/                                |             |
+|    fps                               | 70          |
+|    iterations                        | 30          |
+|    time_elapsed                      | 3475        |
+|    total_timesteps                   | 2145760     |
+| trade/                               |             |
+|    avg_first_trade_duration_min      | 179         |
+|    avg_first_trade_entry_delay_an... | 121         |
+|    episode_pnl                       | 0.233       |
+|    first_trade_is_ny_open_rate       | 0.462       |
+|    first_trade_matches_intent_rate   | 0.769       |
+|    first_trade_pnl                   | 1.2         |
+|    first_trade_win_rate              | 0.769       |
+|    ny_open_trade_rate                | 0.12        |
+|    pnl_continuation_days             | 0.0909      |
+|    pnl_sweep_high_days               | -1.6        |
+|    pnl_sweep_low_days                | 5.68        |
+|    trades_per_episode                | 0.52        |
+|    win_rate                          | 0.615       |
+|    win_rate_continuation             | 0.108       |
+|    win_rate_sweep_days               | 0.308       |
+| train/                               |             |
+|    approx_kl                         | 0.002840674 |
+|    clip_fraction                     | 0.00579     |
+|    clip_range                        | 0.2         |
+|    entropy_loss                      | -0.00437    |
+|    explained_variance                | 0.941       |
+|    learning_rate                     | 0.0003      |
+|    loss                              | 0.0299      |
+|    n_updates                         | 9520        |
+|    policy_gradient_loss              | -0.000858   |
+|    value_loss                        | 0.0801      |
+| validation/                          |             |
+|    acceptance_passed                 | 0           |
+|    avg_first_trade_duration_min      | 221         |
+|    avg_first_trade_entry_delay_an... | 83.9        |
+|    first_trade_is_ny_open_rate       | 0.593       |
+|    first_trade_matches_intent_rate   | 0.556       |
+|    first_trade_win_rate              | 92.6        |
+|    ny_open_first_trade_win_rate      | 25          |
+|    ny_open_trade_rate                | 0.139       |
+|    pnl_continuation_days             | 0.916       |
+|    pnl_sweep_low_days                | 6.32        |
+|    profit_factor                     | 1.31        |
+|    trades_per_episode                | 0.417       |
+|    win_rate                          | 27.1        |
+|    win_rate_continuation             | 12          |
+|    win_rate_sweep_days               | 43.8        |
+------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.988        |
+| session/                             |              |
+|    london_range_pts                  | 31.6         |
+| time/                                |              |
+|    fps                               | 70           |
+|    iterations                        | 31           |
+|    time_elapsed                      | 3625         |
+|    total_timesteps                   | 2153952      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 173          |
+|    avg_first_trade_entry_delay_an... | 169          |
+|    episode_pnl                       | 0.592        |
+|    first_trade_is_ny_open_rate       | 0.455        |
+|    first_trade_matches_intent_rate   | 0.545        |
+|    first_trade_pnl                   | 2.91         |
+|    first_trade_win_rate              | 0.818        |
+|    ny_open_trade_rate                | 0.1          |
+|    pnl_continuation_days             | 0.985        |
+|    pnl_sweep_high_days               | -0.693       |
+|    pnl_sweep_low_days                | 0.417        |
+|    trades_per_episode                | 0.32         |
+|    win_rate                          | 0.727        |
+|    win_rate_continuation             | 0.182        |
+|    win_rate_sweep_days               | 0.118        |
+| train/                               |              |
+|    approx_kl                         | 0.0030096038 |
+|    clip_fraction                     | 0.00552      |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.00399     |
+|    explained_variance                | 0.937        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0334       |
+|    n_updates                         | 9530         |
+|    policy_gradient_loss              | -0.00112     |
+|    value_loss                        | 0.0847       |
+| validation/                          |              |
+|    acceptance_passed                 | 0            |
+|    avg_first_trade_duration_min      | 223          |
+|    avg_first_trade_entry_delay_an... | 80           |
+|    first_trade_is_ny_open_rate       | 0.63         |
+|    first_trade_matches_intent_rate   | 0.556        |
+|    first_trade_win_rate              | 92.6         |
+|    ny_open_first_trade_win_rate      | 23.5         |
+|    ny_open_trade_rate                | 0.148        |
+|    pnl_continuation_days             | 0.833        |
+|    pnl_sweep_low_days                | 6.08         |
+|    profit_factor                     | 1.29         |
+|    trades_per_episode                | 0.435        |
+|    win_rate                          | 26           |
+|    win_rate_continuation             | 12           |
+|    win_rate_sweep_days               | 43.8         |
+-------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.986        |
+| session/                             |              |
+|    london_range_pts                  | 25.8         |
+| time/                                |              |
+|    fps                               | 68           |
+|    iterations                        | 32           |
+|    time_elapsed                      | 3820         |
+|    total_timesteps                   | 2162144      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 232          |
+|    avg_first_trade_entry_delay_an... | 116          |
+|    episode_pnl                       | -0.365       |
+|    first_trade_is_ny_open_rate       | 0.357        |
+|    first_trade_matches_intent_rate   | 0.643        |
+|    first_trade_pnl                   | -1.7         |
+|    first_trade_win_rate              | 0.571        |
+|    ny_open_trade_rate                | 0.1          |
+|    pnl_continuation_days             | 0.219        |
+|    pnl_sweep_high_days               | -4.06        |
+|    pnl_sweep_low_days                | 2.08         |
+|    trades_per_episode                | 0.48         |
+|    win_rate                          | 0.5          |
+|    win_rate_continuation             | 0.111        |
+|    win_rate_sweep_days               | 0.214        |
+| train/                               |              |
+|    approx_kl                         | 0.0028595666 |
+|    clip_fraction                     | 0.00389      |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.00337     |
+|    explained_variance                | 0.941        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.038        |
+|    n_updates                         | 9540         |
+|    policy_gradient_loss              | -0.000767    |
+|    value_loss                        | 0.0733       |
+| validation/                          |              |
+|    acceptance_passed                 | 0            |
+|    avg_first_trade_duration_min      | 207          |
+|    avg_first_trade_entry_delay_an... | 80.4         |
+|    first_trade_is_ny_open_rate       | 0.607        |
+|    first_trade_matches_intent_rate   | 0.536        |
+|    first_trade_win_rate              | 92.9         |
+|    ny_open_first_trade_win_rate      | 17.6         |
+|    ny_open_trade_rate                | 0.148        |
+|    pnl_continuation_days             | 0.982        |
+|    pnl_sweep_low_days                | 6.08         |
+|    profit_factor                     | 1.19         |
+|    trades_per_episode                | 0.452        |
+|    win_rate                          | 26.9         |
+|    win_rate_continuation             | 13.3         |
+|    win_rate_sweep_days               | 40.6         |
+-------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.99         |
+| session/                             |              |
+|    london_range_pts                  | 34.1         |
+| time/                                |              |
+|    fps                               | 65           |
+|    iterations                        | 33           |
+|    time_elapsed                      | 4102         |
+|    total_timesteps                   | 2170336      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 163          |
+|    avg_first_trade_entry_delay_an... | 116          |
+|    episode_pnl                       | 1.42         |
+|    first_trade_is_ny_open_rate       | 0.571        |
+|    first_trade_matches_intent_rate   | 0.5          |
+|    first_trade_pnl                   | 2.32         |
+|    first_trade_win_rate              | 0.786        |
+|    ny_open_trade_rate                | 0.16         |
+|    pnl_continuation_days             | 1.96         |
+|    pnl_sweep_high_days               | 0.528        |
+|    pnl_sweep_low_days                | 1.35         |
+|    trades_per_episode                | 0.62         |
+|    win_rate                          | 0.643        |
+|    win_rate_continuation             | 0.115        |
+|    win_rate_sweep_days               | 0.25         |
+| train/                               |              |
+|    approx_kl                         | 0.0028141786 |
+|    clip_fraction                     | 0.00403      |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.0033      |
+|    explained_variance                | 0.944        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0588       |
+|    n_updates                         | 9550         |
+|    policy_gradient_loss              | -0.000807    |
+|    value_loss                        | 0.0844       |
+| validation/                          |              |
+|    acceptance_passed                 | 0            |
+|    avg_first_trade_duration_min      | 238          |
+|    avg_first_trade_entry_delay_an... | 79.4         |
+|    first_trade_is_ny_open_rate       | 0.63         |
+|    first_trade_matches_intent_rate   | 0.593        |
+|    first_trade_win_rate              | 92.6         |
+|    ny_open_first_trade_win_rate      | 23.5         |
+|    ny_open_trade_rate                | 0.148        |
+|    pnl_continuation_days             | 0.522        |
+|    pnl_sweep_low_days                | 7.04         |
+|    profit_factor                     | 1.27         |
+|    trades_per_episode                | 0.435        |
+|    win_rate                          | 26           |
+|    win_rate_continuation             | 10.8         |
+|    win_rate_sweep_days               | 43.8         |
+-------------------------------------------------------
+------------------------------------------------------
+| policy/                              |             |
+|    ent_coef                          | 0.04        |
+|    hold_rate_500                     | 0.969       |
+| session/                             |             |
+|    london_range_pts                  | 28.7        |
+| time/                                |             |
+|    fps                               | 65          |
+|    iterations                        | 34          |
+|    time_elapsed                      | 4233        |
+|    total_timesteps                   | 2178528     |
+| trade/                               |             |
+|    avg_first_trade_duration_min      | 208         |
+|    avg_first_trade_entry_delay_an... | 89.2        |
+|    episode_pnl                       | -0.233      |
+|    first_trade_is_ny_open_rate       | 0.5         |
+|    first_trade_matches_intent_rate   | 0.85        |
+|    first_trade_pnl                   | -1.34       |
+|    first_trade_win_rate              | 0.75        |
+|    ny_open_trade_rate                | 0.2         |
+|    pnl_continuation_days             | -0.528      |
+|    pnl_sweep_high_days               | 0.797       |
+|    pnl_sweep_low_days                | -3          |
+|    trades_per_episode                | 0.84        |
+|    win_rate                          | 0.6         |
+|    win_rate_continuation             | 0.194       |
+|    win_rate_sweep_days               | 0.357       |
+| train/                               |             |
+|    approx_kl                         | 0.004502813 |
+|    clip_fraction                     | 0.00603     |
+|    clip_range                        | 0.2         |
+|    entropy_loss                      | -0.0048     |
+|    explained_variance                | 0.932       |
+|    learning_rate                     | 0.0003      |
+|    loss                              | 0.0186      |
+|    n_updates                         | 9560        |
+|    policy_gradient_loss              | -0.000594   |
+|    value_loss                        | 0.0805      |
+------------------------------------------------------
+-------------------------------------------------------
+| policy/                              |              |
+|    ent_coef                          | 0.04         |
+|    hold_rate_500                     | 0.982        |
+| session/                             |              |
+|    london_range_pts                  | 26.4         |
+| time/                                |              |
+|    fps                               | 63           |
+|    iterations                        | 35           |
+|    time_elapsed                      | 4488         |
+|    total_timesteps                   | 2186720      |
+| trade/                               |              |
+|    avg_first_trade_duration_min      | 194          |
+|    avg_first_trade_entry_delay_an... | 124          |
+|    episode_pnl                       | 1.23         |
+|    first_trade_is_ny_open_rate       | 0.5          |
+|    first_trade_matches_intent_rate   | 0.643        |
+|    first_trade_pnl                   | 0.591        |
+|    first_trade_win_rate              | 0.714        |
+|    ny_open_trade_rate                | 0.14         |
+|    pnl_continuation_days             | 1.21         |
+|    pnl_sweep_high_days               | 0.429        |
+|    pnl_sweep_low_days                | 2.02         |
+|    trades_per_episode                | 0.54         |
+|    win_rate                          | 0.714        |
+|    win_rate_continuation             | 0.182        |
+|    win_rate_sweep_days               | 0.235        |
+| train/                               |              |
+|    approx_kl                         | 0.0037675335 |
+|    clip_fraction                     | 0.00537      |
+|    clip_range                        | 0.2          |
+|    entropy_loss                      | -0.00482     |
+|    explained_variance                | 0.939        |
+|    learning_rate                     | 0.0003       |
+|    loss                              | 0.0277       |
+|    n_updates                         | 9570         |
+|    policy_gradient_loss              | -0.000885    |
+|    value_loss                        | 0.0795       |
+| validation/                          |              |
+|    acceptance_passed                 | 0            |
+|    avg_first_trade_duration_min      | 197          |
+|    avg_first_trade_entry_delay_an... | 91.7         |
+|    first_trade_is_ny_open_rate       | 0.577        |
+|    first_trade_matches_intent_rate   | 0.538        |
+|    first_trade_win_rate              | 84.6         |
+|    ny_open_first_trade_win_rate      | 26.7         |
+|    ny_open_trade_rate                | 0.13         |
+|    pnl_continuation_days             | -0.378       |
+|    pnl_sweep_low_days                | 5.99         |
+|    profit_factor                     | 0.783        |
+|    trades_per_episode                | 0.435        |
+|    win_rate                          | 24           |
+|    win_rate_continuation             | 7.23         |
+|    win_rate_sweep_days               | 34.4         |
+-------------------------------------------------------

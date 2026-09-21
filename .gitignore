@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+*.pkl
+.pytest_cache/
+
+# Keep models/data? Uncomment to ignore large binaries
+# gold_v3/models/
+# gold_v3/data/raw/
+# gold_v3/data/processed/*.parquet
+# gold_v3/data/processed/*.csv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env

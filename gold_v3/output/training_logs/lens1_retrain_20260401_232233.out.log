@@ -1,0 +1,76 @@
+
+============================================================
+XAUUSD v3 Two-Lens SMC Trading Engine
+Mode: train-lens1
+Project root: C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3
+============================================================
+
+Using cpu device
+Logging to C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\output\tensorboard\lens1\PPO_3
+-----------------------------
+| time/              |      |
+|    fps             | 25   |
+|    iterations      | 1    |
+|    time_elapsed    | 80   |
+|    total_timesteps | 2048 |
+-----------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 23          |
+|    iterations           | 2           |
+|    time_elapsed         | 176         |
+|    total_timesteps      | 4096        |
+| train/                  |             |
+|    approx_kl            | 0.012872403 |
+|    clip_fraction        | 0.105       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.4       |
+|    explained_variance   | -0.0458     |
+|    learning_rate        | 0.0003      |
+|    loss                 | -0.0138     |
+|    n_updates            | 10          |
+|    policy_gradient_loss | -0.0068     |
+|    std                  | 1.02        |
+|    value_loss           | 0.713       |
+-----------------------------------------
+Eval num_timesteps=5000, episode_reward=-0.14 +/- 0.32
+Episode length: 52.00 +/- 0.00
+-----------------------------------------
+| eval/                   |             |
+|    mean_ep_length       | 52          |
+|    mean_reward          | -0.14       |
+| lens1/                  |             |
+|    dim_0_var            | 0.29883465  |
+|    dim_1_var            | 0.78477645  |
+|    dim_2_var            | 0.21800458  |
+|    dim_3_var            | 0.34119865  |
+|    dim_4_var            | 0.24730612  |
+|    dim_5_var            | 0.87561107  |
+|    dim_6_var            | 0.58111334  |
+|    dim_7_var            | 0.14797752  |
+|    encoding_variance    | 0.43685275  |
+| policy/                 |             |
+|    ent_coef             | 0.0493      |
+| time/                   |             |
+|    total_timesteps      | 5000        |
+| train/                  |             |
+|    approx_kl            | 0.013847059 |
+|    clip_fraction        | 0.142       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.6       |
+|    explained_variance   | -0.022      |
+|    learning_rate        | 0.0003      |
+|    loss                 | -0.255      |
+|    n_updates            | 20          |
+|    policy_gradient_loss | -0.00781    |
+|    std                  | 1.03        |
+|    value_loss           | 0.688       |
+-----------------------------------------
+New best mean reward!
+-----------------------------
+| time/              |      |
+|    fps             | 21   |
+|    iterations      | 3    |
+|    time_elapsed    | 287  |
+|    total_timesteps | 6144 |
+-----------------------------

@@ -1,0 +1,912 @@
+═══════════════════════════════════════════════════════════════════════
+XAUUSD INSTITUTIONAL TWO-BRAIN SMC TRADING ENGINE (v3)
+COMPLETE NEW PROJECT — DO NOT MODIFY ANY EXISTING CODEBASE
+═══════════════════════════════════════════════════════════════════════
+
+═══════════════════════════════════════════════════════════════════════
+CORE PHILOSOPHY — READ THIS BEFORE WRITING A SINGLE LINE OF CODE
+═══════════════════════════════════════════════════════════════════════
+
+The London session (08:00–17:00 UTC) is the institutional playbook.
+The New York session (12:00–21:00 UTC) reads that playbook and responds.
+NY consistently respects London's structural levels — its highs, lows,
+order blocks, fair value gaps, and liquidity pools. NY either continues
+the London trend, reverses off London levels, or sweeps London liquidity
+before reversing. This relationship is the edge.
+
+Human traders discovered this by watching thousands of charts and
+recognising recurring patterns. We identified 8 scenarios:
+  S1 Bullish continuation · S2 Bearish continuation
+  S3 High breakout retest · S4 Low breakdown retest
+  S5 Range expand up      · S6 Range expand down
+  S7 High liquidity grab  · S8 Low liquidity grab
+
+Brain 1 must discover these same patterns — and potentially more —
+purely by observing 3 years of London→NY price action through
+reinforcement learning. We do NOT pre-label scenarios or hard-code
+rules. The patterns emerge from the data. Brain 1 learns what a human
+analyst learns: "given what London did, what does NY typically do?"
+
+Brain 2 then uses Brain 1's learned understanding as its context and
+learns to place institutional-grade trades during the NY session.
+
+The two brains are trained sequentially:
+  Step 2 → Train Brain 1 on London→NY observation (RL)
+  Step 3 → Freeze Brain 1, train Brain 2 on NY execution (RL)
+
+
+═══════════════════════════════════════════════════════════════════════
+STEP 1 — PROJECT STRUCTURE AND FOUNDATION
+Build everything in this step. No training yet.
+═══════════════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────────────
+1.1  PROJECT DIRECTORY STRUCTURE
+────────────────────────────────────────────────────────────────────
+
+xauusd_v3/
+  config/
+    settings.yaml              ← all configuration, no hardcoded values
+  data/
+    raw/                       ← Dukascopy downloaded CSVs
+    processed/                 ← validated, indicator-enriched parquet
+  src/
+    data/
+      ingest.py                ← Dukascopy loader + CSV fallback
+      validator.py             ← OHLCV validation and gap detection
+      indicators.py            ← ATR, RSI, momentum via pandas-ta
+    smc/
+      order_blocks.py          ← OB detection (copy from v2)
+      fair_value_gaps.py       ← FVG detection (copy from v2)
+      liquidity.py             ← liquidity mapping (copy from v2)
+      structure.py             ← CHoCH/MSS/swing detection (copy v2)
+    session/
+      profiler.py              ← session slicing and profiling (v2)
+      features.py              ← NEW: raw SMC feature extraction
+                                  for both brains
+    brain1/
+      environment.py           ← Brain 1 RL environment
+      agent.py                 ← Brain 1 PPO agent
+      reward.py                ← Brain 1 reward function
+      encoder.py               ← extract Brain 1 learned encoding
+    brain2/
+      environment.py           ← Brain 2 RL environment
+      agent.py                 ← Brain 2 MaskablePPO agent
+      reward.py                ← Brain 2 reward function
+      callbacks.py             ← entropy annealing + TensorBoard
+    risk/
+      manager.py               ← risk filters (copy from v2)
+      sizing.py                ← position sizing
+    backtester.py              ← two-brain replay engine
+    pipeline.py                ← orchestrates Brain1→Brain2 handoff
+  models/
+    brain1/                    ← saved Brain 1 checkpoints
+    brain2/                    ← saved Brain 2 checkpoints
+  output/
+    brain1_analysis/           ← what Brain 1 discovered
+    backtest/                  ← tearsheets and trade logs
+    tensorboard/
+  tests/
+    test_smc.py
+    test_brain1_env.py
+    test_brain2_env.py
+    test_pipeline.py
+  main.py                      ← CLI orchestrator
+  requirements.txt
+
+
+────────────────────────────────────────────────────────────────────
+1.2  REQUIREMENTS
+────────────────────────────────────────────────────────────────────
+
+dukascopy-python          ← primary data source
+pandas>=2.0
+numpy
+pandas-ta
+scipy
+stable-baselines3>=2.0
+sb3-contrib               ← MaskablePPO
+gymnasium
+torch
+scikit-learn
+shap                      ← post-training analysis of Brain 1
+quantstats
+tensorboard
+pyyaml
+investpy                  ← economic calendar news filter
+pytest
+
+
+────────────────────────────────────────────────────────────────────
+1.3  DATA PIPELINE  (src/data/)
+────────────────────────────────────────────────────────────────────
+
+PRIMARY SOURCE — Dukascopy (institutional tick data, free):
+
+  from dukascopy import Dukascopy
+
+  dc = Dukascopy()
+  df_15m = dc.get_data('XAUUSD', '2022-01-01', '2025-01-01', 'M15')
+  df_5m  = dc.get_data('XAUUSD', '2022-01-01', '2025-01-01', 'M5')
+
+  This provides ~780 trading days.
+  Target: minimum 700 valid session pairs after validation.
+
+FALLBACK — Tickstory CSV:
+  Accept pre-downloaded Dukascopy CSVs via load_csv() function.
+  Auto-detect whether to use Dukascopy API or CSV based on
+  whether raw/ directory contains files.
+
+VALIDATION (carry forward from v2 validator.py):
+  Drop NaN OHLC rows
+  Drop zero/negative volume
+  Drop duplicate timestamps
+  Sort by datetime UTC
+  Warn on gaps > 3× median interval
+  Log final clean bar count
+
+INDICATORS (carry forward from v2):
+  ATR(14), RSI(14), MOM(8), volume_sma(20), volume_ratio
+  candle_body, upper_wick, lower_wick
+
+WALK-FORWARD SPLITS — define these constants at the top of
+settings.yaml, used by BOTH brain training loops:
+  TRAIN_START:    2022-01-01
+  TRAIN_END:      2024-01-01   (24 months — train both brains here)
+  VALIDATE_START: 2024-01-01
+  VALIDATE_END:   2024-07-01   (6 months — tune hyperparameters)
+  TEST_START:     2024-07-01
+  TEST_END:       2025-01-01   (6 months — never touch until final eval)
+
+The test split is SACRED. Do not train or tune on it.
+Only open it once, for final evaluation, after all training is done.
+
+
+────────────────────────────────────────────────────────────────────
+1.4  SESSION FEATURE EXTRACTOR  (src/session/features.py)
+────────────────────────────────────────────────────────────────────
+
+This module is the shared foundation for both brains.
+It runs all SMC detectors on any session's candles and returns
+a standardised raw feature dictionary.
+
+def extract_session_features(candles, atr_series, settings):
+  """
+  Run all SMC detectors on a candle window.
+  Returns raw (unnormalised) feature dict.
+  Used by Brain 1 for London candles and
+  by Brain 2 for NY candle-by-candle state.
+  """
+  profile  = compute_session_profile(candles)
+  obs      = detect_order_blocks(candles, atr_series)
+  fvgs     = detect_fvgs(candles)
+  swings   = detect_swing_points(candles)
+  choch    = detect_choch(candles, swings)
+  mss      = detect_mss(candles, swings, atr_series)
+  liq      = map_liquidity_levels(...)
+
+  return {
+    "profile": profile,
+    "order_blocks": obs,
+    "fvgs": fvgs,
+    "swings": swings,
+    "choch": choch,
+    "mss": mss,
+    "liquidity": liq,
+  }
+
+
+────────────────────────────────────────────────────────────────────
+1.5  SETTINGS.YAML — KEY NEW FIELDS
+────────────────────────────────────────────────────────────────────
+
+brain1:
+  obs_dim: 31                  ← London state vector dimensions
+  encoding_dim: 16             ← learned encoding output size
+  total_timesteps: 500000
+  learning_rate: 0.0003
+  n_steps: 2048
+  batch_size: 64
+  ent_coef_start: 0.05
+  ent_coef_end: 0.01
+  ent_coef_anneal_steps: 150000
+  reward_direction_weight: 1.0
+  reward_level_weight: 0.5
+  reward_sweep_weight: 0.8
+  model_save_path: models/brain1/
+
+brain2:
+  obs_dim: 47                  ← 16 (Brain1 encoding) + 31 (NY live)
+  total_timesteps: 1000000
+  learning_rate: 0.0003
+  n_steps: 2048
+  batch_size: 64
+  ent_coef_start: 0.05
+  ent_coef_end: 0.01
+  ent_coef_anneal_steps: 200000
+  min_rr: 1.5
+  sl_ob_buffer_atr: 1.0
+  model_save_path: models/brain2/
+
+sessions:
+  london_start:  "08:00"
+  london_end:    "17:00"
+  ny_start:      "12:00"
+  ny_end:        "21:00"
+  overlap_start: "12:00"
+  overlap_end:   "17:00"
+  brain1_freeze: "12:15"       ← Brain 1 observation window closes here
+  ny_no_trade:   "20:00"       ← no new positions after this
+
+data:
+  train_start:   "2022-01-01"
+  train_end:     "2024-01-01"
+  validate_start:"2024-01-01"
+  validate_end:  "2024-07-01"
+  test_start:    "2024-07-01"
+  test_end:      "2025-01-01"
+
+
+────────────────────────────────────────────────────────────────────
+1.6  MAIN.PY CLI MODES
+────────────────────────────────────────────────────────────────────
+
+python main.py --mode download              ← fetch Dukascopy data
+python main.py --mode train-brain1          ← Step 2
+python main.py --mode analyse-brain1        ← what did Brain 1 learn?
+python main.py --mode train-brain2          ← Step 3
+python main.py --mode backtest              ← full two-brain replay
+python main.py --mode signal                ← live signal output
+python main.py --mode smoke-test            ← validate both envs
+python main.py --mode tensorboard          ← launch TB
+
+
+────────────────────────────────────────────────────────────────────
+1.7  STEP 1 DELIVERABLE
+────────────────────────────────────────────────────────────────────
+
+When Step 1 is complete:
+  - Full directory structure exists
+  - Dukascopy data downloads successfully for 2022–2025
+  - validate_data() passes on 15M and 5M data
+  - All SMC detectors run on a sample London session without error
+  - settings.yaml loads fully into typed dataclasses
+  - All 4 CLI modes initialise without crashing (training not run yet)
+  - pytest runs with 0 failures on structure and import tests
+  - Print summary: total trading days loaded, date range, bar counts
+
+Do not proceed to Step 2 until Step 1 deliverable is confirmed.
+
+
+═══════════════════════════════════════════════════════════════════════
+STEP 2 — TRAIN BRAIN 1 (LONDON SESSION OBSERVER)
+═══════════════════════════════════════════════════════════════════════
+
+Brain 1 is a reinforcement learning agent that observes the London
+session candle by candle and learns to build an internal representation
+of what the London session means for the coming NY session.
+
+It learns this the same way a human analyst learns: by watching what
+London did and then seeing how NY responded — thousands of times.
+After training, Brain 1's learned representation (its encoding) becomes
+the context handed to Brain 2.
+
+Brain 1 does NOT place trades. It has no position. Its only job is to
+observe and encode.
+
+────────────────────────────────────────────────────────────────────
+2.1  BRAIN 1 ENVIRONMENT  (src/brain1/environment.py)
+────────────────────────────────────────────────────────────────────
+
+CLASS: Brain1LondonEnv(gym.Env)
+
+EPISODE STRUCTURE:
+  One episode = one complete trading day
+  The episode has two phases:
+
+  OBSERVATION PHASE (08:00–12:15 UTC):
+    Agent receives London candles one at a time (15M).
+    At each candle, agent takes an "attention action" — a continuous
+    vector that represents what it is attending to in the structure.
+    No reward is given during this phase.
+    Agent is building its understanding of the session.
+
+  EVALUATION PHASE (12:15–21:00 UTC):
+    The London window has closed. Agent can no longer observe
+    new London candles. But it now observes NY candles as they
+    unfold. At each NY candle, the environment checks:
+    "did Brain 1's encoding predict what NY is doing?"
+    Reward is given based on prediction accuracy.
+
+OBSERVATION SPACE (31 dimensions):
+  This is the raw SMC feature vector of the London session
+  as seen by Brain 1 at the current candle. Updated each step.
+  Dimensions:
+
+  Session state (7):
+    session_bias                # +1/0/-1 so far
+    session_range_atr           # high-low / ATR so far
+    session_body_ratio          # |close-open| / range
+    dist_to_session_high        # from current price, ATR-normalised
+    dist_to_session_low
+    dist_to_session_mid
+    time_elapsed_norm           # minutes into London / 255 (0–1)
+
+  Order blocks (6):
+    bull_ob_dist                # nearest bull OB / ATR
+    bull_ob_strength            # displacement magnitude
+    bear_ob_dist
+    bear_ob_strength
+    ob_at_high_flag             # bear OB near session high
+    ob_at_low_flag              # bull OB near session low
+
+  Fair value gaps (5):
+    bull_fvg_unfilled           # 1 if exists
+    bull_fvg_dist               # / ATR
+    bear_fvg_unfilled
+    bear_fvg_dist
+    fvg_total_size_atr          # total imbalance magnitude
+
+  Liquidity (6):
+    equal_highs_present         # engineered buy-side liquidity above
+    equal_lows_present          # engineered sell-side liquidity below
+    liq_above_density           # count of equal high clusters
+    liq_below_density
+    pdh_dist                    # prev day high / ATR
+    pdl_dist
+
+  Structure (4):
+    choch_bull_recent           # CHoCH up in last 5 candles
+    choch_bear_recent
+    mss_bull_recent
+    mss_bear_recent
+
+  Candle anatomy (3):
+    current_body_atr
+    current_upper_wick_atr
+    current_lower_wick_atr
+
+ACTION SPACE (Box, 8 dimensions, continuous [-1, 1]):
+  Brain 1's action is a continuous latent encoding vector.
+  This is what gets passed to Brain 2 as context.
+  Dimension = settings.brain1.encoding_dim = 8 initially.
+  The agent learns what to encode — we do not define it.
+
+  Why continuous action? Because we want Brain 1 to output a
+  rich, continuous representation of London session state, not
+  a discrete category. PPO with continuous action space
+  (using DiagGaussianDistribution) handles this natively.
+
+  Think of it as: Brain 1 is answering the question
+  "how do I summarise this London session in 8 numbers?"
+  The reward teaches it which 8 numbers matter.
+
+TERMINAL STATE:
+  Episode ends at 21:00 UTC (NY session close).
+  Brain 1 is evaluated on what NY did during 12:15–21:00.
+
+
+────────────────────────────────────────────────────────────────────
+2.2  BRAIN 1 REWARD FUNCTION  (src/brain1/reward.py)
+────────────────────────────────────────────────────────────────────
+
+Brain 1 is rewarded based on how accurately its encoding
+predicted NY session behaviour. The rewards are given
+RETROSPECTIVELY as NY unfolds — Brain 1 sees the consequences
+of its encoding in real time.
+
+This is the key insight: Brain 1's reward signal comes from
+the NY session, not the London session. This forces it to
+learn exactly the information that is predictive of NY.
+
+REWARD COMPONENTS:
+
+1. DIRECTIONAL ACCURACY REWARD (weight 1.0)
+   After NY first 2 candles (12:15–12:45 UTC):
+   
+   ny_direction = +1 if NY is trading above London Mid
+               = -1 if NY is trading below London Mid
+   
+   If Brain 1's encoding action[0] (the primary bias dimension)
+   has the same sign as ny_direction:
+     reward += 0.5    (Brain 1 correctly read London bias)
+   else:
+     reward -= 0.3    (Brain 1 misread the setup)
+
+2. LEVEL RESPECT REWARD (weight 0.5)
+   During NY session, at each NY candle:
+
+   If price touches London High and Brain 1 encoding suggests
+   resistance (action[1] > 0.3) → reward += 0.3
+   
+   If price touches London Low and Brain 1 encoding suggests
+   support (action[2] > 0.3) → reward += 0.3
+   
+   If price ignores the level (blow-through) and Brain 1 encoded
+   it as significant → reward -= 0.2
+
+3. SWEEP DETECTION REWARD (weight 0.8)
+   The highest-value thing Brain 1 can learn:
+
+   If NY spikes above London High by > 3pts and reverses:
+     This is a liquidity grab (our Scenario 7).
+     If Brain 1's encoding had action[3] > 0.5 (sweep-likely flag):
+       reward += 1.0    (Brain 1 anticipated the sweep)
+     else:
+       reward -= 0.5    (Brain 1 missed the most important signal)
+
+   If NY spikes below London Low by > 3pts and reverses:
+     This is Scenario 8.
+     If Brain 1's encoding had action[4] > 0.5:
+       reward += 1.0
+     else:
+       reward -= 0.5
+
+4. CONTINUATION ACCURACY REWARD (weight 0.6)
+   At NY session close (21:00 UTC):
+
+   If london_bias = +1 and NY closed above London Open:
+     continuation occurred.
+     If Brain 1 encoding action[0] was > 0.3:
+       reward += 0.5
+   
+   If london_bias = -1 and NY closed below London Open:
+     continuation occurred.
+     If Brain 1 encoding action[0] was < -0.3:
+       reward += 0.5
+
+5. RANGING SESSION ACCURACY (weight 0.4)
+   If London was ranging (range < 30pts) and NY expanded:
+     direction of expansion matters.
+     Brain 1 should encode which direction expansion is
+     more likely based on liquidity geometry.
+
+IMPLEMENTATION NOTE:
+  Brain 1 outputs its encoding action once — at 12:15 UTC
+  when the London window closes. The action is cached.
+  All subsequent rewards during NY are calculated against
+  this cached encoding. This gives Brain 1 clear signal:
+  "your 12:15 summary of London predicted/failed to predict
+  what NY actually did."
+
+
+────────────────────────────────────────────────────────────────────
+2.3  BRAIN 1 AGENT  (src/brain1/agent.py)
+────────────────────────────────────────────────────────────────────
+
+USE: stable-baselines3 PPO with continuous action space.
+     NOT MaskablePPO — Brain 1 has no masking requirement.
+     All actions are always valid during observation phase.
+
+Policy type: "MlpPolicy"
+Net architecture: [256, 128, 64] for both pi and vf
+
+Key difference from Brain 2: Brain 1 uses Box action space
+not Discrete. The policy outputs a continuous encoding vector.
+
+model = PPO(
+  "MlpPolicy",
+  vec_env,
+  learning_rate=settings.brain1.learning_rate,
+  n_steps=settings.brain1.n_steps,
+  batch_size=settings.brain1.batch_size,
+  ent_coef=settings.brain1.ent_coef_start,
+  policy_kwargs=dict(
+    net_arch=dict(pi=[256,128,64], vf=[256,128,64]),
+    activation_fn=torch.nn.Tanh,  ← Tanh for continuous bounded output
+  ),
+  tensorboard_log="output/tensorboard/brain1/",
+  verbose=1,
+  seed=42,
+)
+
+ENTROPY ANNEALING: same UpdateEntCoefCallback as v2.
+Start 0.05, decay to 0.01 over first 150K steps.
+
+SAVE: save best model every 10K steps via CheckpointCallback.
+EVAL: evaluate on validation set every 5K steps.
+      Log: mean_reward, encoding_variance (are the 8 dimensions
+           being used or collapsing?), sweep_prediction_accuracy.
+
+
+────────────────────────────────────────────────────────────────────
+2.4  BRAIN 1 TRAINING LOOP
+────────────────────────────────────────────────────────────────────
+
+Train on: TRAIN split only (2022-01-01 to 2024-01-01)
+Validate on: VALIDATE split (2024-01-01 to 2024-07-01)
+Total timesteps: 500,000
+
+Each episode = one full trading day (London + NY).
+~700 training days × multiple passes = sufficient coverage.
+
+After training is complete, do NOT proceed to Step 3 until
+the Brain 1 analysis (section 2.5) is run and reviewed.
+
+
+────────────────────────────────────────────────────────────────────
+2.5  BRAIN 1 POST-TRAINING ANALYSIS  (src/brain1/encoder.py)
+────────────────────────────────────────────────────────────────────
+
+After Brain 1 training, run the following analysis on the
+VALIDATE split to understand what Brain 1 discovered.
+Save all outputs to output/brain1_analysis/.
+
+ANALYSIS 1 — Encoding Correlation Matrix:
+  For each of the 700+ training days, extract Brain 1's encoding
+  (the 8-dim action vector output at 12:15 UTC) alongside:
+    - actual NY direction (up/down)
+    - whether a sweep occurred
+    - which London level NY respected
+    - final NY close relative to London levels
+  
+  Compute: which encoding dimensions correlate with which outcomes?
+  Output: brain1_encoding_correlations.csv
+  
+  Expected finding: encoding[0] ≈ directional bias,
+  encoding[3/4] ≈ sweep likelihood — but discovered by the model,
+  not pre-defined by us.
+
+ANALYSIS 2 — Scenario Clustering:
+  Run k-means (k=10) on all 700+ encoding vectors.
+  Label each cluster with the most common NY outcome in that cluster.
+  Output: brain1_scenario_clusters.csv
+  
+  Expected finding: 8–12 natural clusters will emerge.
+  Compare these to our human-defined 8 scenarios.
+  Some may match exactly. Some may be new patterns we didn't see.
+  This is how Brain 1 tells us what it discovered.
+
+ANALYSIS 3 — Sweep Prediction Accuracy:
+  On validation set: what % of actual sweeps did Brain 1
+  predict in advance (encoding[3] or [4] > 0.5)?
+  Target: > 60% recall on sweeps.
+  Output: brain1_sweep_accuracy.txt
+
+ANALYSIS 4 — Encoding Visualisation:
+  PCA or UMAP the encoding vectors down to 2D.
+  Colour each point by what NY actually did.
+  Output: brain1_encoding_map.png (save as matplotlib figure)
+  
+  This is the visual equivalent of "what Brain 1 sees."
+
+STEP 2 IS NOT COMPLETE until:
+  - brain1_encoding_correlations.csv shows at least 3 encoding
+    dimensions with |correlation| > 0.3 to any NY outcome
+  - brain1_scenario_clusters.csv has been reviewed
+  - sweep prediction accuracy is logged
+  - brain1_ppo_final.zip saved to models/brain1/
+
+Do not proceed to Step 3 until these outputs exist.
+
+
+═══════════════════════════════════════════════════════════════════════
+STEP 3 — TRAIN BRAIN 2 (NY SESSION EXECUTOR)
+Brain 1 weights are FROZEN for this entire step.
+═══════════════════════════════════════════════════════════════════════
+
+Brain 2 is the trading agent. It receives Brain 1's frozen encoding
+as its understanding of the London session, then learns to place
+institutional-grade trades during the NY session. It never re-runs
+London analysis — it trusts Brain 1's encoded context entirely.
+
+────────────────────────────────────────────────────────────────────
+3.1  BRAIN 2 ENVIRONMENT  (src/brain2/environment.py)
+────────────────────────────────────────────────────────────────────
+
+CLASS: Brain2NYEnv(gym.Env)
+
+EPISODE STRUCTURE:
+  One episode = NY session of one trading day.
+  At episode start: Brain 1 runs on that day's London candles
+  and produces its 8-dim encoding. This encoding is FIXED
+  for the entire episode — prepended to every observation.
+  Brain 2 steps through NY candles 12:15–21:00 UTC.
+
+OBSERVATION SPACE (47 dimensions):
+
+  Brain 1 context — FIXED per episode (8 dims):
+    brain1_encoding[0..7]    ← Brain 1's frozen 8-dim output
+                                for this day's London session
+
+  Live NY state — UPDATES each candle (31 dims):
+    (identical to v2 rl_state_builder.py, all 31 features,
+     all ATR-normalised, all computed from NY candles seen so far)
+
+    london_bias, london_range_atr,
+    dist_to_LH, dist_to_LL, dist_to_LM,
+    ob_bull_active, ob_bear_active,
+    ob_bull_dist, ob_bear_dist,
+    fvg_bull_active, fvg_bear_active,
+    fvg_bull_dist, fvg_bear_dist,
+    choch_bull, choch_bear, mss_bull, mss_bear,
+    ny_broke_LH, ny_broke_LL,
+    liq_sweep_high, liq_sweep_low,
+    prev_day_high_dist, prev_day_low_dist,
+    ny_time_norm, in_ny_open,
+    candle_body_atr, high_wick_atr, low_wick_atr,
+    momentum_8, volume_ratio,
+    distance_to_nearest_OB_atr   ← the new feature added in v2.1
+
+  Total: 8 + 31 + 1 = 40 dimensions.
+  Update settings.brain2.obs_dim = 40.
+
+ACTION SPACE: Discrete(3) — HOLD=0, BUY=1, SELL=2
+
+ACTION MASKING (implement action_masks() method):
+  Mask BUY/SELL if position already open
+  Mask BUY/SELL if trades_this_episode >= 3
+  Mask BUY/SELL if ny_minutes_remaining <= 60
+  Mask BUY/SELL if london_range_atr > 4.0
+  Mask BUY/SELL if news_flag = True
+
+MAX TRADES PER DAY: 3
+
+
+────────────────────────────────────────────────────────────────────
+3.2  STOP LOSS AND TAKE PROFIT — STRUCTURAL (no ATR placement)
+────────────────────────────────────────────────────────────────────
+
+STOP LOSS:
+  Long SL  = nearest bull OB low  − (sl_ob_buffer_atr × ATR)
+  Short SL = nearest bear OB high + (sl_ob_buffer_atr × ATR)
+
+  If no OB within 2.5 ATR: use nearest swing low/high as SL.
+
+  ATR GATE (reject trade if):
+    |entry − SL| < 0.3 × ATR   (too tight, wick will hit it)
+    |entry − SL| > 3.0 × ATR   (too wide, R:R destroyed)
+
+TAKE PROFIT — structural waterfall:
+  TP1 (close 50% of position) = LondonMid
+  TP2 (close 30% of position) = opposite London level (LH or LL)
+  TP3 (trail 20% remainder)   = PDH or PDL (whichever is in direction)
+
+  Rule: after TP1 is hit, move SL to breakeven immediately.
+        The remaining 50% of the position becomes a free trade.
+
+  Hard close: any open position at 20:45 UTC is closed at market.
+
+R-MULTIPLE: normalise by actual structural SL distance.
+  r_multiple = pnl / abs(entry_price - sl_price)
+  NOT: pnl / (ATR × constant)
+
+
+────────────────────────────────────────────────────────────────────
+3.3  BRAIN 2 REWARD FUNCTION  (src/brain2/reward.py)
+────────────────────────────────────────────────────────────────────
+
+Carry forward all v2 fixes:
+
+  CORRECT_HOLD_REWARD    =  0.001   (near-zero — not 0.05)
+  MISSED_SETUP_PENALTY   = -0.15    (holding when OB/FVG setup exists)
+  SMC_ALIGNMENT_BONUS    =  0.30    (action matches Brain 1 encoding)
+  CONFLUENCE_BONUS       =  0.10    (per SMC confluence, max 0.6)
+  RISK_VIOLATION_PENALTY = -0.50
+  OVERTRADING_PENALTY    = -0.30
+
+NEW: BRAIN 1 ALIGNMENT BONUS
+  Brain 2 now knows Brain 1's encoding. If Brain 2 trades in
+  the direction that Brain 1 encoded as likely:
+    brain1_align_bonus = +0.20
+
+  If Brain 2 trades AGAINST Brain 1's primary encoded direction:
+    brain1_align_penalty = -0.20
+    (Counter-trend only valid if Brain 1 encoded sweep likelihood)
+
+MISSED SETUP PENALTY triggers when:
+  Any of these conditions are true and action == HOLD:
+    bull_ob_dist < 1.0 ATR and brain1_encoding[0] > 0.2
+    bear_ob_dist < 1.0 ATR and brain1_encoding[0] < -0.2
+    bull_fvg_unfilled and dist_to_LL < 1.0 ATR
+    bear_fvg_unfilled and dist_to_LH > -1.0 ATR
+    liq_sweep_high = 1 (sweep detected — SELL setup)
+    liq_sweep_low  = 1 (sweep detected — BUY setup)
+
+EPISODE END BONUS:
+  Total PnL > 0:  +0.5
+  Win rate > 60%: +0.3
+  0 trades taken: -0.1 (small penalty for full inactivity)
+  Trades > 3:     -0.2 per extra trade (overtrading)
+
+
+────────────────────────────────────────────────────────────────────
+3.4  BRAIN 2 AGENT  (src/brain2/agent.py)
+────────────────────────────────────────────────────────────────────
+
+USE: MaskablePPO from sb3-contrib.
+Wrap environment with ActionMasker.
+Use MaskableEvalCallback (not standard EvalCallback).
+
+Policy: "MlpPolicy"
+Net architecture: [256, 128, 64]
+
+ENTROPY ANNEALING:
+  Implement UpdateEntCoefCallback (custom — same as v2.1):
+  Start 0.05, decay linearly to 0.01 over first 200K steps.
+  Hold flat at 0.01 thereafter.
+  Log to TensorBoard as policy/ent_coef.
+  Do NOT pass schedule to MaskablePPO directly.
+
+TOTAL TIMESTEPS: 1,000,000
+  (3yr data × multiple passes = sufficient to learn structural entries)
+
+CHECKPOINTS: every 10K steps.
+EVAL: every 5K steps on VALIDATE split.
+      Save best model to models/brain2/best/.
+
+
+────────────────────────────────────────────────────────────────────
+3.5  NEWS GATE  (hard filter, not learned behaviour)
+────────────────────────────────────────────────────────────────────
+
+At episode start (12:00 UTC check):
+  Query economic calendar for HIGH-impact events between
+  12:00–21:00 UTC on the current trading date.
+
+  High-impact events that trigger the gate:
+    NFP (Non-Farm Payrolls)
+    CPI (Consumer Price Index)
+    FOMC Rate Decision
+    Fed Chair Speech
+    US GDP
+    US Retail Sales (major releases)
+
+  If any such event found:
+    news_flag = True
+    BUY and SELL are masked for the ENTIRE NY session.
+    Brain 2 can only HOLD.
+    Log to output: news_filtered_days.csv
+
+  This is a rule, not a learned behaviour.
+  Do not train the agent to "learn" to avoid news.
+  Hard-code the mask.
+
+  Implementation: use investpy or a pre-downloaded
+  economic calendar CSV if API is unavailable.
+
+
+────────────────────────────────────────────────────────────────────
+3.6  TENSORBOARD METRICS — BOTH BRAINS
+────────────────────────────────────────────────────────────────────
+
+Brain 1 logs:
+  brain1/mean_reward
+  brain1/encoding_variance      ← are all 8 dims being used?
+  brain1/sweep_accuracy         ← % sweeps correctly anticipated
+  brain1/direction_accuracy     ← % days directional call correct
+  brain1/level_respect_rate     ← % of London level touches rewarded
+  policy/ent_coef
+  policy/hold_rate_500          ← should stay low for Brain 1 (observer)
+
+Brain 2 logs:
+  trade/win_rate
+  trade/profit_factor
+  trade/avg_r_multiple
+  trade/trades_per_episode
+  trade/episode_pnl
+  brain1/alignment_rate         ← % trades aligned with Brain 1 encoding
+  smc/ob_entry_rate             ← % entries at OB confluence
+  smc/fvg_entry_rate
+  smc/sweep_entry_rate
+  policy/hold_rate_500          ← alarm if > 95% after 100K steps
+  policy/ent_coef
+
+
+────────────────────────────────────────────────────────────────────
+3.7  SMOKE TEST  (run before full Brain 2 training)
+────────────────────────────────────────────────────────────────────
+
+python main.py --mode smoke-test
+
+Force 20 BUY actions and 20 SELL actions.
+For each action print:
+  - Full 40-dim state vector (Brain 1 encoding + NY features)
+  - Brain 1 encoding values [0..7]
+  - Structural SL level and ATR gate result
+  - TP1/TP2/TP3 structural levels
+  - Reward received
+  - Position open/close status
+
+PASS criteria:
+  - Brain 1 encoding is non-zero and varies day to day
+  - State vector is exactly 40 dimensions
+  - SL is placed below/above an OB, not at entry ± ATR×constant
+  - TP1 = LondonMid (not ATR multiple)
+  - Rewards are not uniformly -0.1
+  - At least some BUY actions result in open long positions
+
+Do not run 1M-step Brain 2 training until smoke test passes.
+
+
+────────────────────────────────────────────────────────────────────
+3.8  WALK-FORWARD BACKTEST  (after Brain 2 training)
+────────────────────────────────────────────────────────────────────
+
+Run full two-brain replay on TEST split (2024-07-01 to 2025-01-01).
+This data has never been seen during any training or tuning.
+
+Report the following metrics in output/backtest/results.md:
+
+  Total trades
+  Win rate (%)
+  Profit factor
+  Total PnL (points)
+  Max drawdown (%)
+  Sharpe ratio
+  Average R-multiple per trade
+  Average trade duration (minutes)
+
+  Per-scenario breakdown (using Brain 1 cluster labels):
+  Which Brain 1 encoding cluster produced the highest win rate?
+  Which produced the most trades?
+  Which should be filtered out?
+
+  Generate full quantstats HTML tearsheet.
+  Save to output/backtest/tearsheet.html.
+
+
+────────────────────────────────────────────────────────────────────
+3.9  FINAL DELIVERABLES — STEP 3 COMPLETE WHEN:
+────────────────────────────────────────────────────────────────────
+
+  models/brain1/brain1_ppo_final.zip          ← frozen encoder
+  models/brain2/brain2_ppo_final.zip          ← trading agent
+  output/brain1_analysis/
+    brain1_encoding_correlations.csv
+    brain1_scenario_clusters.csv
+    brain1_sweep_accuracy.txt
+    brain1_encoding_map.png
+  output/backtest/
+    results.md
+    trade_log.csv
+    tearsheet.html
+  output/news_filtered_days.csv
+  walkthrough.md (updated for two-brain architecture)
+
+  smoke-test passes
+  walk-forward backtest results are in results.md
+  at least one Brain 1 encoding dimension shows
+    |correlation| > 0.35 with NY sweep events
+
+
+═══════════════════════════════════════════════════════════════════════
+EXECUTION ORDER — DO NOT SKIP STEPS
+═══════════════════════════════════════════════════════════════════════
+
+  STEP 1: Build project → confirm all imports and data loads
+  STEP 2: Train Brain 1 → run analysis → confirm encoding quality
+  STEP 3: Freeze Brain 1 → run smoke test → train Brain 2 → backtest
+
+  Each step requires confirmation before the next begins.
+  Report completion of each step with the specific deliverables
+  listed above. Do not compress steps or run them in parallel.
+
+
+═══════════════════════════════════════════════════════════════════════
+WHAT SUCCESS LOOKS LIKE
+═══════════════════════════════════════════════════════════════════════
+
+After Step 2:
+  Brain 1 has discovered that certain London session geometries
+  reliably predict NY behaviour. The encoding map shows clear
+  clusters. At least one cluster maps to sweep setups (S7/S8).
+  Brain 1 can predict NY sweep events with > 60% accuracy.
+
+After Step 3:
+  Brain 2 is placing trades in the NY session that are:
+    - Aligned with Brain 1's encoded London context
+    - Entered at OB or FVG structural levels
+    - Protected by structural SL (below OB, not ATR)
+    - Targeting session liquidity pools (LH, LL, PDH, PDL)
+    - Achieving > 60% win rate and > 2.0 profit factor
+      on the unseen test split
+
+  The two-brain system has learned what experienced
+  institutional analysts know: London sets the stage,
+  NY plays the script — and the edge is in reading
+  London before NY opens.
+═══════════════════════════════════════════════════════════════════════
+
+I don't like the word freeze or Frozen,   we need to use another word instead of freeze and frozen
+I want to replace the Word Brain to something else Maybe to Engine 1 and Engine 2 or soemthing else

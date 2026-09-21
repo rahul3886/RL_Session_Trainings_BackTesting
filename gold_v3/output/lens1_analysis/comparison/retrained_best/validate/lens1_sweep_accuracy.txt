@@ -1,0 +1,14 @@
+Lens 1 Sweep Prediction Accuracy
+==================================================
+
+  sweep_high_total: 6
+  sweep_high_predicted: 1
+  sweep_high_recall: 0.16666666666666666
+  sweep_low_total: 13
+  sweep_low_predicted: 5
+  sweep_low_recall: 0.38461538461538464
+  combined_recall: 0.3157894736842105
+  total_sweeps: 19
+
+  Target: > 60% recall on sweeps
+  Status: NEEDS IMPROVEMENT

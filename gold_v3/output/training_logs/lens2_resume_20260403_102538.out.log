@@ -1,0 +1,4583 @@
+Resuming Lens 2 from lens2_220000_steps.zip
+Loaded num_timesteps=220000
+Remaining timesteps=780000
+Logging to C:\RAHUL BOGI\RL_Session Trainings\xauusd_v3\output\tensorboard\lens2\MaskablePPO_1
+----------------------------------
+| session/            |          |
+|    london_range_pts | 19.7     |
+| time/               |          |
+|    fps              | 8        |
+|    iterations       | 1        |
+|    time_elapsed     | 250      |
+|    total_timesteps  | 222048   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 20.8        |
+| time/                   |             |
+|    fps                  | 6           |
+|    iterations           | 2           |
+|    time_elapsed         | 597         |
+|    total_timesteps      | 224096      |
+| train/                  |             |
+|    approx_kl            | 0.008320347 |
+|    clip_fraction        | 0.0303      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0674     |
+|    explained_variance   | 0.709       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.00257     |
+|    n_updates            | 1080        |
+|    policy_gradient_loss | -0.00893    |
+|    value_loss           | 0.0771      |
+-----------------------------------------
+Eval num_timesteps=225000, episode_reward=-4.39 +/- 0.40
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -4.39       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.966       |
+| session/                 |             |
+|    london_range_pts      | 27.3        |
+| time/                    |             |
+|    total_timesteps       | 225000      |
+| trade/                   |             |
+|    episode_pnl           | 0.655       |
+|    first_trade_pnl       | 1.75        |
+|    first_trade_win_rate  | 0.375       |
+|    ny_open_trade_rate    | 0           |
+|    pnl_continuation_days | 0.71        |
+|    pnl_sweep_high_days   | 1.16        |
+|    pnl_sweep_low_days    | -0.194      |
+|    trades_per_episode    | 0.26        |
+|    win_rate              | 0.625       |
+|    win_rate_continuation | 0.103       |
+|    win_rate_sweep_days   | 0.0952      |
+| train/                   |             |
+|    approx_kl             | 0.006691934 |
+|    clip_fraction         | 0.0361      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.0667     |
+|    explained_variance    | 0.72        |
+|    learning_rate         | 0.0003      |
+|    loss                  | 0.013       |
+|    n_updates             | 1090        |
+|    policy_gradient_loss  | -0.0137     |
+|    value_loss            | 0.113       |
+------------------------------------------
+New best mean reward!
+----------------------------------
+| session/            |          |
+|    london_range_pts | 25.4     |
+| time/               |          |
+|    fps              | 5        |
+|    iterations       | 3        |
+|    time_elapsed     | 1053     |
+|    total_timesteps  | 226144   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 40.2        |
+| time/                   |             |
+|    fps                  | 5           |
+|    iterations           | 4           |
+|    time_elapsed         | 1503        |
+|    total_timesteps      | 228192      |
+| train/                  |             |
+|    approx_kl            | 0.004135479 |
+|    clip_fraction        | 0.0336      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0816     |
+|    explained_variance   | 0.73        |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0101      |
+|    n_updates            | 1100        |
+|    policy_gradient_loss | -0.0118     |
+|    value_loss           | 0.113       |
+-----------------------------------------
+Eval num_timesteps=230000, episode_reward=-4.39 +/- 0.87
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -4.39        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.942        |
+| session/                 |              |
+|    london_range_pts      | 29.9         |
+| time/                    |              |
+|    total_timesteps       | 230000       |
+| trade/                   |              |
+|    episode_pnl           | 0.342        |
+|    first_trade_pnl       | 4.29         |
+|    first_trade_win_rate  | 0.833        |
+|    ny_open_trade_rate    | 0.02         |
+|    pnl_continuation_days | 0.4          |
+|    pnl_sweep_high_days   | 0.789        |
+|    pnl_sweep_low_days    | -1.1         |
+|    trades_per_episode    | 0.16         |
+|    win_rate              | 0.667        |
+|    win_rate_continuation | 0.0789       |
+|    win_rate_sweep_days   | 0.0833       |
+| train/                   |              |
+|    approx_kl             | 0.0045039346 |
+|    clip_fraction         | 0.0335       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0669      |
+|    explained_variance    | 0.675        |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.000794     |
+|    n_updates             | 1110         |
+|    policy_gradient_loss  | -0.0103      |
+|    value_loss            | 0.113        |
+| validation/              |              |
+|    acceptance_passed     | 0            |
+|    first_trade_win_rate  | 64.7         |
+|    ny_open_trade_rate    | 0.0261       |
+|    pnl_continuation_days | 0.633        |
+|    pnl_sweep_low_days    | 0.643        |
+|    profit_factor         | 1.72         |
+|    trades_per_episode    | 0.235        |
+|    win_rate              | 33.3         |
+|    win_rate_continuation | 4.82         |
+|    win_rate_sweep_days   | 28.1         |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 23       |
+| time/               |          |
+|    fps              | 4        |
+|    iterations       | 5        |
+|    time_elapsed     | 2476     |
+|    total_timesteps  | 230240   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 34.4        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 6           |
+|    time_elapsed         | 3113        |
+|    total_timesteps      | 232288      |
+| train/                  |             |
+|    approx_kl            | 0.004873017 |
+|    clip_fraction        | 0.0322      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0639     |
+|    explained_variance   | 0.758       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0141      |
+|    n_updates            | 1120        |
+|    policy_gradient_loss | -0.0121     |
+|    value_loss           | 0.093       |
+-----------------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 52.7         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 7            |
+|    time_elapsed         | 3839         |
+|    total_timesteps      | 234336       |
+| train/                  |              |
+|    approx_kl            | 0.0021994677 |
+|    clip_fraction        | 0.0205       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0415      |
+|    explained_variance   | 0.746        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.0127       |
+|    n_updates            | 1130         |
+|    policy_gradient_loss | -0.0082      |
+|    value_loss           | 0.0888       |
+------------------------------------------
+Eval num_timesteps=235000, episode_reward=-4.26 +/- 0.47
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -4.26        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.971        |
+| session/                 |              |
+|    london_range_pts      | 22.7         |
+| time/                    |              |
+|    total_timesteps       | 235000       |
+| trade/                   |              |
+|    episode_pnl           | 1.45         |
+|    first_trade_pnl       | 3.06         |
+|    first_trade_win_rate  | 0.545        |
+|    ny_open_trade_rate    | 0.06         |
+|    pnl_continuation_days | 1.46         |
+|    pnl_sweep_high_days   | 0.278        |
+|    pnl_sweep_low_days    | 4.07         |
+|    trades_per_episode    | 0.42         |
+|    win_rate              | 0.636        |
+|    win_rate_continuation | 0.1          |
+|    win_rate_sweep_days   | 0.3          |
+| train/                   |              |
+|    approx_kl             | 0.0011982557 |
+|    clip_fraction         | 0.00986      |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0187      |
+|    explained_variance    | 0.812        |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.0288       |
+|    n_updates             | 1140         |
+|    policy_gradient_loss  | -0.00296     |
+|    value_loss            | 0.0719       |
+-------------------------------------------
+New best mean reward!
+----------------------------------
+| session/            |          |
+|    london_range_pts | 43       |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 8        |
+|    time_elapsed     | 4613     |
+|    total_timesteps  | 236384   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 17.9         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 9            |
+|    time_elapsed         | 5292         |
+|    total_timesteps      | 238432       |
+| train/                  |              |
+|    approx_kl            | 0.0064030234 |
+|    clip_fraction        | 0.0459       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0991      |
+|    explained_variance   | 0.637        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.0147       |
+|    n_updates            | 1150         |
+|    policy_gradient_loss | -0.0143      |
+|    value_loss           | 0.142        |
+------------------------------------------
+Eval num_timesteps=240000, episode_reward=-4.18 +/- 0.88
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -4.18        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.937        |
+| session/                 |              |
+|    london_range_pts      | 33.6         |
+| time/                    |              |
+|    total_timesteps       | 240000       |
+| trade/                   |              |
+|    episode_pnl           | 0.544        |
+|    first_trade_pnl       | 0.639        |
+|    first_trade_win_rate  | 0.333        |
+|    ny_open_trade_rate    | 0            |
+|    pnl_continuation_days | 0.583        |
+|    pnl_sweep_high_days   | 0.991        |
+|    pnl_sweep_low_days    | 0            |
+|    trades_per_episode    | 0.18         |
+|    win_rate              | 0.5          |
+|    win_rate_continuation | 0.0606       |
+|    win_rate_sweep_days   | 0.0588       |
+| train/                   |              |
+|    approx_kl             | 0.0037229443 |
+|    clip_fraction         | 0.0303       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0587      |
+|    explained_variance    | 0.675        |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.0307       |
+|    n_updates             | 1160         |
+|    policy_gradient_loss  | -0.0115      |
+|    value_loss            | 0.118        |
+| validation/              |              |
+|    acceptance_passed     | 0            |
+|    first_trade_win_rate  | 64.7         |
+|    ny_open_trade_rate    | 0.0261       |
+|    pnl_continuation_days | 0.579        |
+|    pnl_sweep_low_days    | 0.643        |
+|    profit_factor         | 1.72         |
+|    trades_per_episode    | 0.226        |
+|    win_rate              | 34.6         |
+|    win_rate_continuation | 4.82         |
+|    win_rate_sweep_days   | 28.1         |
+-------------------------------------------
+New best mean reward!
+----------------------------------
+| session/            |          |
+|    london_range_pts | 18.2     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 10       |
+|    time_elapsed     | 6096     |
+|    total_timesteps  | 240480   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 29.3        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 11          |
+|    time_elapsed         | 6574        |
+|    total_timesteps      | 242528      |
+| train/                  |             |
+|    approx_kl            | 0.005677768 |
+|    clip_fraction        | 0.0468      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.103      |
+|    explained_variance   | 0.639       |
+|    learning_rate        | 0.0003      |
+|    loss                 | -0.00574    |
+|    n_updates            | 1170        |
+|    policy_gradient_loss | -0.0139     |
+|    value_loss           | 0.132       |
+-----------------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 20.3         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 12           |
+|    time_elapsed         | 7071         |
+|    total_timesteps      | 244576       |
+| train/                  |              |
+|    approx_kl            | 0.0033296184 |
+|    clip_fraction        | 0.0282       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0585      |
+|    explained_variance   | 0.745        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.00547      |
+|    n_updates            | 1180         |
+|    policy_gradient_loss | -0.0117      |
+|    value_loss           | 0.087        |
+------------------------------------------
+Eval num_timesteps=245000, episode_reward=-4.06 +/- 1.02
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -4.06       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.948       |
+| session/                 |             |
+|    london_range_pts      | 28          |
+| time/                    |             |
+|    total_timesteps       | 245000      |
+| trade/                   |             |
+|    episode_pnl           | 1.07        |
+|    first_trade_pnl       | 2.38        |
+|    first_trade_win_rate  | 0.556       |
+|    ny_open_trade_rate    | 0           |
+|    pnl_continuation_days | 1.22        |
+|    pnl_sweep_high_days   | 0.294       |
+|    pnl_sweep_low_days    | 1.87        |
+|    trades_per_episode    | 0.3         |
+|    win_rate              | 0.667       |
+|    win_rate_continuation | 0.0714      |
+|    win_rate_sweep_days   | 0.182       |
+| train/                   |             |
+|    approx_kl             | 0.003760754 |
+|    clip_fraction         | 0.0329      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.0716     |
+|    explained_variance    | 0.717       |
+|    learning_rate         | 0.0003      |
+|    loss                  | -0.00165    |
+|    n_updates             | 1190        |
+|    policy_gradient_loss  | -0.0112     |
+|    value_loss            | 0.0986      |
+------------------------------------------
+New best mean reward!
+----------------------------------
+| session/            |          |
+|    london_range_pts | 19.4     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 13       |
+|    time_elapsed     | 7610     |
+|    total_timesteps  | 246624   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 29.8         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 14           |
+|    time_elapsed         | 8158         |
+|    total_timesteps      | 248672       |
+| train/                  |              |
+|    approx_kl            | 0.0066046445 |
+|    clip_fraction        | 0.0365       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0718      |
+|    explained_variance   | 0.758        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.00633      |
+|    n_updates            | 1200         |
+|    policy_gradient_loss | -0.0097      |
+|    value_loss           | 0.0878       |
+------------------------------------------
+Eval num_timesteps=250000, episode_reward=-3.38 +/- 1.47
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -3.38       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.958       |
+| session/                 |             |
+|    london_range_pts      | 18.7        |
+| time/                    |             |
+|    total_timesteps       | 250000      |
+| trade/                   |             |
+|    episode_pnl           | 0.0339      |
+|    first_trade_pnl       | 1.6         |
+|    first_trade_win_rate  | 0.667       |
+|    ny_open_trade_rate    | 0           |
+|    pnl_continuation_days | -0.174      |
+|    pnl_sweep_high_days   | 0           |
+|    pnl_sweep_low_days    | 1.09        |
+|    trades_per_episode    | 0.08        |
+|    win_rate              | 0.333       |
+|    win_rate_continuation | 0           |
+|    win_rate_sweep_days   | 0.0625      |
+| train/                   |             |
+|    approx_kl             | 0.005913474 |
+|    clip_fraction         | 0.05        |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.096      |
+|    explained_variance    | 0.727       |
+|    learning_rate         | 0.0003      |
+|    loss                  | -0.0108     |
+|    n_updates             | 1210        |
+|    policy_gradient_loss  | -0.0147     |
+|    value_loss            | 0.0957      |
+| validation/              |             |
+|    acceptance_passed     | 0           |
+|    first_trade_win_rate  | 64.7        |
+|    ny_open_trade_rate    | 0.0261      |
+|    pnl_continuation_days | 0.579       |
+|    pnl_sweep_low_days    | 0.643       |
+|    profit_factor         | 1.93        |
+|    trades_per_episode    | 0.217       |
+|    win_rate              | 36          |
+|    win_rate_continuation | 4.82        |
+|    win_rate_sweep_days   | 28.1        |
+------------------------------------------
+New best mean reward!
+----------------------------------
+| session/            |          |
+|    london_range_pts | 20       |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 15       |
+|    time_elapsed     | 9098     |
+|    total_timesteps  | 250720   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 27.2         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 16           |
+|    time_elapsed         | 9690         |
+|    total_timesteps      | 252768       |
+| train/                  |              |
+|    approx_kl            | 0.0040892735 |
+|    clip_fraction        | 0.0292       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.05        |
+|    explained_variance   | 0.727        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.00781      |
+|    n_updates            | 1220         |
+|    policy_gradient_loss | -0.0099      |
+|    value_loss           | 0.0843       |
+------------------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 19.5        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 17          |
+|    time_elapsed         | 10303       |
+|    total_timesteps      | 254816      |
+| train/                  |             |
+|    approx_kl            | 0.005580405 |
+|    clip_fraction        | 0.0362      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0791     |
+|    explained_variance   | 0.612       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0121      |
+|    n_updates            | 1230        |
+|    policy_gradient_loss | -0.0104     |
+|    value_loss           | 0.12        |
+-----------------------------------------
+Eval num_timesteps=255000, episode_reward=-3.41 +/- 1.06
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -3.41       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.947       |
+| session/                 |             |
+|    london_range_pts      | 18.3        |
+| time/                    |             |
+|    total_timesteps       | 255000      |
+| trade/                   |             |
+|    episode_pnl           | 1.95        |
+|    first_trade_pnl       | 4.14        |
+|    first_trade_win_rate  | 0.692       |
+|    ny_open_trade_rate    | 0.06        |
+|    pnl_continuation_days | 0.566       |
+|    pnl_sweep_high_days   | 6.52        |
+|    pnl_sweep_low_days    | 2.29        |
+|    trades_per_episode    | 0.46        |
+|    win_rate              | 0.769       |
+|    win_rate_continuation | 0.0938      |
+|    win_rate_sweep_days   | 0.389       |
+| train/                   |             |
+|    approx_kl             | 0.006543154 |
+|    clip_fraction         | 0.0439      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.104      |
+|    explained_variance    | 0.558       |
+|    learning_rate         | 0.0003      |
+|    loss                  | 0.00473     |
+|    n_updates             | 1240        |
+|    policy_gradient_loss  | -0.0155     |
+|    value_loss            | 0.162       |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 42.4     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 18       |
+|    time_elapsed     | 10884    |
+|    total_timesteps  | 256864   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 20.2         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 19           |
+|    time_elapsed         | 11339        |
+|    total_timesteps      | 258912       |
+| train/                  |              |
+|    approx_kl            | 0.0039502536 |
+|    clip_fraction        | 0.0335       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0634      |
+|    explained_variance   | 0.667        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.00827      |
+|    n_updates            | 1250         |
+|    policy_gradient_loss | -0.0125      |
+|    value_loss           | 0.102        |
+------------------------------------------
+Eval num_timesteps=260000, episode_reward=-3.16 +/- 1.30
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -3.16        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.96         |
+| session/                 |              |
+|    london_range_pts      | 34.8         |
+| time/                    |              |
+|    total_timesteps       | 260000       |
+| trade/                   |              |
+|    episode_pnl           | 1.73         |
+|    first_trade_pnl       | 7.26         |
+|    first_trade_win_rate  | 0.875        |
+|    ny_open_trade_rate    | 0.02         |
+|    pnl_continuation_days | 0.972        |
+|    pnl_sweep_high_days   | 4.77         |
+|    pnl_sweep_low_days    | 0            |
+|    trades_per_episode    | 0.26         |
+|    win_rate              | 0.875        |
+|    win_rate_continuation | 0.1          |
+|    win_rate_sweep_days   | 0.2          |
+| train/                   |              |
+|    approx_kl             | 0.0029541047 |
+|    clip_fraction         | 0.0212       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0366      |
+|    explained_variance    | 0.69         |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.0205       |
+|    n_updates             | 1260         |
+|    policy_gradient_loss  | -0.00853     |
+|    value_loss            | 0.113        |
+| validation/              |              |
+|    acceptance_passed     | 0            |
+|    first_trade_win_rate  | 64.7         |
+|    ny_open_trade_rate    | 0.0261       |
+|    pnl_continuation_days | 0.578        |
+|    pnl_sweep_low_days    | 0.643        |
+|    profit_factor         | 1.72         |
+|    trades_per_episode    | 0.226        |
+|    win_rate              | 34.6         |
+|    win_rate_continuation | 4.82         |
+|    win_rate_sweep_days   | 28.1         |
+-------------------------------------------
+New best mean reward!
+----------------------------------
+| session/            |          |
+|    london_range_pts | 35.2     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 20       |
+|    time_elapsed     | 12054    |
+|    total_timesteps  | 260960   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 36.4        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 21          |
+|    time_elapsed         | 12485       |
+|    total_timesteps      | 263008      |
+| train/                  |             |
+|    approx_kl            | 0.002940951 |
+|    clip_fraction        | 0.0222      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0534     |
+|    explained_variance   | 0.727       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0129      |
+|    n_updates            | 1270        |
+|    policy_gradient_loss | -0.00686    |
+|    value_loss           | 0.1         |
+-----------------------------------------
+Eval num_timesteps=265000, episode_reward=-3.58 +/- 0.97
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -3.58        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.952        |
+| session/                 |              |
+|    london_range_pts      | 13.4         |
+| time/                    |              |
+|    total_timesteps       | 265000       |
+| trade/                   |              |
+|    episode_pnl           | 1.25         |
+|    first_trade_pnl       | 3.53         |
+|    first_trade_win_rate  | 0.375        |
+|    ny_open_trade_rate    | 0.02         |
+|    pnl_continuation_days | 1.61         |
+|    pnl_sweep_high_days   | 0.48         |
+|    pnl_sweep_low_days    | 0.309        |
+|    trades_per_episode    | 0.38         |
+|    win_rate              | 0.75         |
+|    win_rate_continuation | 0.114        |
+|    win_rate_sweep_days   | 0.133        |
+| train/                   |              |
+|    approx_kl             | 0.0045035915 |
+|    clip_fraction         | 0.0282       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0574      |
+|    explained_variance    | 0.652        |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.0204       |
+|    n_updates             | 1280         |
+|    policy_gradient_loss  | -0.0111      |
+|    value_loss            | 0.113        |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 17.6     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 22       |
+|    time_elapsed     | 12957    |
+|    total_timesteps  | 265056   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 70.3        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 23          |
+|    time_elapsed         | 13437       |
+|    total_timesteps      | 267104      |
+| train/                  |             |
+|    approx_kl            | 0.004002864 |
+|    clip_fraction        | 0.0331      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0754     |
+|    explained_variance   | 0.686       |
+|    learning_rate        | 0.0003      |
+|    loss                 | -0.0168     |
+|    n_updates            | 1290        |
+|    policy_gradient_loss | -0.0136     |
+|    value_loss           | 0.124       |
+-----------------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 29.1         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 24           |
+|    time_elapsed         | 13932        |
+|    total_timesteps      | 269152       |
+| train/                  |              |
+|    approx_kl            | 0.0062427386 |
+|    clip_fraction        | 0.0473       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.107       |
+|    explained_variance   | 0.674        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.021        |
+|    n_updates            | 1300         |
+|    policy_gradient_loss | -0.0174      |
+|    value_loss           | 0.134        |
+------------------------------------------
+Eval num_timesteps=270000, episode_reward=-4.06 +/- 0.84
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -4.06       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.915       |
+| session/                 |             |
+|    london_range_pts      | 21.8        |
+| time/                    |             |
+|    total_timesteps       | 270000      |
+| trade/                   |             |
+|    episode_pnl           | 1.53        |
+|    first_trade_pnl       | 6.11        |
+|    first_trade_win_rate  | 0.889       |
+|    ny_open_trade_rate    | 0           |
+|    pnl_continuation_days | 0.944       |
+|    pnl_sweep_high_days   | 3.85        |
+|    pnl_sweep_low_days    | 2.26        |
+|    trades_per_episode    | 0.3         |
+|    win_rate              | 1           |
+|    win_rate_continuation | 0.0833      |
+|    win_rate_sweep_days   | 0.429       |
+| train/                   |             |
+|    approx_kl             | 0.007447685 |
+|    clip_fraction         | 0.0566      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.126      |
+|    explained_variance    | 0.61        |
+|    learning_rate         | 0.0003      |
+|    loss                  | -0.0138     |
+|    n_updates             | 1310        |
+|    policy_gradient_loss  | -0.0187     |
+|    value_loss            | 0.191       |
+| validation/              |             |
+|    acceptance_passed     | 0           |
+|    first_trade_win_rate  | 60          |
+|    ny_open_trade_rate    | 0           |
+|    pnl_continuation_days | 0.373       |
+|    pnl_sweep_low_days    | 0.643       |
+|    profit_factor         | 1.91        |
+|    trades_per_episode    | 0.217       |
+|    win_rate              | 40          |
+|    win_rate_continuation | 2.41        |
+|    win_rate_sweep_days   | 28.1        |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 15.6     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 25       |
+|    time_elapsed     | 14864    |
+|    total_timesteps  | 271200   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 16.8         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 26           |
+|    time_elapsed         | 15471        |
+|    total_timesteps      | 273248       |
+| train/                  |              |
+|    approx_kl            | 0.0054728054 |
+|    clip_fraction        | 0.0542       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.112       |
+|    explained_variance   | 0.651        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.0127       |
+|    n_updates            | 1320         |
+|    policy_gradient_loss | -0.021       |
+|    value_loss           | 0.189        |
+------------------------------------------
+Eval num_timesteps=275000, episode_reward=-4.43 +/- 0.70
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -4.43        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.95         |
+| session/                 |              |
+|    london_range_pts      | 18.6         |
+| time/                    |              |
+|    total_timesteps       | 275000       |
+| trade/                   |              |
+|    episode_pnl           | 1.72         |
+|    first_trade_pnl       | 4.32         |
+|    first_trade_win_rate  | 1            |
+|    ny_open_trade_rate    | 0            |
+|    pnl_continuation_days | 2.33         |
+|    pnl_sweep_high_days   | 0.729        |
+|    pnl_sweep_low_days    | 0.401        |
+|    trades_per_episode    | 0.24         |
+|    win_rate              | 1            |
+|    win_rate_continuation | 0.0909       |
+|    win_rate_sweep_days   | 0.176        |
+| train/                   |              |
+|    approx_kl             | 0.0035264953 |
+|    clip_fraction         | 0.0309       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0748      |
+|    explained_variance    | 0.759        |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.00802      |
+|    n_updates             | 1330         |
+|    policy_gradient_loss  | -0.0129      |
+|    value_loss            | 0.14         |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 26.5     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 27       |
+|    time_elapsed     | 15897    |
+|    total_timesteps  | 275296   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 30.7        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 28          |
+|    time_elapsed         | 16216       |
+|    total_timesteps      | 277344      |
+| train/                  |             |
+|    approx_kl            | 0.004044134 |
+|    clip_fraction        | 0.0316      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.062      |
+|    explained_variance   | 0.609       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.023       |
+|    n_updates            | 1340        |
+|    policy_gradient_loss | -0.0103     |
+|    value_loss           | 0.124       |
+-----------------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 19.6        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 29          |
+|    time_elapsed         | 16577       |
+|    total_timesteps      | 279392      |
+| train/                  |             |
+|    approx_kl            | 0.004473988 |
+|    clip_fraction        | 0.0333      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.071      |
+|    explained_variance   | 0.68        |
+|    learning_rate        | 0.0003      |
+|    loss                 | -0.00249    |
+|    n_updates            | 1350        |
+|    policy_gradient_loss | -0.0114     |
+|    value_loss           | 0.108       |
+-----------------------------------------
+Eval num_timesteps=280000, episode_reward=-4.33 +/- 0.44
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -4.33        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.953        |
+| session/                 |              |
+|    london_range_pts      | 22.6         |
+| time/                    |              |
+|    total_timesteps       | 280000       |
+| trade/                   |              |
+|    episode_pnl           | 0.212        |
+|    first_trade_pnl       | 0.87         |
+|    first_trade_win_rate  | 0.429        |
+|    ny_open_trade_rate    | 0            |
+|    pnl_continuation_days | -0.0392      |
+|    pnl_sweep_high_days   | 1.18         |
+|    pnl_sweep_low_days    | -0.604       |
+|    trades_per_episode    | 0.16         |
+|    win_rate              | 0.429        |
+|    win_rate_continuation | 0.0312       |
+|    win_rate_sweep_days   | 0.111        |
+| train/                   |              |
+|    approx_kl             | 0.0058940165 |
+|    clip_fraction         | 0.0349       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0663      |
+|    explained_variance    | 0.749        |
+|    learning_rate         | 0.0003       |
+|    loss                  | -0.00352     |
+|    n_updates             | 1360         |
+|    policy_gradient_loss  | -0.0112      |
+|    value_loss            | 0.0795       |
+| validation/              |              |
+|    acceptance_passed     | 0            |
+|    first_trade_win_rate  | 60           |
+|    ny_open_trade_rate    | 0.0087       |
+|    pnl_continuation_days | 0.373        |
+|    pnl_sweep_low_days    | 0.643        |
+|    profit_factor         | 1.72         |
+|    trades_per_episode    | 0.217        |
+|    win_rate              | 36           |
+|    win_rate_continuation | 2.41         |
+|    win_rate_sweep_days   | 28.1         |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 39.6     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 30       |
+|    time_elapsed     | 17232    |
+|    total_timesteps  | 281440   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 24.2         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 31           |
+|    time_elapsed         | 17607        |
+|    total_timesteps      | 283488       |
+| train/                  |              |
+|    approx_kl            | 0.0073739807 |
+|    clip_fraction        | 0.0453       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0658      |
+|    explained_variance   | 0.701        |
+|    learning_rate        | 0.0003       |
+|    loss                 | -0.0215      |
+|    n_updates            | 1370         |
+|    policy_gradient_loss | -0.0181      |
+|    value_loss           | 0.109        |
+------------------------------------------
+Eval num_timesteps=285000, episode_reward=-3.85 +/- 0.88
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -3.85        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.957        |
+| session/                 |              |
+|    london_range_pts      | 25.3         |
+| time/                    |              |
+|    total_timesteps       | 285000       |
+| trade/                   |              |
+|    episode_pnl           | 0.287        |
+|    first_trade_pnl       | -0.664       |
+|    first_trade_win_rate  | 0.333        |
+|    ny_open_trade_rate    | 0.02         |
+|    pnl_continuation_days | 0.639        |
+|    pnl_sweep_high_days   | -0.453       |
+|    pnl_sweep_low_days    | -0.33        |
+|    trades_per_episode    | 0.32         |
+|    win_rate              | 0.444        |
+|    win_rate_continuation | 0.0909       |
+|    win_rate_sweep_days   | 0.0588       |
+| train/                   |              |
+|    approx_kl             | 0.0060067424 |
+|    clip_fraction         | 0.0308       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0577      |
+|    explained_variance    | 0.78         |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.013        |
+|    n_updates             | 1380         |
+|    policy_gradient_loss  | -0.0113      |
+|    value_loss            | 0.099        |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 39.9     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 32       |
+|    time_elapsed     | 18007    |
+|    total_timesteps  | 285536   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 30.5        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 33          |
+|    time_elapsed         | 18427       |
+|    total_timesteps      | 287584      |
+| train/                  |             |
+|    approx_kl            | 0.006044779 |
+|    clip_fraction        | 0.0337      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0717     |
+|    explained_variance   | 0.731       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0142      |
+|    n_updates            | 1390        |
+|    policy_gradient_loss | -0.0104     |
+|    value_loss           | 0.115       |
+-----------------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 39.2         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 34           |
+|    time_elapsed         | 18987        |
+|    total_timesteps      | 289632       |
+| train/                  |              |
+|    approx_kl            | 0.0057573235 |
+|    clip_fraction        | 0.0305       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0564      |
+|    explained_variance   | 0.734        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.0146       |
+|    n_updates            | 1400         |
+|    policy_gradient_loss | -0.00949     |
+|    value_loss           | 0.0986       |
+------------------------------------------
+Eval num_timesteps=290000, episode_reward=-2.81 +/- 1.51
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -2.81        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.953        |
+| session/                 |              |
+|    london_range_pts      | 24           |
+| time/                    |              |
+|    total_timesteps       | 290000       |
+| trade/                   |              |
+|    episode_pnl           | 0.855        |
+|    first_trade_pnl       | 5.91         |
+|    first_trade_win_rate  | 0.714        |
+|    ny_open_trade_rate    | 0.02         |
+|    pnl_continuation_days | 0.591        |
+|    pnl_sweep_high_days   | 1.87         |
+|    pnl_sweep_low_days    | 0.422        |
+|    trades_per_episode    | 0.18         |
+|    win_rate              | 0.714        |
+|    win_rate_continuation | 0.0588       |
+|    win_rate_sweep_days   | 0.188        |
+| train/                   |              |
+|    approx_kl             | 0.0065510394 |
+|    clip_fraction         | 0.0468       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.102       |
+|    explained_variance    | 0.705        |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.0179       |
+|    n_updates             | 1410         |
+|    policy_gradient_loss  | -0.0154      |
+|    value_loss            | 0.137        |
+| validation/              |              |
+|    acceptance_passed     | 0            |
+|    first_trade_win_rate  | 64.7         |
+|    ny_open_trade_rate    | 0.0261       |
+|    pnl_continuation_days | 0.633        |
+|    pnl_sweep_low_days    | 0.643        |
+|    profit_factor         | 2.11         |
+|    trades_per_episode    | 0.217        |
+|    win_rate              | 36           |
+|    win_rate_continuation | 4.82         |
+|    win_rate_sweep_days   | 25           |
+-------------------------------------------
+New best mean reward!
+----------------------------------
+| session/            |          |
+|    london_range_pts | 26.3     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 35       |
+|    time_elapsed     | 20040    |
+|    total_timesteps  | 291680   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 15.2        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 36          |
+|    time_elapsed         | 20598       |
+|    total_timesteps      | 293728      |
+| train/                  |             |
+|    approx_kl            | 0.007065472 |
+|    clip_fraction        | 0.0382      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0723     |
+|    explained_variance   | 0.623       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.00449     |
+|    n_updates            | 1420        |
+|    policy_gradient_loss | -0.0116     |
+|    value_loss           | 0.123       |
+-----------------------------------------
+Eval num_timesteps=295000, episode_reward=-3.79 +/- 0.45
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -3.79       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.947       |
+| session/                 |             |
+|    london_range_pts      | 20.8        |
+| time/                    |             |
+|    total_timesteps       | 295000      |
+| trade/                   |             |
+|    episode_pnl           | 1.53        |
+|    first_trade_pnl       | 2.13        |
+|    first_trade_win_rate  | 0.636       |
+|    ny_open_trade_rate    | 0.02        |
+|    pnl_continuation_days | 1.65        |
+|    pnl_sweep_high_days   | -0.361      |
+|    pnl_sweep_low_days    | 1.99        |
+|    trades_per_episode    | 0.42        |
+|    win_rate              | 0.636       |
+|    win_rate_continuation | 0.0909      |
+|    win_rate_sweep_days   | 0.235       |
+| train/                   |             |
+|    approx_kl             | 0.005548483 |
+|    clip_fraction         | 0.0404      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.0833     |
+|    explained_variance    | 0.688       |
+|    learning_rate         | 0.0003      |
+|    loss                  | 0.00963     |
+|    n_updates             | 1430        |
+|    policy_gradient_loss  | -0.0128     |
+|    value_loss            | 0.144       |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 24.3     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 37       |
+|    time_elapsed     | 21044    |
+|    total_timesteps  | 295776   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 27.1         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 38           |
+|    time_elapsed         | 21483        |
+|    total_timesteps      | 297824       |
+| train/                  |              |
+|    approx_kl            | 0.0025569187 |
+|    clip_fraction        | 0.0218       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0457      |
+|    explained_variance   | 0.601        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.0122       |
+|    n_updates            | 1440         |
+|    policy_gradient_loss | -0.00828     |
+|    value_loss           | 0.124        |
+------------------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 21.8        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 39          |
+|    time_elapsed         | 21940       |
+|    total_timesteps      | 299872      |
+| train/                  |             |
+|    approx_kl            | 0.009549489 |
+|    clip_fraction        | 0.0502      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0733     |
+|    explained_variance   | 0.626       |
+|    learning_rate        | 0.0003      |
+|    loss                 | -0.00878    |
+|    n_updates            | 1450        |
+|    policy_gradient_loss | -0.0181     |
+|    value_loss           | 0.135       |
+-----------------------------------------
+Eval num_timesteps=300000, episode_reward=-3.47 +/- 1.82
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -3.47       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.941       |
+| session/                 |             |
+|    london_range_pts      | 26.5        |
+| time/                    |             |
+|    total_timesteps       | 300000      |
+| trade/                   |             |
+|    episode_pnl           | 1.14        |
+|    first_trade_pnl       | 1.17        |
+|    first_trade_win_rate  | 0.6         |
+|    ny_open_trade_rate    | 0.04        |
+|    pnl_continuation_days | 2.2         |
+|    pnl_sweep_high_days   | -0.736      |
+|    pnl_sweep_low_days    | -0.416      |
+|    trades_per_episode    | 0.4         |
+|    win_rate              | 0.6         |
+|    win_rate_continuation | 0.161       |
+|    win_rate_sweep_days   | 0.0526      |
+| train/                   |             |
+|    approx_kl             | 0.010299931 |
+|    clip_fraction         | 0.0558      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.102      |
+|    explained_variance    | 0.438       |
+|    learning_rate         | 0.0003      |
+|    loss                  | 0.00289     |
+|    n_updates             | 1460        |
+|    policy_gradient_loss  | -0.0185     |
+|    value_loss            | 0.152       |
+| validation/              |             |
+|    acceptance_passed     | 0           |
+|    first_trade_win_rate  | 68.8        |
+|    ny_open_trade_rate    | 0.0261      |
+|    pnl_continuation_days | 0.633       |
+|    pnl_sweep_low_days    | 0.643       |
+|    profit_factor         | 2.37        |
+|    trades_per_episode    | 0.209       |
+|    win_rate              | 37.5        |
+|    win_rate_continuation | 4.82        |
+|    win_rate_sweep_days   | 25          |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 37.1     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 40       |
+|    time_elapsed     | 22822    |
+|    total_timesteps  | 301920   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 18.7        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 41          |
+|    time_elapsed         | 23434       |
+|    total_timesteps      | 303968      |
+| train/                  |             |
+|    approx_kl            | 0.005516886 |
+|    clip_fraction        | 0.0279      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.049      |
+|    explained_variance   | 0.721       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0235      |
+|    n_updates            | 1470        |
+|    policy_gradient_loss | -0.00954    |
+|    value_loss           | 0.122       |
+-----------------------------------------
+Eval num_timesteps=305000, episode_reward=-4.27 +/- 0.72
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -4.27        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.954        |
+| session/                 |              |
+|    london_range_pts      | 23.5         |
+| time/                    |              |
+|    total_timesteps       | 305000       |
+| trade/                   |              |
+|    episode_pnl           | 0.609        |
+|    first_trade_pnl       | 3.28         |
+|    first_trade_win_rate  | 0.75         |
+|    ny_open_trade_rate    | 0.02         |
+|    pnl_continuation_days | 0.402        |
+|    pnl_sweep_high_days   | -0.116       |
+|    pnl_sweep_low_days    | 4.55         |
+|    trades_per_episode    | 0.18         |
+|    win_rate              | 0.75         |
+|    win_rate_continuation | 0.0294       |
+|    win_rate_sweep_days   | 0.312        |
+| train/                   |              |
+|    approx_kl             | 0.0068879738 |
+|    clip_fraction         | 0.0405       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0742      |
+|    explained_variance    | 0.653        |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.028        |
+|    n_updates             | 1480         |
+|    policy_gradient_loss  | -0.0112      |
+|    value_loss            | 0.134        |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 32.3     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 42       |
+|    time_elapsed     | 24051    |
+|    total_timesteps  | 306016   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 29.5         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 43           |
+|    time_elapsed         | 24656        |
+|    total_timesteps      | 308064       |
+| train/                  |              |
+|    approx_kl            | 0.0068747345 |
+|    clip_fraction        | 0.0317       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0505      |
+|    explained_variance   | 0.74         |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.00738      |
+|    n_updates            | 1490         |
+|    policy_gradient_loss | -0.0127      |
+|    value_loss           | 0.0832       |
+------------------------------------------
+Eval num_timesteps=310000, episode_reward=-4.61 +/- 0.63
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -4.61       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.958       |
+| session/                 |             |
+|    london_range_pts      | 25.1        |
+| time/                    |             |
+|    total_timesteps       | 310000      |
+| trade/                   |             |
+|    episode_pnl           | 1.61        |
+|    first_trade_pnl       | 4.42        |
+|    first_trade_win_rate  | 0.714       |
+|    ny_open_trade_rate    | 0           |
+|    pnl_continuation_days | 2.04        |
+|    pnl_sweep_high_days   | 1.19        |
+|    pnl_sweep_low_days    | -0.604      |
+|    trades_per_episode    | 0.24        |
+|    win_rate              | 0.714       |
+|    win_rate_continuation | 0.111       |
+|    win_rate_sweep_days   | 0.0714      |
+| train/                   |             |
+|    approx_kl             | 0.008167073 |
+|    clip_fraction         | 0.0375      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.0746     |
+|    explained_variance    | 0.68        |
+|    learning_rate         | 0.0003      |
+|    loss                  | -0.00158    |
+|    n_updates             | 1500        |
+|    policy_gradient_loss  | -0.0139     |
+|    value_loss            | 0.131       |
+| validation/              |             |
+|    acceptance_passed     | 0           |
+|    first_trade_win_rate  | 64.7        |
+|    ny_open_trade_rate    | 0.0261      |
+|    pnl_continuation_days | 0.633       |
+|    pnl_sweep_low_days    | 0.643       |
+|    profit_factor         | 1.72        |
+|    trades_per_episode    | 0.235       |
+|    win_rate              | 33.3        |
+|    win_rate_continuation | 4.82        |
+|    win_rate_sweep_days   | 28.1        |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 21.8     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 44       |
+|    time_elapsed     | 25682    |
+|    total_timesteps  | 310112   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 26           |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 45           |
+|    time_elapsed         | 26222        |
+|    total_timesteps      | 312160       |
+| train/                  |              |
+|    approx_kl            | 0.0081186555 |
+|    clip_fraction        | 0.0423       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.069       |
+|    explained_variance   | 0.709        |
+|    learning_rate        | 0.0003       |
+|    loss                 | -0.00461     |
+|    n_updates            | 1510         |
+|    policy_gradient_loss | -0.0135      |
+|    value_loss           | 0.135        |
+------------------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 29.7         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 46           |
+|    time_elapsed         | 26681        |
+|    total_timesteps      | 314208       |
+| train/                  |              |
+|    approx_kl            | 0.0040574307 |
+|    clip_fraction        | 0.0272       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0605      |
+|    explained_variance   | 0.669        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.0248       |
+|    n_updates            | 1520         |
+|    policy_gradient_loss | -0.00836     |
+|    value_loss           | 0.113        |
+------------------------------------------
+Eval num_timesteps=315000, episode_reward=-4.29 +/- 0.26
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -4.29        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.944        |
+| session/                 |              |
+|    london_range_pts      | 22.6         |
+| time/                    |              |
+|    total_timesteps       | 315000       |
+| trade/                   |              |
+|    episode_pnl           | 1.25         |
+|    first_trade_pnl       | 3.75         |
+|    first_trade_win_rate  | 0.727        |
+|    ny_open_trade_rate    | 0.08         |
+|    pnl_continuation_days | 1.09         |
+|    pnl_sweep_high_days   | 2.73         |
+|    pnl_sweep_low_days    | 0.00228      |
+|    trades_per_episode    | 0.42         |
+|    win_rate              | 0.909        |
+|    win_rate_continuation | 0.1          |
+|    win_rate_sweep_days   | 0.35         |
+| train/                   |              |
+|    approx_kl             | 0.0076062707 |
+|    clip_fraction         | 0.0422       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0789      |
+|    explained_variance    | 0.745        |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.00847      |
+|    n_updates             | 1530         |
+|    policy_gradient_loss  | -0.0137      |
+|    value_loss            | 0.128        |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 40.8     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 47       |
+|    time_elapsed     | 27213    |
+|    total_timesteps  | 316256   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 44.9         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 48           |
+|    time_elapsed         | 27729        |
+|    total_timesteps      | 318304       |
+| train/                  |              |
+|    approx_kl            | 0.0052215327 |
+|    clip_fraction        | 0.0392       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0868      |
+|    explained_variance   | 0.669        |
+|    learning_rate        | 0.0003       |
+|    loss                 | -0.00375     |
+|    n_updates            | 1540         |
+|    policy_gradient_loss | -0.0137      |
+|    value_loss           | 0.133        |
+------------------------------------------
+Eval num_timesteps=320000, episode_reward=-2.90 +/- 2.47
+Episode length: 35.00 +/- 0.00
+-----------------------------------------
+| eval/                    |            |
+|    mean_ep_length        | 35         |
+|    mean_reward           | -2.9       |
+| policy/                  |            |
+|    ent_coef              | 0.01       |
+|    hold_rate_500         | 0.953      |
+| session/                 |            |
+|    london_range_pts      | 18.6       |
+| time/                    |            |
+|    total_timesteps       | 320000     |
+| trade/                   |            |
+|    episode_pnl           | 1.25       |
+|    first_trade_pnl       | 2.41       |
+|    first_trade_win_rate  | 0.625      |
+|    ny_open_trade_rate    | 0          |
+|    pnl_continuation_days | 1.34       |
+|    pnl_sweep_high_days   | -0.0424    |
+|    pnl_sweep_low_days    | 1.84       |
+|    trades_per_episode    | 0.24       |
+|    win_rate              | 0.75       |
+|    win_rate_continuation | 0.0606     |
+|    win_rate_sweep_days   | 0.235      |
+| train/                   |            |
+|    approx_kl             | 0.00981194 |
+|    clip_fraction         | 0.0474     |
+|    clip_range            | 0.2        |
+|    entropy_loss          | -0.0724    |
+|    explained_variance    | 0.759      |
+|    learning_rate         | 0.0003     |
+|    loss                  | 0.00994    |
+|    n_updates             | 1550       |
+|    policy_gradient_loss  | -0.0135    |
+|    value_loss            | 0.0995     |
+| validation/              |            |
+|    acceptance_passed     | 0          |
+|    first_trade_win_rate  | 68.8       |
+|    ny_open_trade_rate    | 0.0261     |
+|    pnl_continuation_days | 0.578      |
+|    pnl_sweep_low_days    | 0.643      |
+|    profit_factor         | 1.89       |
+|    trades_per_episode    | 0.217      |
+|    win_rate              | 36         |
+|    win_rate_continuation | 4.82       |
+|    win_rate_sweep_days   | 28.1       |
+-----------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 30.2     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 49       |
+|    time_elapsed     | 28652    |
+|    total_timesteps  | 320352   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 25.8         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 50           |
+|    time_elapsed         | 29214        |
+|    total_timesteps      | 322400       |
+| train/                  |              |
+|    approx_kl            | 0.0064752772 |
+|    clip_fraction        | 0.0466       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.079       |
+|    explained_variance   | 0.735        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.0118       |
+|    n_updates            | 1560         |
+|    policy_gradient_loss | -0.0126      |
+|    value_loss           | 0.0953       |
+------------------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 44.8        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 51          |
+|    time_elapsed         | 29794       |
+|    total_timesteps      | 324448      |
+| train/                  |             |
+|    approx_kl            | 0.008163238 |
+|    clip_fraction        | 0.0405      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0838     |
+|    explained_variance   | 0.726       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0195      |
+|    n_updates            | 1570        |
+|    policy_gradient_loss | -0.0134     |
+|    value_loss           | 0.114       |
+-----------------------------------------
+Eval num_timesteps=325000, episode_reward=-4.28 +/- 1.40
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -4.28       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.939       |
+| session/                 |             |
+|    london_range_pts      | 22.6        |
+| time/                    |             |
+|    total_timesteps       | 325000      |
+| trade/                   |             |
+|    episode_pnl           | 1.08        |
+|    first_trade_pnl       | 3.83        |
+|    first_trade_win_rate  | 0.7         |
+|    ny_open_trade_rate    | 0.02        |
+|    pnl_continuation_days | 0.621       |
+|    pnl_sweep_high_days   | 2.95        |
+|    pnl_sweep_low_days    | 0           |
+|    trades_per_episode    | 0.26        |
+|    win_rate              | 0.8         |
+|    win_rate_continuation | 0.128       |
+|    win_rate_sweep_days   | 0.273       |
+| train/                   |             |
+|    approx_kl             | 0.008332359 |
+|    clip_fraction         | 0.0496      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.0961     |
+|    explained_variance    | 0.713       |
+|    learning_rate         | 0.0003      |
+|    loss                  | 0.0103      |
+|    n_updates             | 1580        |
+|    policy_gradient_loss  | -0.0165     |
+|    value_loss            | 0.164       |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 27.3     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 52       |
+|    time_elapsed     | 30436    |
+|    total_timesteps  | 326496   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 19.7        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 53          |
+|    time_elapsed         | 31086       |
+|    total_timesteps      | 328544      |
+| train/                  |             |
+|    approx_kl            | 0.004515347 |
+|    clip_fraction        | 0.0413      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0695     |
+|    explained_variance   | 0.704       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.00913     |
+|    n_updates            | 1590        |
+|    policy_gradient_loss | -0.0143     |
+|    value_loss           | 0.114       |
+-----------------------------------------
+Eval num_timesteps=330000, episode_reward=-4.63 +/- 0.20
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -4.63        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.956        |
+| session/                 |              |
+|    london_range_pts      | 28           |
+| time/                    |              |
+|    total_timesteps       | 330000       |
+| trade/                   |              |
+|    episode_pnl           | 1.5          |
+|    first_trade_pnl       | 2.32         |
+|    first_trade_win_rate  | 0.545        |
+|    ny_open_trade_rate    | 0.02         |
+|    pnl_continuation_days | 0.929        |
+|    pnl_sweep_high_days   | 1.32         |
+|    pnl_sweep_low_days    | 3.29         |
+|    trades_per_episode    | 0.4          |
+|    win_rate              | 0.727        |
+|    win_rate_continuation | 0.111        |
+|    win_rate_sweep_days   | 0.217        |
+| train/                   |              |
+|    approx_kl             | 0.0065965233 |
+|    clip_fraction         | 0.0442       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0736      |
+|    explained_variance    | 0.637        |
+|    learning_rate         | 0.0003       |
+|    loss                  | -0.00311     |
+|    n_updates             | 1600         |
+|    policy_gradient_loss  | -0.0148      |
+|    value_loss            | 0.111        |
+| validation/              |              |
+|    acceptance_passed     | 0            |
+|    first_trade_win_rate  | 68.8         |
+|    ny_open_trade_rate    | 0.0261       |
+|    pnl_continuation_days | 0.578        |
+|    pnl_sweep_low_days    | 0.643        |
+|    profit_factor         | 1.89         |
+|    trades_per_episode    | 0.217        |
+|    win_rate              | 36           |
+|    win_rate_continuation | 4.82         |
+|    win_rate_sweep_days   | 28.1         |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 20.3     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 54       |
+|    time_elapsed     | 32051    |
+|    total_timesteps  | 330592   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 18.2         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 55           |
+|    time_elapsed         | 32539        |
+|    total_timesteps      | 332640       |
+| train/                  |              |
+|    approx_kl            | 0.0072226515 |
+|    clip_fraction        | 0.0439       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0893      |
+|    explained_variance   | 0.632        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.000569     |
+|    n_updates            | 1610         |
+|    policy_gradient_loss | -0.0118      |
+|    value_loss           | 0.112        |
+------------------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 44.8         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 56           |
+|    time_elapsed         | 33046        |
+|    total_timesteps      | 334688       |
+| train/                  |              |
+|    approx_kl            | 0.0061198515 |
+|    clip_fraction        | 0.0447       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0868      |
+|    explained_variance   | 0.763        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.00724      |
+|    n_updates            | 1620         |
+|    policy_gradient_loss | -0.013       |
+|    value_loss           | 0.118        |
+------------------------------------------
+Eval num_timesteps=335000, episode_reward=-4.17 +/- 1.24
+Episode length: 35.00 +/- 0.00
+-----------------------------------------
+| eval/                    |            |
+|    mean_ep_length        | 35         |
+|    mean_reward           | -4.17      |
+| policy/                  |            |
+|    ent_coef              | 0.01       |
+|    hold_rate_500         | 0.95       |
+| session/                 |            |
+|    london_range_pts      | 22.2       |
+| time/                    |            |
+|    total_timesteps       | 335000     |
+| trade/                   |            |
+|    episode_pnl           | 0.0182     |
+|    first_trade_pnl       | 0.303      |
+|    first_trade_win_rate  | 0.667      |
+|    ny_open_trade_rate    | 0          |
+|    pnl_continuation_days | -0.0286    |
+|    pnl_sweep_high_days   | 0.399      |
+|    pnl_sweep_low_days    | 0          |
+|    trades_per_episode    | 0.06       |
+|    win_rate              | 0.667      |
+|    win_rate_continuation | 0.0263     |
+|    win_rate_sweep_days   | 0.0833     |
+| train/                   |            |
+|    approx_kl             | 0.00517237 |
+|    clip_fraction         | 0.0322     |
+|    clip_range            | 0.2        |
+|    entropy_loss          | -0.0522    |
+|    explained_variance    | 0.868      |
+|    learning_rate         | 0.0003     |
+|    loss                  | 0.00758    |
+|    n_updates             | 1630       |
+|    policy_gradient_loss  | -0.00856   |
+|    value_loss            | 0.0707     |
+-----------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 29.6     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 57       |
+|    time_elapsed     | 33595    |
+|    total_timesteps  | 336736   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 39.5        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 58          |
+|    time_elapsed         | 34140       |
+|    total_timesteps      | 338784      |
+| train/                  |             |
+|    approx_kl            | 0.012681164 |
+|    clip_fraction        | 0.0611      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0988     |
+|    explained_variance   | 0.738       |
+|    learning_rate        | 0.0003      |
+|    loss                 | -0.0202     |
+|    n_updates            | 1640        |
+|    policy_gradient_loss | -0.0194     |
+|    value_loss           | 0.128       |
+-----------------------------------------
+Eval num_timesteps=340000, episode_reward=-3.88 +/- 0.99
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -3.88       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.933       |
+| session/                 |             |
+|    london_range_pts      | 20.5        |
+| time/                    |             |
+|    total_timesteps       | 340000      |
+| trade/                   |             |
+|    episode_pnl           | 2.95        |
+|    first_trade_pnl       | 7.12        |
+|    first_trade_win_rate  | 0.9         |
+|    ny_open_trade_rate    | 0.02        |
+|    pnl_continuation_days | 3.44        |
+|    pnl_sweep_high_days   | 2.59        |
+|    pnl_sweep_low_days    | 0.724       |
+|    trades_per_episode    | 0.4         |
+|    win_rate              | 1           |
+|    win_rate_continuation | 0.176       |
+|    win_rate_sweep_days   | 0.25        |
+| train/                   |             |
+|    approx_kl             | 0.010168732 |
+|    clip_fraction         | 0.0511      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.0844     |
+|    explained_variance    | 0.652       |
+|    learning_rate         | 0.0003      |
+|    loss                  | 0.0327      |
+|    n_updates             | 1650        |
+|    policy_gradient_loss  | -0.0126     |
+|    value_loss            | 0.136       |
+| validation/              |             |
+|    acceptance_passed     | 0           |
+|    first_trade_win_rate  | 73.3        |
+|    ny_open_trade_rate    | 0.0261      |
+|    pnl_continuation_days | 0.516       |
+|    pnl_sweep_low_days    | 0.609       |
+|    profit_factor         | 2.87        |
+|    trades_per_episode    | 0.191       |
+|    win_rate              | 45.5        |
+|    win_rate_continuation | 3.61        |
+|    win_rate_sweep_days   | 28.1        |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 13.4     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 59       |
+|    time_elapsed     | 35057    |
+|    total_timesteps  | 340832   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 22.6         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 60           |
+|    time_elapsed         | 35623        |
+|    total_timesteps      | 342880       |
+| train/                  |              |
+|    approx_kl            | 0.0049316287 |
+|    clip_fraction        | 0.0411       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0788      |
+|    explained_variance   | 0.66         |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.00545      |
+|    n_updates            | 1660         |
+|    policy_gradient_loss | -0.0112      |
+|    value_loss           | 0.107        |
+------------------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 16.3        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 61          |
+|    time_elapsed         | 36238       |
+|    total_timesteps      | 344928      |
+| train/                  |             |
+|    approx_kl            | 0.005147118 |
+|    clip_fraction        | 0.0394      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0654     |
+|    explained_variance   | 0.677       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.00855     |
+|    n_updates            | 1670        |
+|    policy_gradient_loss | -0.0116     |
+|    value_loss           | 0.106       |
+-----------------------------------------
+Eval num_timesteps=345000, episode_reward=-4.09 +/- 0.56
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -4.09        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.964        |
+| session/                 |              |
+|    london_range_pts      | 17.1         |
+| time/                    |              |
+|    total_timesteps       | 345000       |
+| trade/                   |              |
+|    episode_pnl           | 1.26         |
+|    first_trade_pnl       | 4.16         |
+|    first_trade_win_rate  | 0.857        |
+|    ny_open_trade_rate    | 0.02         |
+|    pnl_continuation_days | 0.677        |
+|    pnl_sweep_high_days   | 3.43         |
+|    pnl_sweep_low_days    | 1.08         |
+|    trades_per_episode    | 0.26         |
+|    win_rate              | 1            |
+|    win_rate_continuation | 0.0667       |
+|    win_rate_sweep_days   | 0.25         |
+| train/                   |              |
+|    approx_kl             | 0.0035093222 |
+|    clip_fraction         | 0.027        |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0408      |
+|    explained_variance    | 0.648        |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.0109       |
+|    n_updates             | 1680         |
+|    policy_gradient_loss  | -0.0111      |
+|    value_loss            | 0.0892       |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 18.3     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 62       |
+|    time_elapsed     | 36889    |
+|    total_timesteps  | 346976   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 23.6        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 63          |
+|    time_elapsed         | 37340       |
+|    total_timesteps      | 349024      |
+| train/                  |             |
+|    approx_kl            | 0.004060081 |
+|    clip_fraction        | 0.0228      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.028      |
+|    explained_variance   | 0.75        |
+|    learning_rate        | 0.0003      |
+|    loss                 | -0.00643    |
+|    n_updates            | 1690        |
+|    policy_gradient_loss | -0.0104     |
+|    value_loss           | 0.0727      |
+-----------------------------------------
+Eval num_timesteps=350000, episode_reward=-2.58 +/- 1.40
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -2.58        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.974        |
+| session/                 |              |
+|    london_range_pts      | 28.8         |
+| time/                    |              |
+|    total_timesteps       | 350000       |
+| trade/                   |              |
+|    episode_pnl           | 0.694        |
+|    first_trade_pnl       | 3.97         |
+|    first_trade_win_rate  | 0.667        |
+|    ny_open_trade_rate    | 0.02         |
+|    pnl_continuation_days | 0.347        |
+|    pnl_sweep_high_days   | 2.53         |
+|    pnl_sweep_low_days    | 0.333        |
+|    trades_per_episode    | 0.2          |
+|    win_rate              | 0.667        |
+|    win_rate_continuation | 0.0303       |
+|    win_rate_sweep_days   | 0.176        |
+| train/                   |              |
+|    approx_kl             | 0.0062342985 |
+|    clip_fraction         | 0.0386       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0606      |
+|    explained_variance    | 0.731        |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.00942      |
+|    n_updates             | 1700         |
+|    policy_gradient_loss  | -0.00968     |
+|    value_loss            | 0.0997       |
+| validation/              |              |
+|    acceptance_passed     | 0            |
+|    first_trade_win_rate  | 66.7         |
+|    ny_open_trade_rate    | 0.0261       |
+|    pnl_continuation_days | 0.516        |
+|    pnl_sweep_low_days    | 0.643        |
+|    profit_factor         | 2.06         |
+|    trades_per_episode    | 0.2          |
+|    win_rate              | 39.1         |
+|    win_rate_continuation | 3.61         |
+|    win_rate_sweep_days   | 25           |
+-------------------------------------------
+New best mean reward!
+----------------------------------
+| session/            |          |
+|    london_range_pts | 14.3     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 64       |
+|    time_elapsed     | 38205    |
+|    total_timesteps  | 351072   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 26.3         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 65           |
+|    time_elapsed         | 38691        |
+|    total_timesteps      | 353120       |
+| train/                  |              |
+|    approx_kl            | 0.0068116803 |
+|    clip_fraction        | 0.0461       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0944      |
+|    explained_variance   | 0.664        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.000709     |
+|    n_updates            | 1710         |
+|    policy_gradient_loss | -0.0129      |
+|    value_loss           | 0.137        |
+------------------------------------------
+Eval num_timesteps=355000, episode_reward=-3.65 +/- 2.04
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -3.65       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.948       |
+| session/                 |             |
+|    london_range_pts      | 54.1        |
+| time/                    |             |
+|    total_timesteps       | 355000      |
+| trade/                   |             |
+|    episode_pnl           | 0.716       |
+|    first_trade_pnl       | 4.31        |
+|    first_trade_win_rate  | 0.667       |
+|    ny_open_trade_rate    | 0           |
+|    pnl_continuation_days | 0.821       |
+|    pnl_sweep_high_days   | 0.286       |
+|    pnl_sweep_low_days    | 0.671       |
+|    trades_per_episode    | 0.18        |
+|    win_rate              | 0.667       |
+|    win_rate_continuation | 0.0606      |
+|    win_rate_sweep_days   | 0.118       |
+| train/                   |             |
+|    approx_kl             | 0.011147734 |
+|    clip_fraction         | 0.0613      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.0918     |
+|    explained_variance    | 0.682       |
+|    learning_rate         | 0.0003      |
+|    loss                  | -0.0137     |
+|    n_updates             | 1720        |
+|    policy_gradient_loss  | -0.0214     |
+|    value_loss            | 0.0957      |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 28.2     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 66       |
+|    time_elapsed     | 39231    |
+|    total_timesteps  | 355168   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 24.2        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 67          |
+|    time_elapsed         | 39768       |
+|    total_timesteps      | 357216      |
+| train/                  |             |
+|    approx_kl            | 0.008817196 |
+|    clip_fraction        | 0.0475      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0847     |
+|    explained_variance   | 0.766       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0177      |
+|    n_updates            | 1730        |
+|    policy_gradient_loss | -0.0142     |
+|    value_loss           | 0.0939      |
+-----------------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 31.2        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 68          |
+|    time_elapsed         | 40275       |
+|    total_timesteps      | 359264      |
+| train/                  |             |
+|    approx_kl            | 0.004478284 |
+|    clip_fraction        | 0.0317      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0679     |
+|    explained_variance   | 0.759       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0123      |
+|    n_updates            | 1740        |
+|    policy_gradient_loss | -0.00946    |
+|    value_loss           | 0.105       |
+-----------------------------------------
+Eval num_timesteps=360000, episode_reward=-3.81 +/- 1.51
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -3.81        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.95         |
+| session/                 |              |
+|    london_range_pts      | 26.4         |
+| time/                    |              |
+|    total_timesteps       | 360000       |
+| trade/                   |              |
+|    episode_pnl           | 1.83         |
+|    first_trade_pnl       | 2.65         |
+|    first_trade_win_rate  | 0.667        |
+|    ny_open_trade_rate    | 0.02         |
+|    pnl_continuation_days | 2            |
+|    pnl_sweep_high_days   | 1.42         |
+|    pnl_sweep_low_days    | 1.55         |
+|    trades_per_episode    | 0.34         |
+|    win_rate              | 0.75         |
+|    win_rate_continuation | 0.121        |
+|    win_rate_sweep_days   | 0.294        |
+| train/                   |              |
+|    approx_kl             | 0.0065882676 |
+|    clip_fraction         | 0.0536       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.1         |
+|    explained_variance    | 0.661        |
+|    learning_rate         | 0.0003       |
+|    loss                  | -0.017       |
+|    n_updates             | 1750         |
+|    policy_gradient_loss  | -0.0161      |
+|    value_loss            | 0.12         |
+| validation/              |              |
+|    acceptance_passed     | 0            |
+|    first_trade_win_rate  | 68.8         |
+|    ny_open_trade_rate    | 0.0261       |
+|    pnl_continuation_days | 0.568        |
+|    pnl_sweep_low_days    | 0.643        |
+|    profit_factor         | 1.89         |
+|    trades_per_episode    | 0.217        |
+|    win_rate              | 36           |
+|    win_rate_continuation | 4.82         |
+|    win_rate_sweep_days   | 28.1         |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 27.6     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 69       |
+|    time_elapsed     | 41037    |
+|    total_timesteps  | 361312   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 30.7         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 70           |
+|    time_elapsed         | 41650        |
+|    total_timesteps      | 363360       |
+| train/                  |              |
+|    approx_kl            | 0.0091438275 |
+|    clip_fraction        | 0.0438       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.088       |
+|    explained_variance   | 0.691        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.00191      |
+|    n_updates            | 1760         |
+|    policy_gradient_loss | -0.0143      |
+|    value_loss           | 0.126        |
+------------------------------------------
+Eval num_timesteps=365000, episode_reward=-4.49 +/- 0.72
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -4.49        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.952        |
+| session/                 |              |
+|    london_range_pts      | 27.4         |
+| time/                    |              |
+|    total_timesteps       | 365000       |
+| trade/                   |              |
+|    episode_pnl           | 1.44         |
+|    first_trade_pnl       | 3.26         |
+|    first_trade_win_rate  | 0.667        |
+|    ny_open_trade_rate    | 0.04         |
+|    pnl_continuation_days | 0.971        |
+|    pnl_sweep_high_days   | 3.06         |
+|    pnl_sweep_low_days    | 1.72         |
+|    trades_per_episode    | 0.32         |
+|    win_rate              | 1            |
+|    win_rate_continuation | 0.114        |
+|    win_rate_sweep_days   | 0.333        |
+| train/                   |              |
+|    approx_kl             | 0.0038742253 |
+|    clip_fraction         | 0.0313       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0477      |
+|    explained_variance    | 0.755        |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.0115       |
+|    n_updates             | 1770         |
+|    policy_gradient_loss  | -0.00935     |
+|    value_loss            | 0.0803       |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 21.1     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 71       |
+|    time_elapsed     | 42291    |
+|    total_timesteps  | 365408   |
+----------------------------------
+----------------------------------------
+| session/                |            |
+|    london_range_pts     | 21.6       |
+| time/                   |            |
+|    fps                  | 3          |
+|    iterations           | 72         |
+|    time_elapsed         | 42743      |
+|    total_timesteps      | 367456     |
+| train/                  |            |
+|    approx_kl            | 0.00596913 |
+|    clip_fraction        | 0.0401     |
+|    clip_range           | 0.2        |
+|    entropy_loss         | -0.0822    |
+|    explained_variance   | 0.628      |
+|    learning_rate        | 0.0003     |
+|    loss                 | -0.0087    |
+|    n_updates            | 1780       |
+|    policy_gradient_loss | -0.0137    |
+|    value_loss           | 0.136      |
+----------------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 37.5        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 73          |
+|    time_elapsed         | 43208       |
+|    total_timesteps      | 369504      |
+| train/                  |             |
+|    approx_kl            | 0.004157287 |
+|    clip_fraction        | 0.0328      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0501     |
+|    explained_variance   | 0.733       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.000497    |
+|    n_updates            | 1790        |
+|    policy_gradient_loss | -0.00941    |
+|    value_loss           | 0.0978      |
+-----------------------------------------
+Eval num_timesteps=370000, episode_reward=-3.89 +/- 1.11
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -3.89       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.949       |
+| session/                 |             |
+|    london_range_pts      | 18          |
+| time/                    |             |
+|    total_timesteps       | 370000      |
+| trade/                   |             |
+|    episode_pnl           | 0.581       |
+|    first_trade_pnl       | 2.28        |
+|    first_trade_win_rate  | 0.667       |
+|    ny_open_trade_rate    | 0.02        |
+|    pnl_continuation_days | 0.781       |
+|    pnl_sweep_high_days   | 0           |
+|    pnl_sweep_low_days    | 0.245       |
+|    trades_per_episode    | 0.2         |
+|    win_rate              | 0.833       |
+|    win_rate_continuation | 0.114       |
+|    win_rate_sweep_days   | 0.0667      |
+| train/                   |             |
+|    approx_kl             | 0.009724181 |
+|    clip_fraction         | 0.0571      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.103      |
+|    explained_variance    | 0.693       |
+|    learning_rate         | 0.0003      |
+|    loss                  | -0.0287     |
+|    n_updates             | 1800        |
+|    policy_gradient_loss  | -0.0202     |
+|    value_loss            | 0.125       |
+| validation/              |             |
+|    acceptance_passed     | 0           |
+|    first_trade_win_rate  | 68.8        |
+|    ny_open_trade_rate    | 0.0261      |
+|    pnl_continuation_days | 0.578       |
+|    pnl_sweep_low_days    | 0.643       |
+|    profit_factor         | 2.06        |
+|    trades_per_episode    | 0.209       |
+|    win_rate              | 37.5        |
+|    win_rate_continuation | 4.82        |
+|    win_rate_sweep_days   | 25          |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 28.8     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 74       |
+|    time_elapsed     | 44085    |
+|    total_timesteps  | 371552   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 31.9        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 75          |
+|    time_elapsed         | 44585       |
+|    total_timesteps      | 373600      |
+| train/                  |             |
+|    approx_kl            | 0.004997853 |
+|    clip_fraction        | 0.0326      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0595     |
+|    explained_variance   | 0.665       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.011       |
+|    n_updates            | 1810        |
+|    policy_gradient_loss | -0.0099     |
+|    value_loss           | 0.0887      |
+-----------------------------------------
+Eval num_timesteps=375000, episode_reward=-4.09 +/- 0.62
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -4.09        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.952        |
+| session/                 |              |
+|    london_range_pts      | 39.4         |
+| time/                    |              |
+|    total_timesteps       | 375000       |
+| trade/                   |              |
+|    episode_pnl           | 1.73         |
+|    first_trade_pnl       | 6.95         |
+|    first_trade_win_rate  | 0.875        |
+|    ny_open_trade_rate    | 0.04         |
+|    pnl_continuation_days | 1.14         |
+|    pnl_sweep_high_days   | 2.96         |
+|    pnl_sweep_low_days    | 3.25         |
+|    trades_per_episode    | 0.28         |
+|    win_rate              | 1            |
+|    win_rate_continuation | 0.0857       |
+|    win_rate_sweep_days   | 0.333        |
+| train/                   |              |
+|    approx_kl             | 0.0070059644 |
+|    clip_fraction         | 0.0402       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0707      |
+|    explained_variance    | 0.683        |
+|    learning_rate         | 0.0003       |
+|    loss                  | -0.0253      |
+|    n_updates             | 1820         |
+|    policy_gradient_loss  | -0.0144      |
+|    value_loss            | 0.104        |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 24.4     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 76       |
+|    time_elapsed     | 45058    |
+|    total_timesteps  | 375648   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 22.1         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 77           |
+|    time_elapsed         | 45512        |
+|    total_timesteps      | 377696       |
+| train/                  |              |
+|    approx_kl            | 0.0048006275 |
+|    clip_fraction        | 0.0311       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0541      |
+|    explained_variance   | 0.604        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.00702      |
+|    n_updates            | 1830         |
+|    policy_gradient_loss | -0.011       |
+|    value_loss           | 0.134        |
+------------------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 27.3         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 78           |
+|    time_elapsed         | 45994        |
+|    total_timesteps      | 379744       |
+| train/                  |              |
+|    approx_kl            | 0.0052809184 |
+|    clip_fraction        | 0.0316       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.056       |
+|    explained_variance   | 0.541        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.0143       |
+|    n_updates            | 1840         |
+|    policy_gradient_loss | -0.0107      |
+|    value_loss           | 0.154        |
+------------------------------------------
+Eval num_timesteps=380000, episode_reward=-4.37 +/- 0.75
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -4.37       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.959       |
+| session/                 |             |
+|    london_range_pts      | 26.3        |
+| time/                    |             |
+|    total_timesteps       | 380000      |
+| trade/                   |             |
+|    episode_pnl           | 1.06        |
+|    first_trade_pnl       | 2.36        |
+|    first_trade_win_rate  | 0.625       |
+|    ny_open_trade_rate    | 0.02        |
+|    pnl_continuation_days | 0.846       |
+|    pnl_sweep_high_days   | 3.11        |
+|    pnl_sweep_low_days    | -0.251      |
+|    trades_per_episode    | 0.24        |
+|    win_rate              | 0.75        |
+|    win_rate_continuation | 0.0625      |
+|    win_rate_sweep_days   | 0.222       |
+| train/                   |             |
+|    approx_kl             | 0.008632063 |
+|    clip_fraction         | 0.0483      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.0907     |
+|    explained_variance    | 0.693       |
+|    learning_rate         | 0.0003      |
+|    loss                  | 0.00751     |
+|    n_updates             | 1850        |
+|    policy_gradient_loss  | -0.0152     |
+|    value_loss            | 0.108       |
+| validation/              |             |
+|    acceptance_passed     | 0           |
+|    first_trade_win_rate  | 68.8        |
+|    ny_open_trade_rate    | 0.0261      |
+|    pnl_continuation_days | 0.579       |
+|    pnl_sweep_low_days    | 0.643       |
+|    profit_factor         | 2.11        |
+|    trades_per_episode    | 0.2         |
+|    win_rate              | 34.8        |
+|    win_rate_continuation | 4.82        |
+|    win_rate_sweep_days   | 25          |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 17.1     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 79       |
+|    time_elapsed     | 46820    |
+|    total_timesteps  | 381792   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 24.3        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 80          |
+|    time_elapsed         | 47372       |
+|    total_timesteps      | 383840      |
+| train/                  |             |
+|    approx_kl            | 0.008816309 |
+|    clip_fraction        | 0.0578      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.107      |
+|    explained_variance   | 0.716       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0211      |
+|    n_updates            | 1860        |
+|    policy_gradient_loss | -0.0177     |
+|    value_loss           | 0.137       |
+-----------------------------------------
+Eval num_timesteps=385000, episode_reward=-3.45 +/- 0.58
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -3.45        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.943        |
+| session/                 |              |
+|    london_range_pts      | 18.9         |
+| time/                    |              |
+|    total_timesteps       | 385000       |
+| trade/                   |              |
+|    episode_pnl           | 1.44         |
+|    first_trade_pnl       | 2.07         |
+|    first_trade_win_rate  | 0.625        |
+|    ny_open_trade_rate    | 0.02         |
+|    pnl_continuation_days | 1.83         |
+|    pnl_sweep_high_days   | 0.558        |
+|    pnl_sweep_low_days    | 0            |
+|    trades_per_episode    | 0.28         |
+|    win_rate              | 0.625        |
+|    win_rate_continuation | 0.0541       |
+|    win_rate_sweep_days   | 0.231        |
+| train/                   |              |
+|    approx_kl             | 0.0044610114 |
+|    clip_fraction         | 0.0294       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0556      |
+|    explained_variance    | 0.747        |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.0277       |
+|    n_updates             | 1870         |
+|    policy_gradient_loss  | -0.00979     |
+|    value_loss            | 0.102        |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 28.8     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 81       |
+|    time_elapsed     | 47782    |
+|    total_timesteps  | 385888   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 18.1         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 82           |
+|    time_elapsed         | 48215        |
+|    total_timesteps      | 387936       |
+| train/                  |              |
+|    approx_kl            | 0.0075691645 |
+|    clip_fraction        | 0.0399       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0759      |
+|    explained_variance   | 0.715        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.0168       |
+|    n_updates            | 1880         |
+|    policy_gradient_loss | -0.0139      |
+|    value_loss           | 0.109        |
+------------------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 13.4        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 83          |
+|    time_elapsed         | 48638       |
+|    total_timesteps      | 389984      |
+| train/                  |             |
+|    approx_kl            | 0.003686884 |
+|    clip_fraction        | 0.025       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0391     |
+|    explained_variance   | 0.677       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0161      |
+|    n_updates            | 1890        |
+|    policy_gradient_loss | -0.00774    |
+|    value_loss           | 0.114       |
+-----------------------------------------
+Eval num_timesteps=390000, episode_reward=-3.14 +/- 2.59
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -3.14        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.96         |
+| session/                 |              |
+|    london_range_pts      | 13.4         |
+| time/                    |              |
+|    total_timesteps       | 390000       |
+| trade/                   |              |
+|    episode_pnl           | 0.953        |
+|    first_trade_pnl       | 0.972        |
+|    first_trade_win_rate  | 0.625        |
+|    ny_open_trade_rate    | 0            |
+|    pnl_continuation_days | 0.895        |
+|    pnl_sweep_high_days   | 1.39         |
+|    pnl_sweep_low_days    | 0.545        |
+|    trades_per_episode    | 0.3          |
+|    win_rate              | 0.75         |
+|    win_rate_continuation | 0.0882       |
+|    win_rate_sweep_days   | 0.188        |
+| train/                   |              |
+|    approx_kl             | 0.0072604325 |
+|    clip_fraction         | 0.0353       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0567      |
+|    explained_variance    | 0.701        |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.00183      |
+|    n_updates             | 1900         |
+|    policy_gradient_loss  | -0.0133      |
+|    value_loss            | 0.112        |
+| validation/              |              |
+|    acceptance_passed     | 0            |
+|    first_trade_win_rate  | 64.3         |
+|    ny_open_trade_rate    | 0.0261       |
+|    pnl_continuation_days | 0.516        |
+|    pnl_sweep_low_days    | 0.452        |
+|    profit_factor         | 2.07         |
+|    trades_per_episode    | 0.2          |
+|    win_rate              | 39.1         |
+|    win_rate_continuation | 3.61         |
+|    win_rate_sweep_days   | 25           |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 18.8     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 84       |
+|    time_elapsed     | 49421    |
+|    total_timesteps  | 392032   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 24.3        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 85          |
+|    time_elapsed         | 49876       |
+|    total_timesteps      | 394080      |
+| train/                  |             |
+|    approx_kl            | 0.006181257 |
+|    clip_fraction        | 0.0311      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.042      |
+|    explained_variance   | 0.773       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0101      |
+|    n_updates            | 1910        |
+|    policy_gradient_loss | -0.0115     |
+|    value_loss           | 0.0998      |
+-----------------------------------------
+Eval num_timesteps=395000, episode_reward=-4.48 +/- 0.28
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -4.48       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.952       |
+| session/                 |             |
+|    london_range_pts      | 28.3        |
+| time/                    |             |
+|    total_timesteps       | 395000      |
+| trade/                   |             |
+|    episode_pnl           | 1.04        |
+|    first_trade_pnl       | 1.92        |
+|    first_trade_win_rate  | 0.538       |
+|    ny_open_trade_rate    | 0.06        |
+|    pnl_continuation_days | 0.419       |
+|    pnl_sweep_high_days   | 1.39        |
+|    pnl_sweep_low_days    | 2.83        |
+|    trades_per_episode    | 0.48        |
+|    win_rate              | 0.769       |
+|    win_rate_continuation | 0.0667      |
+|    win_rate_sweep_days   | 0.4         |
+| train/                   |             |
+|    approx_kl             | 0.009198366 |
+|    clip_fraction         | 0.0412      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.0567     |
+|    explained_variance    | 0.759       |
+|    learning_rate         | 0.0003      |
+|    loss                  | -0.00763    |
+|    n_updates             | 1920        |
+|    policy_gradient_loss  | -0.0143     |
+|    value_loss            | 0.106       |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 34.3     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 86       |
+|    time_elapsed     | 50379    |
+|    total_timesteps  | 396128   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 26.2        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 87          |
+|    time_elapsed         | 50943       |
+|    total_timesteps      | 398176      |
+| train/                  |             |
+|    approx_kl            | 0.010646077 |
+|    clip_fraction        | 0.0513      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0913     |
+|    explained_variance   | 0.65        |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0269      |
+|    n_updates            | 1930        |
+|    policy_gradient_loss | -0.0181     |
+|    value_loss           | 0.169       |
+-----------------------------------------
+Eval num_timesteps=400000, episode_reward=-2.36 +/- 2.26
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -2.36        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.948        |
+| session/                 |              |
+|    london_range_pts      | 20.7         |
+| time/                    |              |
+|    total_timesteps       | 400000       |
+| trade/                   |              |
+|    episode_pnl           | 1.25         |
+|    first_trade_pnl       | 6.69         |
+|    first_trade_win_rate  | 0.8          |
+|    ny_open_trade_rate    | 0.06         |
+|    pnl_continuation_days | 0.937        |
+|    pnl_sweep_high_days   | 3.29         |
+|    pnl_sweep_low_days    | -0.513       |
+|    trades_per_episode    | 0.22         |
+|    win_rate              | 0.7          |
+|    win_rate_continuation | 0.0938       |
+|    win_rate_sweep_days   | 0.222        |
+| train/                   |              |
+|    approx_kl             | 0.0097945575 |
+|    clip_fraction         | 0.0504       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0906      |
+|    explained_variance    | 0.669        |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.00383      |
+|    n_updates             | 1940         |
+|    policy_gradient_loss  | -0.0184      |
+|    value_loss            | 0.15         |
+| validation/              |              |
+|    acceptance_passed     | 0            |
+|    first_trade_win_rate  | 64.7         |
+|    ny_open_trade_rate    | 0.0261       |
+|    pnl_continuation_days | 0.579        |
+|    pnl_sweep_low_days    | 0.643        |
+|    profit_factor         | 1.55         |
+|    trades_per_episode    | 0.217        |
+|    win_rate              | 32           |
+|    win_rate_continuation | 4.82         |
+|    win_rate_sweep_days   | 25           |
+-------------------------------------------
+New best mean reward!
+----------------------------------
+| session/            |          |
+|    london_range_pts | 19.6     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 88       |
+|    time_elapsed     | 51775    |
+|    total_timesteps  | 400224   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 31.2         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 89           |
+|    time_elapsed         | 52265        |
+|    total_timesteps      | 402272       |
+| train/                  |              |
+|    approx_kl            | 0.0060332995 |
+|    clip_fraction        | 0.0438       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.094       |
+|    explained_variance   | 0.649        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.0358       |
+|    n_updates            | 1950         |
+|    policy_gradient_loss | -0.0137      |
+|    value_loss           | 0.16         |
+------------------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 29.5        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 90          |
+|    time_elapsed         | 52658       |
+|    total_timesteps      | 404320      |
+| train/                  |             |
+|    approx_kl            | 0.008232607 |
+|    clip_fraction        | 0.0447      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0825     |
+|    explained_variance   | 0.767       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.00849     |
+|    n_updates            | 1960        |
+|    policy_gradient_loss | -0.011      |
+|    value_loss           | 0.124       |
+-----------------------------------------
+Eval num_timesteps=405000, episode_reward=-5.03 +/- 0.66
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -5.03       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.939       |
+| session/                 |             |
+|    london_range_pts      | 50.9        |
+| time/                    |             |
+|    total_timesteps       | 405000      |
+| trade/                   |             |
+|    episode_pnl           | 0.577       |
+|    first_trade_pnl       | 3.1         |
+|    first_trade_win_rate  | 0.8         |
+|    ny_open_trade_rate    | 0.02        |
+|    pnl_continuation_days | 0.961       |
+|    pnl_sweep_high_days   | 0.244       |
+|    pnl_sweep_low_days    | -0.459      |
+|    trades_per_episode    | 0.16        |
+|    win_rate              | 0.8         |
+|    win_rate_continuation | 0.0882      |
+|    win_rate_sweep_days   | 0.0625      |
+| train/                   |             |
+|    approx_kl             | 0.007994214 |
+|    clip_fraction         | 0.0354      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.0526     |
+|    explained_variance    | 0.575       |
+|    learning_rate         | 0.0003      |
+|    loss                  | 0.00264     |
+|    n_updates             | 1970        |
+|    policy_gradient_loss  | -0.0137     |
+|    value_loss            | 0.142       |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 19.6     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 91       |
+|    time_elapsed     | 53083    |
+|    total_timesteps  | 406368   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 15.8         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 92           |
+|    time_elapsed         | 53485        |
+|    total_timesteps      | 408416       |
+| train/                  |              |
+|    approx_kl            | 0.0081155095 |
+|    clip_fraction        | 0.0542       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0976      |
+|    explained_variance   | 0.744        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.0157       |
+|    n_updates            | 1980         |
+|    policy_gradient_loss | -0.0168      |
+|    value_loss           | 0.154        |
+------------------------------------------
+Eval num_timesteps=410000, episode_reward=-3.43 +/- 0.97
+Episode length: 35.00 +/- 0.00
+-----------------------------------------
+| eval/                    |            |
+|    mean_ep_length        | 35         |
+|    mean_reward           | -3.43      |
+| policy/                  |            |
+|    ent_coef              | 0.01       |
+|    hold_rate_500         | 0.934      |
+| session/                 |            |
+|    london_range_pts      | 16.4       |
+| time/                    |            |
+|    total_timesteps       | 410000     |
+| trade/                   |            |
+|    episode_pnl           | 0.977      |
+|    first_trade_pnl       | 1.3        |
+|    first_trade_win_rate  | 0.545      |
+|    ny_open_trade_rate    | 0.04       |
+|    pnl_continuation_days | 0.774      |
+|    pnl_sweep_high_days   | -0.398     |
+|    pnl_sweep_low_days    | 2.68       |
+|    trades_per_episode    | 0.4        |
+|    win_rate              | 0.636      |
+|    win_rate_continuation | 0.0857     |
+|    win_rate_sweep_days   | 0.267      |
+| train/                   |            |
+|    approx_kl             | 0.00857218 |
+|    clip_fraction         | 0.0545     |
+|    clip_range            | 0.2        |
+|    entropy_loss          | -0.0948    |
+|    explained_variance    | 0.608      |
+|    learning_rate         | 0.0003     |
+|    loss                  | 0.0135     |
+|    n_updates             | 1990       |
+|    policy_gradient_loss  | -0.0181    |
+|    value_loss            | 0.201      |
+| validation/              |            |
+|    acceptance_passed     | 0          |
+|    first_trade_win_rate  | 68.8       |
+|    ny_open_trade_rate    | 0.0261     |
+|    pnl_continuation_days | 0.578      |
+|    pnl_sweep_low_days    | 0.643      |
+|    profit_factor         | 1.89       |
+|    trades_per_episode    | 0.217      |
+|    win_rate              | 36         |
+|    win_rate_continuation | 4.82       |
+|    win_rate_sweep_days   | 28.1       |
+-----------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 41.2     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 93       |
+|    time_elapsed     | 54225    |
+|    total_timesteps  | 410464   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 20.8        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 94          |
+|    time_elapsed         | 54690       |
+|    total_timesteps      | 412512      |
+| train/                  |             |
+|    approx_kl            | 0.006023424 |
+|    clip_fraction        | 0.0423      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0835     |
+|    explained_variance   | 0.615       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.018       |
+|    n_updates            | 2000        |
+|    policy_gradient_loss | -0.0176     |
+|    value_loss           | 0.161       |
+-----------------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 18.9         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 95           |
+|    time_elapsed         | 55262        |
+|    total_timesteps      | 414560       |
+| train/                  |              |
+|    approx_kl            | 0.0104201045 |
+|    clip_fraction        | 0.0454       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0749      |
+|    explained_variance   | 0.693        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.00442      |
+|    n_updates            | 2010         |
+|    policy_gradient_loss | -0.0169      |
+|    value_loss           | 0.136        |
+------------------------------------------
+Eval num_timesteps=415000, episode_reward=-4.06 +/- 0.63
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -4.06       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.946       |
+| session/                 |             |
+|    london_range_pts      | 28.7        |
+| time/                    |             |
+|    total_timesteps       | 415000      |
+| trade/                   |             |
+|    episode_pnl           | 2.51        |
+|    first_trade_pnl       | 4.08        |
+|    first_trade_win_rate  | 0.786       |
+|    ny_open_trade_rate    | 0.04        |
+|    pnl_continuation_days | 2.49        |
+|    pnl_sweep_high_days   | 2.55        |
+|    pnl_sweep_low_days    | 2.6         |
+|    trades_per_episode    | 0.44        |
+|    win_rate              | 0.929       |
+|    win_rate_continuation | 0.216       |
+|    win_rate_sweep_days   | 0.385       |
+| train/                   |             |
+|    approx_kl             | 0.006346722 |
+|    clip_fraction         | 0.0388      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.0721     |
+|    explained_variance    | 0.735       |
+|    learning_rate         | 0.0003      |
+|    loss                  | 0.0221      |
+|    n_updates             | 2020        |
+|    policy_gradient_loss  | -0.0105     |
+|    value_loss            | 0.15        |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 22.4     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 96       |
+|    time_elapsed     | 55816    |
+|    total_timesteps  | 416608   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 25.9        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 97          |
+|    time_elapsed         | 56327       |
+|    total_timesteps      | 418656      |
+| train/                  |             |
+|    approx_kl            | 0.008726498 |
+|    clip_fraction        | 0.04        |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0621     |
+|    explained_variance   | 0.72        |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0292      |
+|    n_updates            | 2030        |
+|    policy_gradient_loss | -0.0133     |
+|    value_loss           | 0.147       |
+-----------------------------------------
+Eval num_timesteps=420000, episode_reward=-4.33 +/- 0.65
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -4.33       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.953       |
+| session/                 |             |
+|    london_range_pts      | 37.7        |
+| time/                    |             |
+|    total_timesteps       | 420000      |
+| trade/                   |             |
+|    episode_pnl           | 0.205       |
+|    first_trade_pnl       | 0.981       |
+|    first_trade_win_rate  | 0.6         |
+|    ny_open_trade_rate    | 0.02        |
+|    pnl_continuation_days | -0.0558     |
+|    pnl_sweep_high_days   | 0.781       |
+|    pnl_sweep_low_days    | 0.444       |
+|    trades_per_episode    | 0.14        |
+|    win_rate              | 0.6         |
+|    win_rate_continuation | 0           |
+|    win_rate_sweep_days   | 0.167       |
+| train/                   |             |
+|    approx_kl             | 0.006706097 |
+|    clip_fraction         | 0.0351      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.0535     |
+|    explained_variance    | 0.756       |
+|    learning_rate         | 0.0003      |
+|    loss                  | 0.0371      |
+|    n_updates             | 2040        |
+|    policy_gradient_loss  | -0.0141     |
+|    value_loss            | 0.153       |
+| validation/              |             |
+|    acceptance_passed     | 0           |
+|    first_trade_win_rate  | 64.7        |
+|    ny_open_trade_rate    | 0.0261      |
+|    pnl_continuation_days | 0.568       |
+|    pnl_sweep_low_days    | 0.643       |
+|    profit_factor         | 1.72        |
+|    trades_per_episode    | 0.226       |
+|    win_rate              | 34.6        |
+|    win_rate_continuation | 4.82        |
+|    win_rate_sweep_days   | 28.1        |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 24.3     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 98       |
+|    time_elapsed     | 57226    |
+|    total_timesteps  | 420704   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 21.8        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 99          |
+|    time_elapsed         | 57680       |
+|    total_timesteps      | 422752      |
+| train/                  |             |
+|    approx_kl            | 0.008244617 |
+|    clip_fraction        | 0.05        |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.084      |
+|    explained_variance   | 0.723       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.012       |
+|    n_updates            | 2050        |
+|    policy_gradient_loss | -0.0139     |
+|    value_loss           | 0.106       |
+-----------------------------------------
+----------------------------------------
+| session/                |            |
+|    london_range_pts     | 28.9       |
+| time/                   |            |
+|    fps                  | 3          |
+|    iterations           | 100        |
+|    time_elapsed         | 58191      |
+|    total_timesteps      | 424800     |
+| train/                  |            |
+|    approx_kl            | 0.00838744 |
+|    clip_fraction        | 0.0396     |
+|    clip_range           | 0.2        |
+|    entropy_loss         | -0.0743    |
+|    explained_variance   | 0.742      |
+|    learning_rate        | 0.0003     |
+|    loss                 | 0.0136     |
+|    n_updates            | 2060       |
+|    policy_gradient_loss | -0.0136    |
+|    value_loss           | 0.153      |
+----------------------------------------
+Eval num_timesteps=425000, episode_reward=-3.82 +/- 0.81
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -3.82        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.948        |
+| session/                 |              |
+|    london_range_pts      | 23.9         |
+| time/                    |              |
+|    total_timesteps       | 425000       |
+| trade/                   |              |
+|    episode_pnl           | 1.48         |
+|    first_trade_pnl       | 2.14         |
+|    first_trade_win_rate  | 0.75         |
+|    ny_open_trade_rate    | 0.02         |
+|    pnl_continuation_days | 1.25         |
+|    pnl_sweep_high_days   | 1.39         |
+|    pnl_sweep_low_days    | 2.69         |
+|    trades_per_episode    | 0.38         |
+|    win_rate              | 0.875        |
+|    win_rate_continuation | 0.0938       |
+|    win_rate_sweep_days   | 0.222        |
+| train/                   |              |
+|    approx_kl             | 0.0097969165 |
+|    clip_fraction         | 0.0477       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0804      |
+|    explained_variance    | 0.755        |
+|    learning_rate         | 0.0003       |
+|    loss                  | -0.00132     |
+|    n_updates             | 2070         |
+|    policy_gradient_loss  | -0.0138      |
+|    value_loss            | 0.107        |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 31.5     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 101      |
+|    time_elapsed     | 58746    |
+|    total_timesteps  | 426848   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 42.1         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 102          |
+|    time_elapsed         | 59337        |
+|    total_timesteps      | 428896       |
+| train/                  |              |
+|    approx_kl            | 0.0056317747 |
+|    clip_fraction        | 0.0274       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0399      |
+|    explained_variance   | 0.728        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.00378      |
+|    n_updates            | 2080         |
+|    policy_gradient_loss | -0.0101      |
+|    value_loss           | 0.122        |
+------------------------------------------
+Eval num_timesteps=430000, episode_reward=-4.56 +/- 1.13
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -4.56        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.967        |
+| session/                 |              |
+|    london_range_pts      | 16.3         |
+| time/                    |              |
+|    total_timesteps       | 430000       |
+| trade/                   |              |
+|    episode_pnl           | 1.19         |
+|    first_trade_pnl       | 3.12         |
+|    first_trade_win_rate  | 0.625        |
+|    ny_open_trade_rate    | 0            |
+|    pnl_continuation_days | 1.84         |
+|    pnl_sweep_high_days   | 0.765        |
+|    pnl_sweep_low_days    | 0            |
+|    trades_per_episode    | 0.26         |
+|    win_rate              | 0.75         |
+|    win_rate_continuation | 0.148        |
+|    win_rate_sweep_days   | 0.087        |
+| train/                   |              |
+|    approx_kl             | 0.0066189505 |
+|    clip_fraction         | 0.0308       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0479      |
+|    explained_variance    | 0.776        |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.0224       |
+|    n_updates             | 2090         |
+|    policy_gradient_loss  | -0.00962     |
+|    value_loss            | 0.125        |
+| validation/              |              |
+|    acceptance_passed     | 0            |
+|    first_trade_win_rate  | 64.7         |
+|    ny_open_trade_rate    | 0.0261       |
+|    pnl_continuation_days | 0.578        |
+|    pnl_sweep_low_days    | 0.643        |
+|    profit_factor         | 1.86         |
+|    trades_per_episode    | 0.209        |
+|    win_rate              | 37.5         |
+|    win_rate_continuation | 4.82         |
+|    win_rate_sweep_days   | 21.9         |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 55.2     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 103      |
+|    time_elapsed     | 60317    |
+|    total_timesteps  | 430944   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 19.4         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 104          |
+|    time_elapsed         | 60923        |
+|    total_timesteps      | 432992       |
+| train/                  |              |
+|    approx_kl            | 0.0051329294 |
+|    clip_fraction        | 0.0222       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0354      |
+|    explained_variance   | 0.776        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.00986      |
+|    n_updates            | 2100         |
+|    policy_gradient_loss | -0.00718     |
+|    value_loss           | 0.111        |
+------------------------------------------
+Eval num_timesteps=435000, episode_reward=-3.71 +/- 0.86
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -3.71       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.948       |
+| session/                 |             |
+|    london_range_pts      | 24.6        |
+| time/                    |             |
+|    total_timesteps       | 435000      |
+| trade/                   |             |
+|    episode_pnl           | 1.91        |
+|    first_trade_pnl       | 3.72        |
+|    first_trade_win_rate  | 0.818       |
+|    ny_open_trade_rate    | 0           |
+|    pnl_continuation_days | 2.48        |
+|    pnl_sweep_high_days   | 1.53        |
+|    pnl_sweep_low_days    | 0.501       |
+|    trades_per_episode    | 0.46        |
+|    win_rate              | 0.818       |
+|    win_rate_continuation | 0.161       |
+|    win_rate_sweep_days   | 0.211       |
+| train/                   |             |
+|    approx_kl             | 0.009127296 |
+|    clip_fraction         | 0.0396      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.0643     |
+|    explained_variance    | 0.699       |
+|    learning_rate         | 0.0003      |
+|    loss                  | 0.00161     |
+|    n_updates             | 2110        |
+|    policy_gradient_loss  | -0.0143     |
+|    value_loss            | 0.123       |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 14.8     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 105      |
+|    time_elapsed     | 61610    |
+|    total_timesteps  | 435040   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 25.6        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 106         |
+|    time_elapsed         | 62286       |
+|    total_timesteps      | 437088      |
+| train/                  |             |
+|    approx_kl            | 0.011278454 |
+|    clip_fraction        | 0.0571      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0977     |
+|    explained_variance   | 0.64        |
+|    learning_rate        | 0.0003      |
+|    loss                 | -0.0118     |
+|    n_updates            | 2120        |
+|    policy_gradient_loss | -0.0171     |
+|    value_loss           | 0.159       |
+-----------------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 36.6        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 107         |
+|    time_elapsed         | 62915       |
+|    total_timesteps      | 439136      |
+| train/                  |             |
+|    approx_kl            | 0.006200188 |
+|    clip_fraction        | 0.0319      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0431     |
+|    explained_variance   | 0.583       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0137      |
+|    n_updates            | 2130        |
+|    policy_gradient_loss | -0.0136     |
+|    value_loss           | 0.128       |
+-----------------------------------------
+Eval num_timesteps=440000, episode_reward=-3.77 +/- 0.91
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -3.77       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.957       |
+| session/                 |             |
+|    london_range_pts      | 22.6        |
+| time/                    |             |
+|    total_timesteps       | 440000      |
+| trade/                   |             |
+|    episode_pnl           | 2.82        |
+|    first_trade_pnl       | 7.06        |
+|    first_trade_win_rate  | 1           |
+|    ny_open_trade_rate    | 0.04        |
+|    pnl_continuation_days | 2.89        |
+|    pnl_sweep_high_days   | 4.08        |
+|    pnl_sweep_low_days    | 0           |
+|    trades_per_episode    | 0.28        |
+|    win_rate              | 1           |
+|    win_rate_continuation | 0.139       |
+|    win_rate_sweep_days   | 0.143       |
+| train/                   |             |
+|    approx_kl             | 0.010630513 |
+|    clip_fraction         | 0.0454      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.0787     |
+|    explained_variance    | 0.682       |
+|    learning_rate         | 0.0003      |
+|    loss                  | -0.00123    |
+|    n_updates             | 2140        |
+|    policy_gradient_loss  | -0.0183     |
+|    value_loss            | 0.134       |
+| validation/              |             |
+|    acceptance_passed     | 0           |
+|    first_trade_win_rate  | 64.7        |
+|    ny_open_trade_rate    | 0.0261      |
+|    pnl_continuation_days | 0.578       |
+|    pnl_sweep_low_days    | 0.643       |
+|    profit_factor         | 1.86        |
+|    trades_per_episode    | 0.217       |
+|    win_rate              | 36          |
+|    win_rate_continuation | 4.82        |
+|    win_rate_sweep_days   | 25          |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 17.9     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 108      |
+|    time_elapsed     | 63826    |
+|    total_timesteps  | 441184   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 28.8         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 109          |
+|    time_elapsed         | 64396        |
+|    total_timesteps      | 443232       |
+| train/                  |              |
+|    approx_kl            | 0.0058628265 |
+|    clip_fraction        | 0.0232       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0319      |
+|    explained_variance   | 0.681        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.0264       |
+|    n_updates            | 2150         |
+|    policy_gradient_loss | -0.00837     |
+|    value_loss           | 0.134        |
+------------------------------------------
+Eval num_timesteps=445000, episode_reward=-3.85 +/- 0.92
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -3.85       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.96        |
+| session/                 |             |
+|    london_range_pts      | 21.4        |
+| time/                    |             |
+|    total_timesteps       | 445000      |
+| trade/                   |             |
+|    episode_pnl           | 0.669       |
+|    first_trade_pnl       | 4.42        |
+|    first_trade_win_rate  | 0.875       |
+|    ny_open_trade_rate    | 0.02        |
+|    pnl_continuation_days | 1.23        |
+|    pnl_sweep_high_days   | -0.0158     |
+|    pnl_sweep_low_days    | -0.983      |
+|    trades_per_episode    | 0.24        |
+|    win_rate              | 0.75        |
+|    win_rate_continuation | 0.129       |
+|    win_rate_sweep_days   | 0.105       |
+| train/                   |             |
+|    approx_kl             | 0.011975084 |
+|    clip_fraction         | 0.0387      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.0536     |
+|    explained_variance    | 0.727       |
+|    learning_rate         | 0.0003      |
+|    loss                  | 0.0176      |
+|    n_updates             | 2160        |
+|    policy_gradient_loss  | -0.0138     |
+|    value_loss            | 0.113       |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 27.8     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 110      |
+|    time_elapsed     | 64872    |
+|    total_timesteps  | 445280   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 40.7         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 111          |
+|    time_elapsed         | 65299        |
+|    total_timesteps      | 447328       |
+| train/                  |              |
+|    approx_kl            | 0.0071556573 |
+|    clip_fraction        | 0.0294       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0475      |
+|    explained_variance   | 0.683        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.00447      |
+|    n_updates            | 2170         |
+|    policy_gradient_loss | -0.0098      |
+|    value_loss           | 0.121        |
+------------------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 27.3         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 112          |
+|    time_elapsed         | 65743        |
+|    total_timesteps      | 449376       |
+| train/                  |              |
+|    approx_kl            | 0.0055089863 |
+|    clip_fraction        | 0.0334       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0577      |
+|    explained_variance   | 0.707        |
+|    learning_rate        | 0.0003       |
+|    loss                 | -0.00205     |
+|    n_updates            | 2180         |
+|    policy_gradient_loss | -0.0103      |
+|    value_loss           | 0.126        |
+------------------------------------------
+Eval num_timesteps=450000, episode_reward=-3.63 +/- 0.91
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -3.63        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.958        |
+| session/                 |              |
+|    london_range_pts      | 61           |
+| time/                    |              |
+|    total_timesteps       | 450000       |
+| trade/                   |              |
+|    episode_pnl           | 1.07         |
+|    first_trade_pnl       | 2.87         |
+|    first_trade_win_rate  | 0.667        |
+|    ny_open_trade_rate    | 0.02         |
+|    pnl_continuation_days | 1.24         |
+|    pnl_sweep_high_days   | 0.758        |
+|    pnl_sweep_low_days    | 1.01         |
+|    trades_per_episode    | 0.44         |
+|    win_rate              | 0.75         |
+|    win_rate_continuation | 0.143        |
+|    win_rate_sweep_days   | 0.227        |
+| train/                   |              |
+|    approx_kl             | 0.0055874186 |
+|    clip_fraction         | 0.0314       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0528      |
+|    explained_variance    | 0.711        |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.0265       |
+|    n_updates             | 2190         |
+|    policy_gradient_loss  | -0.01        |
+|    value_loss            | 0.128        |
+| validation/              |              |
+|    acceptance_passed     | 0            |
+|    first_trade_win_rate  | 64.7         |
+|    ny_open_trade_rate    | 0.0261       |
+|    pnl_continuation_days | 0.57         |
+|    pnl_sweep_low_days    | 0.643        |
+|    profit_factor         | 1.69         |
+|    trades_per_episode    | 0.217        |
+|    win_rate              | 32           |
+|    win_rate_continuation | 4.82         |
+|    win_rate_sweep_days   | 25           |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 70.3     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 113      |
+|    time_elapsed     | 66560    |
+|    total_timesteps  | 451424   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 25.4        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 114         |
+|    time_elapsed         | 67046       |
+|    total_timesteps      | 453472      |
+| train/                  |             |
+|    approx_kl            | 0.011434022 |
+|    clip_fraction        | 0.0486      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0762     |
+|    explained_variance   | 0.704       |
+|    learning_rate        | 0.0003      |
+|    loss                 | -0.00803    |
+|    n_updates            | 2200        |
+|    policy_gradient_loss | -0.0162     |
+|    value_loss           | 0.111       |
+-----------------------------------------
+Eval num_timesteps=455000, episode_reward=-4.52 +/- 0.33
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -4.52       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.939       |
+| session/                 |             |
+|    london_range_pts      | 44.9        |
+| time/                    |             |
+|    total_timesteps       | 455000      |
+| trade/                   |             |
+|    episode_pnl           | 0.401       |
+|    first_trade_pnl       | 1.93        |
+|    first_trade_win_rate  | 0.5         |
+|    ny_open_trade_rate    | 0.02        |
+|    pnl_continuation_days | 0.0724      |
+|    pnl_sweep_high_days   | 1.39        |
+|    pnl_sweep_low_days    | 0.137       |
+|    trades_per_episode    | 0.26        |
+|    win_rate              | 0.6         |
+|    win_rate_continuation | 0.0714      |
+|    win_rate_sweep_days   | 0.182       |
+| train/                   |             |
+|    approx_kl             | 0.010288003 |
+|    clip_fraction         | 0.056       |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.0992     |
+|    explained_variance    | 0.613       |
+|    learning_rate         | 0.0003      |
+|    loss                  | 0.0234      |
+|    n_updates             | 2210        |
+|    policy_gradient_loss  | -0.0176     |
+|    value_loss            | 0.156       |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 19.2     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 115      |
+|    time_elapsed     | 67545    |
+|    total_timesteps  | 455520   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 28          |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 116         |
+|    time_elapsed         | 67958       |
+|    total_timesteps      | 457568      |
+| train/                  |             |
+|    approx_kl            | 0.008469027 |
+|    clip_fraction        | 0.0372      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0501     |
+|    explained_variance   | 0.708       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.00869     |
+|    n_updates            | 2220        |
+|    policy_gradient_loss | -0.0146     |
+|    value_loss           | 0.102       |
+-----------------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 28.7        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 117         |
+|    time_elapsed         | 68340       |
+|    total_timesteps      | 459616      |
+| train/                  |             |
+|    approx_kl            | 0.009861883 |
+|    clip_fraction        | 0.0591      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.085      |
+|    explained_variance   | 0.693       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0169      |
+|    n_updates            | 2230        |
+|    policy_gradient_loss | -0.0177     |
+|    value_loss           | 0.12        |
+-----------------------------------------
+Eval num_timesteps=460000, episode_reward=-4.63 +/- 0.31
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -4.63        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.962        |
+| session/                 |              |
+|    london_range_pts      | 23           |
+| time/                    |              |
+|    total_timesteps       | 460000       |
+| trade/                   |              |
+|    episode_pnl           | 1.02         |
+|    first_trade_pnl       | 6.25         |
+|    first_trade_win_rate  | 1            |
+|    ny_open_trade_rate    | 0.02         |
+|    pnl_continuation_days | 1.03         |
+|    pnl_sweep_high_days   | 1.24         |
+|    pnl_sweep_low_days    | 0            |
+|    trades_per_episode    | 0.18         |
+|    win_rate              | 1            |
+|    win_rate_continuation | 0.118        |
+|    win_rate_sweep_days   | 0.188        |
+| train/                   |              |
+|    approx_kl             | 0.0038062604 |
+|    clip_fraction         | 0.0257       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.041       |
+|    explained_variance    | 0.712        |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.0085       |
+|    n_updates             | 2240         |
+|    policy_gradient_loss  | -0.00726     |
+|    value_loss            | 0.127        |
+| validation/              |              |
+|    acceptance_passed     | 0            |
+|    first_trade_win_rate  | 64.7         |
+|    ny_open_trade_rate    | 0.0261       |
+|    pnl_continuation_days | 0.633        |
+|    pnl_sweep_low_days    | 0.643        |
+|    profit_factor         | 1.86         |
+|    trades_per_episode    | 0.226        |
+|    win_rate              | 34.6         |
+|    win_rate_continuation | 4.82         |
+|    win_rate_sweep_days   | 25           |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 16.4     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 118      |
+|    time_elapsed     | 69069    |
+|    total_timesteps  | 461664   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 27.9        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 119         |
+|    time_elapsed         | 69485       |
+|    total_timesteps      | 463712      |
+| train/                  |             |
+|    approx_kl            | 0.012903811 |
+|    clip_fraction        | 0.0484      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0822     |
+|    explained_variance   | 0.673       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0122      |
+|    n_updates            | 2250        |
+|    policy_gradient_loss | -0.0152     |
+|    value_loss           | 0.133       |
+-----------------------------------------
+Eval num_timesteps=465000, episode_reward=-4.59 +/- 0.62
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -4.59        |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.949        |
+| session/                 |              |
+|    london_range_pts      | 15.2         |
+| time/                    |              |
+|    total_timesteps       | 465000       |
+| trade/                   |              |
+|    episode_pnl           | 1.55         |
+|    first_trade_pnl       | 5.6          |
+|    first_trade_win_rate  | 0.75         |
+|    ny_open_trade_rate    | 0.04         |
+|    pnl_continuation_days | 1.18         |
+|    pnl_sweep_high_days   | 2.56         |
+|    pnl_sweep_low_days    | 1.65         |
+|    trades_per_episode    | 0.28         |
+|    win_rate              | 0.875        |
+|    win_rate_continuation | 0.0938       |
+|    win_rate_sweep_days   | 0.222        |
+| train/                   |              |
+|    approx_kl             | 0.0049217585 |
+|    clip_fraction         | 0.0242       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.048       |
+|    explained_variance    | 0.685        |
+|    learning_rate         | 0.0003       |
+|    loss                  | 0.0208       |
+|    n_updates             | 2260         |
+|    policy_gradient_loss  | -0.00856     |
+|    value_loss            | 0.148        |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 29.5     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 120      |
+|    time_elapsed     | 69921    |
+|    total_timesteps  | 465760   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 19.9         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 121          |
+|    time_elapsed         | 70341        |
+|    total_timesteps      | 467808       |
+| train/                  |              |
+|    approx_kl            | 0.0070965136 |
+|    clip_fraction        | 0.0342       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0465      |
+|    explained_variance   | 0.66         |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.00877      |
+|    n_updates            | 2270         |
+|    policy_gradient_loss | -0.013       |
+|    value_loss           | 0.123        |
+------------------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 44.2        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 122         |
+|    time_elapsed         | 70777       |
+|    total_timesteps      | 469856      |
+| train/                  |             |
+|    approx_kl            | 0.010198011 |
+|    clip_fraction        | 0.038       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0591     |
+|    explained_variance   | 0.686       |
+|    learning_rate        | 0.0003      |
+|    loss                 | -0.0143     |
+|    n_updates            | 2280        |
+|    policy_gradient_loss | -0.0143     |
+|    value_loss           | 0.124       |
+-----------------------------------------
+Eval num_timesteps=470000, episode_reward=-3.95 +/- 0.94
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -3.95       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.968       |
+| session/                 |             |
+|    london_range_pts      | 32.9        |
+| time/                    |             |
+|    total_timesteps       | 470000      |
+| trade/                   |             |
+|    episode_pnl           | 0.822       |
+|    first_trade_pnl       | 0.971       |
+|    first_trade_win_rate  | 0.667       |
+|    ny_open_trade_rate    | 0           |
+|    pnl_continuation_days | 1.28        |
+|    pnl_sweep_high_days   | -0.524      |
+|    pnl_sweep_low_days    | 0.52        |
+|    trades_per_episode    | 0.18        |
+|    win_rate              | 0.667       |
+|    win_rate_continuation | 0.0968      |
+|    win_rate_sweep_days   | 0.0526      |
+| train/                   |             |
+|    approx_kl             | 0.008805821 |
+|    clip_fraction         | 0.0362      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.0612     |
+|    explained_variance    | 0.759       |
+|    learning_rate         | 0.0003      |
+|    loss                  | -0.00801    |
+|    n_updates             | 2290        |
+|    policy_gradient_loss  | -0.0144     |
+|    value_loss            | 0.0891      |
+| validation/              |             |
+|    acceptance_passed     | 0           |
+|    first_trade_win_rate  | 64.7        |
+|    ny_open_trade_rate    | 0.0261      |
+|    pnl_continuation_days | 0.579       |
+|    pnl_sweep_low_days    | 0.643       |
+|    profit_factor         | 1.86        |
+|    trades_per_episode    | 0.217       |
+|    win_rate              | 36          |
+|    win_rate_continuation | 4.82        |
+|    win_rate_sweep_days   | 25          |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 20.3     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 123      |
+|    time_elapsed     | 71540    |
+|    total_timesteps  | 471904   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 28.2        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 124         |
+|    time_elapsed         | 72012       |
+|    total_timesteps      | 473952      |
+| train/                  |             |
+|    approx_kl            | 0.009292503 |
+|    clip_fraction        | 0.0481      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.084      |
+|    explained_variance   | 0.695       |
+|    learning_rate        | 0.0003      |
+|    loss                 | -0.00125    |
+|    n_updates            | 2300        |
+|    policy_gradient_loss | -0.0155     |
+|    value_loss           | 0.135       |
+-----------------------------------------
+Eval num_timesteps=475000, episode_reward=-3.42 +/- 1.72
+Episode length: 35.00 +/- 0.00
+-----------------------------------------
+| eval/                    |            |
+|    mean_ep_length        | 35         |
+|    mean_reward           | -3.42      |
+| policy/                  |            |
+|    ent_coef              | 0.01       |
+|    hold_rate_500         | 0.938      |
+| session/                 |            |
+|    london_range_pts      | 24.3       |
+| time/                    |            |
+|    total_timesteps       | 475000     |
+| trade/                   |            |
+|    episode_pnl           | 1.14       |
+|    first_trade_pnl       | 0.397      |
+|    first_trade_win_rate  | 0.455      |
+|    ny_open_trade_rate    | 0.04       |
+|    pnl_continuation_days | 1.55       |
+|    pnl_sweep_high_days   | 0.255      |
+|    pnl_sweep_low_days    | 0.434      |
+|    trades_per_episode    | 0.48       |
+|    win_rate              | 0.636      |
+|    win_rate_continuation | 0.0909     |
+|    win_rate_sweep_days   | 0.235      |
+| train/                   |            |
+|    approx_kl             | 0.00885622 |
+|    clip_fraction         | 0.043      |
+|    clip_range            | 0.2        |
+|    entropy_loss          | -0.0748    |
+|    explained_variance    | 0.732      |
+|    learning_rate         | 0.0003     |
+|    loss                  | 0.0336     |
+|    n_updates             | 2310       |
+|    policy_gradient_loss  | -0.0159    |
+|    value_loss            | 0.147      |
+-----------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 40       |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 125      |
+|    time_elapsed     | 72429    |
+|    total_timesteps  | 476000   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 33.8         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 126          |
+|    time_elapsed         | 72783        |
+|    total_timesteps      | 478048       |
+| train/                  |              |
+|    approx_kl            | 0.0064089256 |
+|    clip_fraction        | 0.0279       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0476      |
+|    explained_variance   | 0.695        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.000688     |
+|    n_updates            | 2320         |
+|    policy_gradient_loss | -0.00918     |
+|    value_loss           | 0.0925       |
+------------------------------------------
+Eval num_timesteps=480000, episode_reward=-3.40 +/- 0.80
+Episode length: 35.00 +/- 0.00
+-------------------------------------------
+| eval/                    |              |
+|    mean_ep_length        | 35           |
+|    mean_reward           | -3.4         |
+| policy/                  |              |
+|    ent_coef              | 0.01         |
+|    hold_rate_500         | 0.967        |
+| session/                 |              |
+|    london_range_pts      | 28.8         |
+| time/                    |              |
+|    total_timesteps       | 480000       |
+| trade/                   |              |
+|    episode_pnl           | 0.846        |
+|    first_trade_pnl       | 3.37         |
+|    first_trade_win_rate  | 0.625        |
+|    ny_open_trade_rate    | 0.02         |
+|    pnl_continuation_days | 0.589        |
+|    pnl_sweep_high_days   | 1.39         |
+|    pnl_sweep_low_days    | 1.68         |
+|    trades_per_episode    | 0.26         |
+|    win_rate              | 0.875        |
+|    win_rate_continuation | 0.0857       |
+|    win_rate_sweep_days   | 0.267        |
+| train/                   |              |
+|    approx_kl             | 0.0070018824 |
+|    clip_fraction         | 0.0327       |
+|    clip_range            | 0.2          |
+|    entropy_loss          | -0.0503      |
+|    explained_variance    | 0.677        |
+|    learning_rate         | 0.0003       |
+|    loss                  | -0.00184     |
+|    n_updates             | 2330         |
+|    policy_gradient_loss  | -0.0143      |
+|    value_loss            | 0.129        |
+| validation/              |              |
+|    acceptance_passed     | 0            |
+|    first_trade_win_rate  | 64.7         |
+|    ny_open_trade_rate    | 0.0261       |
+|    pnl_continuation_days | 0.633        |
+|    pnl_sweep_low_days    | 0.643        |
+|    profit_factor         | 1.72         |
+|    trades_per_episode    | 0.235        |
+|    win_rate              | 33.3         |
+|    win_rate_continuation | 4.82         |
+|    win_rate_sweep_days   | 28.1         |
+-------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 18.6     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 127      |
+|    time_elapsed     | 73445    |
+|    total_timesteps  | 480096   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 32.9         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 128          |
+|    time_elapsed         | 73844        |
+|    total_timesteps      | 482144       |
+| train/                  |              |
+|    approx_kl            | 0.0065266415 |
+|    clip_fraction        | 0.0274       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.039       |
+|    explained_variance   | 0.752        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.0151       |
+|    n_updates            | 2340         |
+|    policy_gradient_loss | -0.0115      |
+|    value_loss           | 0.116        |
+------------------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 21          |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 129         |
+|    time_elapsed         | 74254       |
+|    total_timesteps      | 484192      |
+| train/                  |             |
+|    approx_kl            | 0.009393042 |
+|    clip_fraction        | 0.0526      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0918     |
+|    explained_variance   | 0.67        |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0263      |
+|    n_updates            | 2350        |
+|    policy_gradient_loss | -0.0176     |
+|    value_loss           | 0.193       |
+-----------------------------------------
+Eval num_timesteps=485000, episode_reward=-4.04 +/- 1.07
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -4.04       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.943       |
+| session/                 |             |
+|    london_range_pts      | 40.9        |
+| time/                    |             |
+|    total_timesteps       | 485000      |
+| trade/                   |             |
+|    episode_pnl           | 1.25        |
+|    first_trade_pnl       | 3.44        |
+|    first_trade_win_rate  | 0.75        |
+|    ny_open_trade_rate    | 0.02        |
+|    pnl_continuation_days | 1.18        |
+|    pnl_sweep_high_days   | 0           |
+|    pnl_sweep_low_days    | 1.64        |
+|    trades_per_episode    | 0.28        |
+|    win_rate              | 0.875       |
+|    win_rate_continuation | 0.0968      |
+|    win_rate_sweep_days   | 0.211       |
+| train/                   |             |
+|    approx_kl             | 0.007388249 |
+|    clip_fraction         | 0.038       |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.0596     |
+|    explained_variance    | 0.693       |
+|    learning_rate         | 0.0003      |
+|    loss                  | -0.00305    |
+|    n_updates             | 2360        |
+|    policy_gradient_loss  | -0.0147     |
+|    value_loss            | 0.111       |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 22.2     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 130      |
+|    time_elapsed     | 74699    |
+|    total_timesteps  | 486240   |
+----------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 16.4        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 131         |
+|    time_elapsed         | 75145       |
+|    total_timesteps      | 488288      |
+| train/                  |             |
+|    approx_kl            | 0.006768666 |
+|    clip_fraction        | 0.0429      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0809     |
+|    explained_variance   | 0.743       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.00837     |
+|    n_updates            | 2370        |
+|    policy_gradient_loss | -0.0152     |
+|    value_loss           | 0.136       |
+-----------------------------------------
+Eval num_timesteps=490000, episode_reward=-2.83 +/- 1.05
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -2.83       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.92        |
+| session/                 |             |
+|    london_range_pts      | 24.4        |
+| time/                    |             |
+|    total_timesteps       | 490000      |
+| trade/                   |             |
+|    episode_pnl           | 0.959       |
+|    first_trade_pnl       | 0.939       |
+|    first_trade_win_rate  | 0.5         |
+|    ny_open_trade_rate    | 0           |
+|    pnl_continuation_days | 1.63        |
+|    pnl_sweep_high_days   | -1.75       |
+|    pnl_sweep_low_days    | -0.0532     |
+|    trades_per_episode    | 0.34        |
+|    win_rate              | 0.4         |
+|    win_rate_continuation | 0.0857      |
+|    win_rate_sweep_days   | 0.0667      |
+| train/                   |             |
+|    approx_kl             | 0.010351345 |
+|    clip_fraction         | 0.0567      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.104      |
+|    explained_variance    | 0.592       |
+|    learning_rate         | 0.0003      |
+|    loss                  | -0.0022     |
+|    n_updates             | 2380        |
+|    policy_gradient_loss  | -0.0218     |
+|    value_loss            | 0.173       |
+| validation/              |             |
+|    acceptance_passed     | 0           |
+|    first_trade_win_rate  | 64.7        |
+|    ny_open_trade_rate    | 0.0261      |
+|    pnl_continuation_days | 0.633       |
+|    pnl_sweep_low_days    | 0.643       |
+|    profit_factor         | 2.11        |
+|    trades_per_episode    | 0.217       |
+|    win_rate              | 36          |
+|    win_rate_continuation | 4.82        |
+|    win_rate_sweep_days   | 25          |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 38.6     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 132      |
+|    time_elapsed     | 75899    |
+|    total_timesteps  | 490336   |
+----------------------------------
+------------------------------------------
+| session/                |              |
+|    london_range_pts     | 18.7         |
+| time/                   |              |
+|    fps                  | 3            |
+|    iterations           | 133          |
+|    time_elapsed         | 76386        |
+|    total_timesteps      | 492384       |
+| train/                  |              |
+|    approx_kl            | 0.0072832354 |
+|    clip_fraction        | 0.0414       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.0762      |
+|    explained_variance   | 0.745        |
+|    learning_rate        | 0.0003       |
+|    loss                 | -0.0096      |
+|    n_updates            | 2390         |
+|    policy_gradient_loss | -0.0139      |
+|    value_loss           | 0.128        |
+------------------------------------------
+----------------------------------------
+| session/                |            |
+|    london_range_pts     | 27         |
+| time/                   |            |
+|    fps                  | 3          |
+|    iterations           | 134        |
+|    time_elapsed         | 76788      |
+|    total_timesteps      | 494432     |
+| train/                  |            |
+|    approx_kl            | 0.00759749 |
+|    clip_fraction        | 0.0586     |
+|    clip_range           | 0.2        |
+|    entropy_loss         | -0.12      |
+|    explained_variance   | 0.711      |
+|    learning_rate        | 0.0003     |
+|    loss                 | -0.00864   |
+|    n_updates            | 2400       |
+|    policy_gradient_loss | -0.0198    |
+|    value_loss           | 0.138      |
+----------------------------------------
+Eval num_timesteps=495000, episode_reward=-3.51 +/- 0.92
+Episode length: 35.00 +/- 0.00
+-----------------------------------------
+| eval/                    |            |
+|    mean_ep_length        | 35         |
+|    mean_reward           | -3.51      |
+| policy/                  |            |
+|    ent_coef              | 0.01       |
+|    hold_rate_500         | 0.926      |
+| session/                 |            |
+|    london_range_pts      | 27.6       |
+| time/                    |            |
+|    total_timesteps       | 495000     |
+| trade/                   |            |
+|    episode_pnl           | 1.66       |
+|    first_trade_pnl       | 4.64       |
+|    first_trade_win_rate  | 0.8        |
+|    ny_open_trade_rate    | 0.06       |
+|    pnl_continuation_days | 0.923      |
+|    pnl_sweep_high_days   | 2.07       |
+|    pnl_sweep_low_days    | 3.79       |
+|    trades_per_episode    | 0.4        |
+|    win_rate              | 1          |
+|    win_rate_continuation | 0.0909     |
+|    win_rate_sweep_days   | 0.412      |
+| train/                   |            |
+|    approx_kl             | 0.01062187 |
+|    clip_fraction         | 0.0558     |
+|    clip_range            | 0.2        |
+|    entropy_loss          | -0.107     |
+|    explained_variance    | 0.655      |
+|    learning_rate         | 0.0003     |
+|    loss                  | 0.0115     |
+|    n_updates             | 2410       |
+|    policy_gradient_loss  | -0.017     |
+|    value_loss            | 0.131      |
+-----------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 19.1     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 135      |
+|    time_elapsed     | 77191    |
+|    total_timesteps  | 496480   |
+----------------------------------
+----------------------------------------
+| session/                |            |
+|    london_range_pts     | 35.2       |
+| time/                   |            |
+|    fps                  | 3          |
+|    iterations           | 136        |
+|    time_elapsed         | 77578      |
+|    total_timesteps      | 498528     |
+| train/                  |            |
+|    approx_kl            | 0.00617525 |
+|    clip_fraction        | 0.0272     |
+|    clip_range           | 0.2        |
+|    entropy_loss         | -0.0446    |
+|    explained_variance   | 0.72       |
+|    learning_rate        | 0.0003     |
+|    loss                 | 0.0105     |
+|    n_updates            | 2420       |
+|    policy_gradient_loss | -0.00917   |
+|    value_loss           | 0.0945     |
+----------------------------------------
+Eval num_timesteps=500000, episode_reward=-4.12 +/- 1.06
+Episode length: 35.00 +/- 0.00
+------------------------------------------
+| eval/                    |             |
+|    mean_ep_length        | 35          |
+|    mean_reward           | -4.12       |
+| policy/                  |             |
+|    ent_coef              | 0.01        |
+|    hold_rate_500         | 0.945       |
+| session/                 |             |
+|    london_range_pts      | 38.2        |
+| time/                    |             |
+|    total_timesteps       | 500000      |
+| trade/                   |             |
+|    episode_pnl           | 1.19        |
+|    first_trade_pnl       | 4.38        |
+|    first_trade_win_rate  | 0.625       |
+|    ny_open_trade_rate    | 0           |
+|    pnl_continuation_days | 1.17        |
+|    pnl_sweep_high_days   | 1.17        |
+|    pnl_sweep_low_days    | 3.11        |
+|    trades_per_episode    | 0.24        |
+|    win_rate              | 0.75        |
+|    win_rate_continuation | 0.108       |
+|    win_rate_sweep_days   | 0.154       |
+| train/                   |             |
+|    approx_kl             | 0.011194909 |
+|    clip_fraction         | 0.0626      |
+|    clip_range            | 0.2         |
+|    entropy_loss          | -0.117      |
+|    explained_variance    | 0.592       |
+|    learning_rate         | 0.0003      |
+|    loss                  | -0.00204    |
+|    n_updates             | 2430        |
+|    policy_gradient_loss  | -0.0203     |
+|    value_loss            | 0.127       |
+| validation/              |             |
+|    acceptance_passed     | 0           |
+|    first_trade_win_rate  | 64.7        |
+|    ny_open_trade_rate    | 0.0261      |
+|    pnl_continuation_days | 0.578       |
+|    pnl_sweep_low_days    | 0.643       |
+|    profit_factor         | 1.69        |
+|    trades_per_episode    | 0.217       |
+|    win_rate              | 32          |
+|    win_rate_continuation | 4.82        |
+|    win_rate_sweep_days   | 25          |
+------------------------------------------
+----------------------------------
+| session/            |          |
+|    london_range_pts | 22.6     |
+| time/               |          |
+|    fps              | 3        |
+|    iterations       | 137      |
+|    time_elapsed     | 78291    |
+|    total_timesteps  | 500576   |
+----------------------------------
+----------------------------------------
+| session/                |            |
+|    london_range_pts     | 18.1       |
+| time/                   |            |
+|    fps                  | 3          |
+|    iterations           | 138        |
+|    time_elapsed         | 78695      |
+|    total_timesteps      | 502624     |
+| train/                  |            |
+|    approx_kl            | 0.00732154 |
+|    clip_fraction        | 0.0432     |
+|    clip_range           | 0.2        |
+|    entropy_loss         | -0.0653    |
+|    explained_variance   | 0.687      |
+|    learning_rate        | 0.0003     |
+|    loss                 | 0.00761    |
+|    n_updates            | 2440       |
+|    policy_gradient_loss | -0.017     |
+|    value_loss           | 0.112      |
+----------------------------------------
+-----------------------------------------
+| session/                |             |
+|    london_range_pts     | 40.3        |
+| time/                   |             |
+|    fps                  | 3           |
+|    iterations           | 139         |
+|    time_elapsed         | 79121       |
+|    total_timesteps      | 504672      |
+| train/                  |             |
+|    approx_kl            | 0.008094215 |
+|    clip_fraction        | 0.0397      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.0647     |
+|    explained_variance   | 0.679       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.0173      |
+|    n_updates            | 2450        |
+|    policy_gradient_loss | -0.0145     |
+|    value_loss           | 0.123       |
+-----------------------------------------
+Eval num_timesteps=505000, episode_reward=-3.78 +/- 0.31
+Episode length: 35.00 +/- 0.00
+-----------------------------------------
+| eval/                    |            |
+|    mean_ep_length        | 35         |
+|    mean_reward           | -3.78      |
+| policy/                  |            |
+|    ent_coef              | 0.01       |
+|    hold_rate_500         | 0.938      |
+| session/                 |            |
+|    london_range_pts      | 30.2       |
+| time/                    |            |
+|    total_timesteps       | 505000     |
+| trade/                   |            |
+|    episode_pnl           | 2.25       |
+|    first_trade_pnl       | 2.64       |
+|    first_trade_win_rate  | 0.667      |
+|    ny_open_trade_rate    | 0          |
+|    pnl_continuation_days | 2.52       |
+|    pnl_sweep_high_days   | 1.24       |
+|    pnl_sweep_low_days    | 2.24       |
+|    trades_per_episode    | 0.48       |
+|    win_rate              | 0.889      |
+|    win_rate_continuation | 0.162      |
+|    win_rate_sweep_days   | 0.154      |
+| train/                   |            |
+|    approx_kl             | 0.00850995 |
+|    clip_fraction         | 0.0423     |
+|    clip_range            | 0.2        |
+|    entropy_loss          | -0.0737    |
+|    explained_variance    | 0.707      |
+|    learning_rate         | 0.0003     |
+|    loss                  | 0.00658    |
+|    n_updates             | 2460       |
+|    policy_gradient_loss  | -0.0164    |
+|    value_loss            | 0.13       |
+-----------------------------------------

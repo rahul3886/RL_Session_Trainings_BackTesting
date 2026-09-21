@@ -1,0 +1,1 @@
+# src/smc package

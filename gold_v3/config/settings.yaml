@@ -1,0 +1,167 @@
+# ═══════════════════════════════════════════════════════════════
+# XAUUSD v3 — Two-Lens SMC Trading Engine Configuration
+# ═══════════════════════════════════════════════════════════════
+
+data:
+  instrument: "xauusd"
+  timeframes: ["M1", "M5", "M15"]
+  train_start: "2022-01-01"
+  train_end: "2024-01-01"
+  validate_start: "2024-01-01"
+  validate_end: "2024-07-01"
+  test_start: "2024-07-01"
+  test_end: "2025-01-01"
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  news_calendar_path: "data/news_calendar.csv"
+  mt5_symbol: "XAUUSD"
+  mt5_login: null
+  mt5_server: null
+
+sessions:
+  london_start: "08:00"
+  london_end: "17:00"
+  ny_start: "12:00"
+  ny_end: "21:00"
+  overlap_start: "12:00"
+  overlap_end: "17:00"
+  lens1_anchor: "12:15"
+  ny_no_trade: "20:00"
+
+smc:
+  # Order blocks
+  ob_atr_displacement: 1.5
+  ob_lookback: 20
+  ob_max_age: 50
+  # Fair value gaps
+  fvg_min_size_lr: 0.05
+  fvg_max_age: 30
+  # Liquidity
+  equal_tolerance_lr: 0.05
+  equal_min_touches: 2
+  sweep_min_lr: 0.12
+  # Structure
+  swing_lookback: 5
+  choch_lookback: 5
+  mss_lookback: 5
+
+lens1:
+  obs_dim: 31
+  encoding_dim: 8
+  total_timesteps: 500000
+  learning_rate: 0.0003
+  n_steps: 2048
+  batch_size: 64
+  n_epochs: 10
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.2
+  ent_coef_start: 0.05
+  ent_coef_end: 0.01
+  ent_coef_anneal_steps: 300000
+  net_arch: [256, 128, 64]
+  reward_direction_weight: 1.0
+  reward_level_weight: 0.5
+  reward_sweep_weight: 5.0
+  reward_continuation_weight: 0.6
+  reward_ranging_weight: 0.4
+  model_save_path: "models/lens1"
+  checkpoint_freq: 10000
+  eval_freq: 5000
+  seed: 42
+
+lens2:
+  # Predictor Classifier Configuration
+  batch_size: 64
+  learning_rate: 0.001
+  n_epochs: 50
+  net_arch: [128, 64, 32]
+  model_save_path: "models/lens2"
+  dataset_save_path: "data/processed/lens2_scenarios.csv"
+
+lens3:
+  obs_dim: 64
+  total_timesteps: 1000000
+  n_envs: 4
+  scenario_handover_enabled: true
+  oracle_mode: false  # Now defaults to using Lens 2 Predictor
+  mask_scenarios: false
+  mask_mode: "strict_smc"  # Options: "scenario" (Ph6), "strict_smc" (Ph8)
+  displacement_min: 1.2    # Min Force for Break Confirmation
+  momentum_r2_max: 0.65    # Max stability for Sweep Counter-trend
+  target_fps: 30           # Target FPS for training (Throttled)
+  geometry_enabled: true
+  learning_rate: 0.0003
+  n_steps: 2048
+  batch_size: 64
+  n_epochs: 10
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.2
+  ent_coef_start: 0.05
+  ent_coef_end: 0.01
+  ent_coef_anneal_steps: 200000
+  net_arch: [256, 128, 64]
+  min_rr: 1.5
+  sl_buffer_lr: 0.10
+  sl_min_atr_gate: 0.3
+  sl_max_lr_gate: 1.5
+  max_trades_per_day: 3
+  london_range_atr_max: 4.0
+  sweep_asymmetry_mode: true
+  sweep_low_entry_confidence: 1.0
+  sweep_high_entry_confidence: 0.6
+  sweep_low_min_rr: 1.5
+  sweep_high_min_rr: 2.0
+  sweep_high_requires_choch: true
+  ny_open_reward_window_steps: 4
+  ny_open_entry_bonus: 0.05
+  opening_intent_enabled: true
+  opening_intent_clusters_path: "output/lens1_analysis/lens1_scenario_clusters.csv"
+  opening_intent_min_confidence: 0.20
+  opening_intent_bonus: 0.20
+  opening_intent_missed_penalty: -0.12
+  opening_intent_opposite_penalty: -0.20
+  opening_intent_first_trade_only: true
+  structural_eval_freq: 10000
+  structural_min_win_rate: 10.0
+  structural_min_profit_factor: 0.1
+  structural_min_trades_per_episode: 0.1
+  structural_min_pnl_sweep_low_days: 0.0
+  hold_rate_watch_threshold: 0.85
+  hold_rate_watch_after_steps: 200000
+  hold_rate_warn_threshold: 0.95
+  hold_rate_warn_after_steps: 150000
+  model_save_path: "models/lens3"
+  checkpoint_freq: 10000
+  eval_freq: 5000
+  seed: 42
+
+risk:
+  account_balance: 100000
+  risk_pct: 0.01
+  max_daily_loss_pct: 0.03
+  max_open_positions: 1
+
+reward:
+  correct_hold: 0.0
+  missed_setup_penalty: -0.15
+  smc_alignment_bonus: 0.30
+  confluence_bonus: 0.10
+  confluence_max: 0.60
+  risk_violation_penalty: -0.10
+  overtrading_penalty: -0.30
+  lens1_align_bonus: 0.20
+  lens1_align_penalty: -0.20
+  episode_pnl_bonus: 0.50
+  episode_winrate_bonus: 0.30
+  episode_no_trade_penalty: -0.80
+  episode_overtrade_penalty: -0.20
+  participation_bonus: 0.15
+  progressive_no_trade_step_penalty: -0.015
+
+indicators:
+  atr_period: 14
+  rsi_period: 14
+  momentum_period: 8
+  volume_sma_period: 20

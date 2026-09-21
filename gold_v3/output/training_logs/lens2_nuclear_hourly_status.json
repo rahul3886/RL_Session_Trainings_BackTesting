@@ -1,0 +1,15 @@
+{
+  "checked_at_utc": "2026-04-12T15:31:46.695067+00:00",
+  "run_state": "running",
+  "absolute_target_timesteps": 500000,
+  "start_timesteps": 0,
+  "latest_total_timesteps": 0,
+  "progress_pct_of_resume_run": 0.0,
+  "latest_checkpoint_name": "lens2_2100000_steps.zip",
+  "latest_checkpoint_time_utc": "2026-04-12T15:10:45.759792+00:00",
+  "best_checkpoint_name": "best_model.zip",
+  "best_checkpoint_time_utc": "2026-04-12T15:11:32.930921+00:00",
+  "log_name": "lens2_nuclear_v4_restart_20260412_195326.err.log",
+  "log_last_update_utc": "2026-04-12T15:31:18.218717+00:00",
+  "notes": "Lens 2 retraining is still actively updating."
+}
